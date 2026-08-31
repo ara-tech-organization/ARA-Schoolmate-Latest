@@ -20,7 +20,7 @@ function TransformCta() {
             monitoring.
           </p>
           <div className={styles.actions}>
-            <Button as="a" href="/contact" onDark>
+            <Button to="/contact" onDark>
               Get a free Demo
             </Button>
             <Button as="a" href="tel:+918110015152" variant="secondary" onDark>

@@ -36,7 +36,7 @@ function Header() {
               {item.label}
             </NavLink>
           ))}
-          <Button as="a" href="/contact" size="md" className={styles.navCta}>
+          <Button to="/contact" size="md" className={styles.navCta}>
             Get a free Demo
           </Button>
         </nav>

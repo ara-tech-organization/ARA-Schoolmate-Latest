@@ -70,7 +70,7 @@ function EveryUser() {
         </div>
 
         <div className={styles.actions}>
-          <Button as="a" href="/contact">Get a free Demo</Button>
+          <Button to="/contact">Get a free Demo</Button>
         </div>
       </div>
     </Reveal>

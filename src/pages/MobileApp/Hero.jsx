@@ -27,7 +27,7 @@ function Hero() {
             schools in managing daily operations effectively and keeping parents informed in real time.
           </p>
           <div className={styles.actions}>
-            <Button as="a" href="/contact">
+            <Button to="/contact">
               Get a free Demo
             </Button>
             <Button as="a" href="tel:+918110015152" variant="secondary">

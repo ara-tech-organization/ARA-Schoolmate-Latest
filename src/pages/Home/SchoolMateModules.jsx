@@ -100,7 +100,7 @@ function SchoolMateModules() {
                 ))}
               </ul>
               <p className={styles.blurb}>{plan.blurb}</p>
-              <Button as="a" href="/contact" variant="secondary" size="md" className={styles.cta}>
+              <Button to="/contact" variant="secondary" size="md" className={styles.cta}>
                 {plan.cta}
               </Button>
             </div>
@@ -108,7 +108,7 @@ function SchoolMateModules() {
         </div>
 
         <div className={styles.actions}>
-          <Button as="a" href="/contact">Get a free Demo</Button>
+          <Button to="/contact">Get a free Demo</Button>
         </div>
       </div>
     </Reveal>

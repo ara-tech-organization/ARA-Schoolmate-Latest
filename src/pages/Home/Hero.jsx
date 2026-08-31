@@ -42,7 +42,7 @@ function Hero() {
             ))}
           </ul>
 
-          <Button as="a" href="/contact">Get Started Today with SchoolMate</Button>
+          <Button to="/contact">Get Started Today with SchoolMate</Button>
         </div>
 
         <div className={styles.visual}>
