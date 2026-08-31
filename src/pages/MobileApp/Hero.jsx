@@ -3,11 +3,12 @@ import heroDesktop from '../../assets/images/hero-app-fan-desktop.png'
 import heroTablet from '../../assets/images/hero-app-fan-tablet.png'
 import heroMobile from '../../assets/images/hero-app-fan-mobile.png'
 import Reveal from '../../components/ui/Reveal'
+import { getHeroRevealDelay } from '../../utils/pageLoaderTiming'
 import styles from './Hero.module.css'
 
 function Hero() {
   return (
-    <Reveal as="section" className={styles.hero}>
+    <Reveal as="section" className={styles.hero} delay={getHeroRevealDelay()}>
       <div className={`container ${styles.row}`}>
         <div className={styles.copy}>
           <h1 className={styles.heading}>Smart School Management at Your Fingertips</h1>

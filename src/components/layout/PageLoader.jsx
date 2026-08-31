@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { LOADER_DURATION_MS, markLoaderDone } from '../../utils/pageLoaderTiming'
 import styles from './PageLoader.module.css'
 
 const BRAND = 'SchoolMate'.split('')
@@ -9,7 +10,10 @@ function PageLoader() {
 
   useEffect(() => {
     const t1 = setTimeout(() => setHiding(true), 2800)
-    const t2 = setTimeout(() => setGone(true), 3400)
+    const t2 = setTimeout(() => {
+      setGone(true)
+      markLoaderDone()
+    }, LOADER_DURATION_MS)
     return () => {
       clearTimeout(t1)
       clearTimeout(t2)

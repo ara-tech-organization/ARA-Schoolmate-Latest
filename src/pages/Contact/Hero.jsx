@@ -1,10 +1,11 @@
 import Eyebrow from '../../components/ui/Eyebrow'
 import Reveal from '../../components/ui/Reveal'
+import { getHeroRevealDelay } from '../../utils/pageLoaderTiming'
 import styles from './Hero.module.css'
 
 function Hero() {
   return (
-    <Reveal as="section" className={styles.hero}>
+    <Reveal as="section" className={styles.hero} delay={getHeroRevealDelay()}>
       <div className="container">
         <div className={styles.copy}>
           <Eyebrow>Get in touch</Eyebrow>

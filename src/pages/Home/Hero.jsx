@@ -2,6 +2,7 @@ import heroVisual from '../../assets/images/hero-ecosystem.png'
 import Button from '../../components/ui/Button'
 import CheckItem from '../../components/ui/CheckItem'
 import Reveal from '../../components/ui/Reveal'
+import { getHeroRevealDelay } from '../../utils/pageLoaderTiming'
 import styles from './Hero.module.css'
 
 const BULLETS = [
@@ -15,7 +16,7 @@ const BULLETS = [
 
 function Hero() {
   return (
-    <Reveal as="section" className={styles.hero}>
+    <Reveal as="section" className={styles.hero} delay={getHeroRevealDelay()}>
       <div className={`container ${styles.row}`}>
         <div className={styles.copy}>
           <div className={styles.context}>
