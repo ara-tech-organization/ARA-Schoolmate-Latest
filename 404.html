@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>SchoolMate</title>
+    <!--
+      GitHub Pages has no server-side routing, so a direct hit or refresh on
+      any route other than the site root (e.g. /mobile-app) 404s here. This
+      redirects back to index.html with the intended path encoded in the
+      query string; index.html's inline script (below) restores it via
+      history.replaceState before React Router mounts, so the SPA still
+      lands on the right route. See https://github.com/rafgraph/spa-github-pages.
+    -->
+    <script>
+      var pathSegmentsToKeep = 1 // "/ARA-Schoolmate-Latest"
+      var l = window.location
+      l.replace(
+        l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+        l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/?/' +
+        l.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~') +
+        (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+        l.hash
+      )
+    </script>
+  </head>
+  <body></body>
+</html>
