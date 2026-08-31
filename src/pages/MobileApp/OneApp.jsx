@@ -6,6 +6,7 @@ import appFees from '../../assets/images/app-fees.png'
 import appTimetable from '../../assets/images/app-timetable.png'
 import appCirculars from '../../assets/images/app-circulars.png'
 import Reveal from '../../components/ui/Reveal'
+import Image from '../../components/ui/Image'
 import styles from './OneApp.module.css'
 
 const DEVICES = [
@@ -35,7 +36,7 @@ function OneApp() {
         <div className={styles.devices}>
           {DEVICES.map((device) => (
             <div key={device.alt} className={styles.device}>
-              <img src={device.src} alt={device.alt} loading="lazy" decoding="async" />
+              <Image src={device.src} alt={device.alt} loading="lazy" decoding="async" />
             </div>
           ))}
         </div>

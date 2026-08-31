@@ -3,6 +3,7 @@ import heroDesktop from '../../assets/images/hero-app-fan-desktop.png'
 import heroTablet from '../../assets/images/hero-app-fan-tablet.png'
 import heroMobile from '../../assets/images/hero-app-fan-mobile.png'
 import Reveal from '../../components/ui/Reveal'
+import Image from '../../components/ui/Image'
 import { getHeroRevealDelay } from '../../utils/pageLoaderTiming'
 import styles from './Hero.module.css'
 
@@ -39,7 +40,7 @@ function Hero() {
           <picture>
             <source media="(min-width: 1280px)" srcSet={heroDesktop} />
             <source media="(min-width: 768px)" srcSet={heroTablet} />
-            <img src={heroMobile} alt="SchoolMate app screens showing attendance, circulars and the parent dashboard" />
+            <Image src={heroMobile} alt="SchoolMate app screens showing attendance, circulars and the parent dashboard" />
           </picture>
         </div>
       </div>

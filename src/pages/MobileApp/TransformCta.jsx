@@ -1,6 +1,7 @@
 import Button from '../../components/ui/Button'
 import visual from '../../assets/images/transform-cta-visual.png'
 import Reveal from '../../components/ui/Reveal'
+import Image from '../../components/ui/Image'
 import styles from './TransformCta.module.css'
 
 function TransformCta() {
@@ -29,7 +30,7 @@ function TransformCta() {
         </div>
 
         <div className={styles.visual}>
-          <img src={visual} alt="SchoolMate fees screen and mobile app mockup" loading="lazy" decoding="async" />
+          <Image src={visual} alt="SchoolMate fees screen and mobile app mockup" loading="lazy" decoding="async" />
         </div>
       </div>
     </Reveal>

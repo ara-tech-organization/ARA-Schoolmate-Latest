@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { NavLink, Link } from 'react-router-dom'
 import logo from '../../assets/images/logo-header.png'
 import Button from '../ui/Button'
+import Image from '../ui/Image'
 import styles from './Header.module.css'
 
 const NAV_ITEMS = [
@@ -18,7 +19,7 @@ function Header() {
     <header className={styles.header}>
       <div className={styles.bar}>
         <Link to="/" className={styles.logo}>
-          <img src={logo} alt="SchoolMate" />
+          <Image src={logo} alt="SchoolMate" />
         </Link>
 
         <nav className={[styles.nav, open ? styles.navOpen : ''].filter(Boolean).join(' ')}>

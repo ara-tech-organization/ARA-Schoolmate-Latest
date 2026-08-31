@@ -2,6 +2,7 @@ import ecosystemDesktop from '../../assets/images/module-ecosystem-desktop.png'
 import ecosystemMobile from '../../assets/images/module-ecosystem-mobile.png'
 import Eyebrow from '../../components/ui/Eyebrow'
 import Reveal from '../../components/ui/Reveal'
+import Image from '../../components/ui/Image'
 import styles from './OnePlatform.module.css'
 
 function OnePlatform() {
@@ -19,7 +20,7 @@ function OnePlatform() {
 
         <picture className={styles.ecosystem}>
           <source media="(min-width: 768px)" srcSet={ecosystemDesktop} />
-          <img src={ecosystemMobile} alt="SchoolMate module ecosystem connecting attendance, fees, payroll, homework, transport, notifications and reports around the platform hub" loading="lazy" decoding="async" />
+          <Image src={ecosystemMobile} alt="SchoolMate module ecosystem connecting attendance, fees, payroll, homework, transport, notifications and reports around the platform hub" loading="lazy" decoding="async" />
         </picture>
 
         <p className={styles.closing}>

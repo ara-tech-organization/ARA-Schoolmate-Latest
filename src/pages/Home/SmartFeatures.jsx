@@ -3,6 +3,7 @@ import panelFees from '../../assets/images/panel-fees.png'
 import Eyebrow from '../../components/ui/Eyebrow'
 import CheckItem from '../../components/ui/CheckItem'
 import Reveal from '../../components/ui/Reveal'
+import Image from '../../components/ui/Image'
 import styles from './SmartFeatures.module.css'
 
 const HIGHLIGHTS = [
@@ -39,8 +40,8 @@ function SmartFeatures() {
           </p>
         </div>
         <div className={styles.visual}>
-          <img src={panelTransport} alt="Transport tracking panel showing live bus routes" loading="lazy" decoding="async" />
-          <img src={panelFees} alt="Fee collection panel showing payment status" loading="lazy" decoding="async" />
+          <Image src={panelTransport} alt="Transport tracking panel showing live bus routes" loading="lazy" decoding="async" />
+          <Image src={panelFees} alt="Fee collection panel showing payment status" loading="lazy" decoding="async" />
         </div>
       </div>
     </Reveal>

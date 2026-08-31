@@ -4,6 +4,7 @@ import appFees from '../../assets/images/app-fees.png'
 import appTimetable from '../../assets/images/app-timetable.png'
 import appCirculars from '../../assets/images/app-circulars.png'
 import Reveal from '../../components/ui/Reveal'
+import Image from '../../components/ui/Image'
 import styles from './SmartFeatures.module.css'
 
 const FEATURES = [
@@ -59,7 +60,7 @@ function SmartFeatures() {
                 <p className={styles.body}>{feature.body}</p>
               </div>
               <div className={styles.visual}>
-                <img src={feature.image} alt={feature.alt} loading="lazy" decoding="async" />
+                <Image src={feature.image} alt={feature.alt} loading="lazy" decoding="async" />
               </div>
             </div>
           ))}

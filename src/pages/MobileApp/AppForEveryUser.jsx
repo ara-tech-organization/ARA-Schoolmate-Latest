@@ -3,6 +3,7 @@ import roleParents from '../../assets/images/role-parents.png'
 import roleTeachers from '../../assets/images/role-teachers.png'
 import roleAdmins from '../../assets/images/role-admins.png'
 import Reveal from '../../components/ui/Reveal'
+import Image from '../../components/ui/Image'
 import styles from './AppForEveryUser.module.css'
 
 const ROLES = [
@@ -55,7 +56,7 @@ function AppForEveryUser() {
           {ROLES.map((role) => (
             <div key={role.key} className={styles.card}>
               <div className={styles.visual}>
-                <img src={role.image} alt={role.alt} loading="lazy" decoding="async" />
+                <Image src={role.image} alt={role.alt} loading="lazy" decoding="async" />
               </div>
               <h3 className={styles.title}>{role.title}</h3>
               <ul className={styles.items}>

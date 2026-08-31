@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import logo from '../../assets/images/logo-footer.png'
+import Image from '../ui/Image'
 import styles from './Footer.module.css'
 
 const NAV_ITEMS = [
@@ -13,7 +14,7 @@ function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={styles.top}>
-        <img src={logo} alt="SchoolMate — Smarter School | Happier Parents" loading="lazy" decoding="async" className={styles.logo} />
+        <Image src={logo} alt="SchoolMate — Smarter School | Happier Parents" loading="lazy" decoding="async" className={styles.logo} />
         <nav className={styles.nav}>
           {NAV_ITEMS.map((item) => (
             <Link key={item.label} to={item.to}>

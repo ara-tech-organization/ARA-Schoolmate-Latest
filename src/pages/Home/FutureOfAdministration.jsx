@@ -1,6 +1,7 @@
 import visual from '../../assets/images/dashboard-admin.png'
 import Eyebrow from '../../components/ui/Eyebrow'
 import Reveal from '../../components/ui/Reveal'
+import Image from '../../components/ui/Image'
 import styles from './FutureOfAdministration.module.css'
 
 function FutureOfAdministration() {
@@ -20,7 +21,7 @@ function FutureOfAdministration() {
           </p>
         </div>
         <div className={styles.visual}>
-          <img src={visual} alt="SchoolMate attendance dashboard" loading="lazy" decoding="async" />
+          <Image src={visual} alt="SchoolMate attendance dashboard" loading="lazy" decoding="async" />
         </div>
       </div>
     </Reveal>

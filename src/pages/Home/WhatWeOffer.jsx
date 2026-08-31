@@ -7,6 +7,7 @@ import panelAttendance from '../../assets/images/panel-attendance.png'
 import Eyebrow from '../../components/ui/Eyebrow'
 import CheckItem from '../../components/ui/CheckItem'
 import Reveal from '../../components/ui/Reveal'
+import Image from '../../components/ui/Image'
 import styles from './WhatWeOffer.module.css'
 
 const CAPABILITIES = [
@@ -74,7 +75,7 @@ function WhatWeOffer() {
                 </ul>
               </div>
               <div className={styles.visual}>
-                <img src={cap.visual} alt={cap.alt} loading="lazy" decoding="async" />
+                <Image src={cap.visual} alt={cap.alt} loading="lazy" decoding="async" />
               </div>
             </div>
           ))}

@@ -7,6 +7,7 @@ import busIcon from '../../assets/icons/fn-bus.svg'
 import calendarIcon from '../../assets/icons/fn-calendar.svg'
 import Eyebrow from '../../components/ui/Eyebrow'
 import Reveal from '../../components/ui/Reveal'
+import Image from '../../components/ui/Image'
 import styles from './AdvancedOperations.module.css'
 
 const FUNCTIONS = [
@@ -29,7 +30,7 @@ function AdvancedOperations() {
         </p>
 
         <div className={styles.visual}>
-          <img src={dashboardVisual} alt="SchoolMate operations dashboard with attendance, homework and circular modules" loading="lazy" decoding="async" />
+          <Image src={dashboardVisual} alt="SchoolMate operations dashboard with attendance, homework and circular modules" loading="lazy" decoding="async" />
         </div>
 
         <h3 className={styles.functionsLabel}>Advanced Functionalities</h3>

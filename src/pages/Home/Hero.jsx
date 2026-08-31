@@ -2,6 +2,7 @@ import heroVisual from '../../assets/images/hero-ecosystem.png'
 import Button from '../../components/ui/Button'
 import CheckItem from '../../components/ui/CheckItem'
 import Reveal from '../../components/ui/Reveal'
+import Image from '../../components/ui/Image'
 import { getHeroRevealDelay } from '../../utils/pageLoaderTiming'
 import styles from './Hero.module.css'
 
@@ -45,7 +46,7 @@ function Hero() {
         </div>
 
         <div className={styles.visual}>
-          <img src={heroVisual} alt="SchoolMate dashboard and mobile app showing attendance, communication, and fee management" />
+          <Image src={heroVisual} alt="SchoolMate dashboard and mobile app showing attendance, communication, and fee management" />
         </div>
       </div>
     </Reveal>

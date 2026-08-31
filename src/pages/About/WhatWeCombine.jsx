@@ -7,6 +7,7 @@ import transportIcon from '../../assets/icons/transport-management.svg'
 import erpIcon from '../../assets/icons/erp-features.svg'
 import dashboardMockup from '../../assets/images/about-dashboard-mockup.png'
 import Reveal from '../../components/ui/Reveal'
+import Image from '../../components/ui/Image'
 import styles from './WhatWeCombine.module.css'
 
 const CAPABILITIES = [
@@ -43,7 +44,7 @@ function WhatWeCombine() {
           <span className={styles.connectorDot} />
         </div>
 
-        <img src={dashboardMockup} alt="SchoolMate admin dashboard" loading="lazy" decoding="async" className={styles.dashboard} />
+        <Image src={dashboardMockup} alt="SchoolMate admin dashboard" loading="lazy" decoding="async" className={styles.dashboard} />
       </div>
     </Reveal>
   )

@@ -3,6 +3,7 @@ import visualDesktop from '../../assets/images/why-choose-visual-desktop.png'
 import visualTablet from '../../assets/images/why-choose-visual-tablet.png'
 import visualMobile from '../../assets/images/why-choose-visual-mobile.png'
 import Reveal from '../../components/ui/Reveal'
+import Image from '../../components/ui/Image'
 import styles from './WhyChoose.module.css'
 
 const BENEFITS = [
@@ -41,7 +42,7 @@ function WhyChoose() {
           <picture>
             <source media="(min-width: 1280px)" srcSet={visualDesktop} />
             <source media="(min-width: 768px)" srcSet={visualTablet} />
-            <img src={visualMobile} alt="SchoolMate circulars screen with live push notifications" loading="lazy" decoding="async" />
+            <Image src={visualMobile} alt="SchoolMate circulars screen with live push notifications" loading="lazy" decoding="async" />
           </picture>
         </div>
       </div>
