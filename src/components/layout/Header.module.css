@@ -80,15 +80,26 @@
   .nav {
     display: flex;
     align-items: center;
+    gap: var(--space-5);
+  }
+
+  .navCta {
+    margin-left: var(--space-3);
+    flex-shrink: 0;
+  }
+
+  .toggle {
+    display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  .nav {
     gap: var(--space-7);
   }
 
   .navCta {
     margin-left: var(--space-5);
-  }
-
-  .toggle {
-    display: none;
   }
 }
 

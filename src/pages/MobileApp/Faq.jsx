@@ -8,27 +8,27 @@ const FAQS = [
   {
     question: 'What is the SchoolMate Mobile App?',
     answer:
-      'SchoolMate Mobile App is a powerful and easy-to-use mobile solution for administrators, teachers, students, and parents. It brings communication, attendance, homework, fees, and academic performance into a single secure dashboard.',
+      'SchoolMate Mobile App is a smart schooling software for schools, teachers, students, and parents to have attendance, communication, homework, fees & academics on a single platform.',
   },
   {
     question: 'How does the SchoolMate app work as a smart school management system?',
     answer:
-      'It digitizes core school operations — attendance, homework, fee collection, timetables, and circulars — so schools can manage daily activities from one dashboard while keeping parents and students updated in real time.',
+      'SchoolMate is an intelligent school management system that provides Live attendance updates, instant notifications, access to timetable, fee management and easy communication between parents and school using mobile devices.',
   },
   {
     question: 'Does the SchoolMate app provide student attendance management system functionality?',
     answer:
-      'Yes. Teachers can mark attendance digitally and parents receive instant alerts the moment attendance is recorded, along with a full monthly history inside the app.',
+      'Yes, there is a student attendance management system in the SchoolMate app where teachers can mark attendance digitally, and parents get immediate attendance alerts and updates.',
   },
   {
     question: 'How is SchoolMate better than traditional school management system apps?',
     answer:
-      'SchoolMate combines communication, attendance, fees, homework, and timetables in one app, with unlimited real-time notifications, a simple dashboard, and dedicated views for parents, teachers, and administrators.',
+      'SchoolMate is not like a traditional school management system app. It provides cloud-based access, unlimited app notifications, real-time communication, digital consent forms, homework tracking, and integrated ERP features, all in one dashboard.',
   },
   {
     question: 'Is SchoolMate a student school management system software for teachers and parents?',
     answer:
-      'Yes — SchoolMate is built for every stakeholder in a school. Parents track attendance and fees, teachers manage homework and records, and administrators oversee communication and reporting, all from the same app.',
+      'SchoolMate is a complete student school management system software. SchoolMate helps parents to track student activities. Teachers handle attendance, homework, exams, and communication efficiently through the mobile app.',
   },
 ]
 

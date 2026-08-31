@@ -9,7 +9,7 @@
   gap: var(--stack-xl);
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .split {
     flex-direction: row;
     align-items: flex-start;
@@ -25,7 +25,7 @@
   width: 100%;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .list {
     width: 352px;
     flex-shrink: 0;
@@ -100,10 +100,15 @@ a.item:hover .value {
   min-width: 0;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 640px) {
+  .form {
+    padding: 40px;
+  }
+}
+
+@media (min-width: 1024px) {
   .form {
     flex: 1 1 auto;
-    padding: 40px;
   }
 }
 
