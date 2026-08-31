@@ -41,7 +41,7 @@ function WhyChoose() {
           <picture>
             <source media="(min-width: 1280px)" srcSet={visualDesktop} />
             <source media="(min-width: 768px)" srcSet={visualTablet} />
-            <img src={visualMobile} alt="SchoolMate circulars screen with live push notifications" />
+            <img src={visualMobile} alt="SchoolMate circulars screen with live push notifications" loading="lazy" decoding="async" />
           </picture>
         </div>
       </div>

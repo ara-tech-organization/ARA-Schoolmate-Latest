@@ -22,8 +22,8 @@ function OurVision() {
         </div>
 
         <div className={styles.visual}>
-          <img src={dashboardMockup} alt="SchoolMate admin dashboard" className={styles.dashboard} />
-          <img src={academicsMockup} alt="SchoolMate academics panel" className={styles.academics} />
+          <img src={dashboardMockup} alt="SchoolMate admin dashboard" loading="lazy" decoding="async" className={styles.dashboard} />
+          <img src={academicsMockup} alt="SchoolMate academics panel" loading="lazy" decoding="async" className={styles.academics} />
         </div>
       </div>
     </Reveal>

@@ -29,7 +29,7 @@ function TransformCta() {
         </div>
 
         <div className={styles.visual}>
-          <img src={visual} alt="SchoolMate fees screen and mobile app mockup" />
+          <img src={visual} alt="SchoolMate fees screen and mobile app mockup" loading="lazy" decoding="async" />
         </div>
       </div>
     </Reveal>

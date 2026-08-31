@@ -10,6 +10,8 @@ function ProductVisual() {
           <img
             src={dashboard}
             alt="SchoolMate admin dashboard showing attendance rate, class-wise attendance, and school KPIs"
+            loading="lazy"
+            decoding="async"
           />
         </div>
       </div>

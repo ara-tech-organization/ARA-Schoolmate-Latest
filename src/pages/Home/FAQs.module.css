@@ -51,11 +51,26 @@
   height: 32px;
   border-radius: var(--radius-full);
   background: var(--bg-muted);
-  transition: transform 0.2s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .indicatorOpen {
+  background: var(--bg-brand-subtle);
   transform: rotate(45deg);
+}
+
+.answerWrap {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s ease;
+}
+
+.answerWrapOpen {
+  grid-template-rows: 1fr;
+}
+
+.answerInner {
+  overflow: hidden;
 }
 
 .answer {

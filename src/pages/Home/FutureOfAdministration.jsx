@@ -20,7 +20,7 @@ function FutureOfAdministration() {
           </p>
         </div>
         <div className={styles.visual}>
-          <img src={visual} alt="SchoolMate attendance dashboard" />
+          <img src={visual} alt="SchoolMate attendance dashboard" loading="lazy" decoding="async" />
         </div>
       </div>
     </Reveal>

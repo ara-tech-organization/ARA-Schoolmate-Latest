@@ -38,7 +38,7 @@ function WhySchoolsPrefer() {
           {REASONS.map((reason) => (
             <div key={reason.title} className={styles.card}>
               <div className={styles.iconTile}>
-                <img src={reason.icon} alt="" aria-hidden="true" />
+                <img src={reason.icon} alt="" loading="lazy" decoding="async" aria-hidden="true" />
               </div>
               <div className={styles.copy}>
                 <h3>{reason.title}</h3>

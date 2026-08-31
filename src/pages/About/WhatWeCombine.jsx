@@ -32,7 +32,7 @@ function WhatWeCombine() {
         <ul className={styles.tiles}>
           {CAPABILITIES.map((item) => (
             <li key={item.label} className={styles.tile}>
-              <img src={item.icon} alt="" width={20} height={20} />
+              <img src={item.icon} alt="" loading="lazy" decoding="async" width={20} height={20} />
               <span>{item.label}</span>
             </li>
           ))}
@@ -43,7 +43,7 @@ function WhatWeCombine() {
           <span className={styles.connectorDot} />
         </div>
 
-        <img src={dashboardMockup} alt="SchoolMate admin dashboard" className={styles.dashboard} />
+        <img src={dashboardMockup} alt="SchoolMate admin dashboard" loading="lazy" decoding="async" className={styles.dashboard} />
       </div>
     </Reveal>
   )

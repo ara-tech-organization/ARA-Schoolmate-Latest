@@ -26,7 +26,7 @@ function KeyStatistics() {
             </li>
           ))}
           <li className={styles.stat}>
-            <img src={dashboardIcon} alt="" className={styles.icon} width={30} height={30} />
+            <img src={dashboardIcon} alt="" loading="lazy" decoding="async" className={styles.icon} width={30} height={30} />
             <p className={styles.labelStrong}>Complete All-in-One Dashboard</p>
           </li>
         </ul>

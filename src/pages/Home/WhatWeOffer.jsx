@@ -64,7 +64,7 @@ function WhatWeOffer() {
             <div key={cap.title} className={[styles.capability, cap.reverse ? styles.reverse : ''].join(' ')}>
               <div className={styles.copy}>
                 <span className={styles.iconTile}>
-                  <img src={cap.icon} alt="" width={24} height={24} />
+                  <img src={cap.icon} alt="" loading="lazy" decoding="async" width={24} height={24} />
                 </span>
                 <h3 className={styles.title}>{cap.title}</h3>
                 <ul className={styles.items}>
@@ -74,7 +74,7 @@ function WhatWeOffer() {
                 </ul>
               </div>
               <div className={styles.visual}>
-                <img src={cap.visual} alt={cap.alt} />
+                <img src={cap.visual} alt={cap.alt} loading="lazy" decoding="async" />
               </div>
             </div>
           ))}

@@ -56,7 +56,7 @@ function EveryUser() {
           {ROLES.map((role) => (
             <div key={role.title} className={styles.role}>
               <div className={styles.well}>
-                <img src={role.visual} alt={role.alt} />
+                <img src={role.visual} alt={role.alt} loading="lazy" decoding="async" />
               </div>
               <h3 className={styles.roleTitle}>{role.title}</h3>
               <ul className={styles.items}>

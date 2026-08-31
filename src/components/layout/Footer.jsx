@@ -13,7 +13,7 @@ function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={styles.top}>
-        <img src={logo} alt="SchoolMate — Smarter School | Happier Parents" className={styles.logo} />
+        <img src={logo} alt="SchoolMate — Smarter School | Happier Parents" loading="lazy" decoding="async" className={styles.logo} />
         <nav className={styles.nav}>
           {NAV_ITEMS.map((item) => (
             <Link key={item.label} to={item.to}>

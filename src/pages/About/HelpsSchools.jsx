@@ -24,7 +24,7 @@ function HelpsSchools() {
           {OUTCOMES.map((item) => (
             <li key={item.label} className={styles.outcome}>
               <span className={styles.iconTile}>
-                <img src={item.icon} alt="" width={24} height={24} />
+                <img src={item.icon} alt="" loading="lazy" decoding="async" width={24} height={24} />
               </span>
               <span className={styles.outcomeLabel}>{item.label}</span>
             </li>

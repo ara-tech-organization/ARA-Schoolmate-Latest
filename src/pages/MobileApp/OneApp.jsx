@@ -35,7 +35,7 @@ function OneApp() {
         <div className={styles.devices}>
           {DEVICES.map((device) => (
             <div key={device.alt} className={styles.device}>
-              <img src={device.src} alt={device.alt} />
+              <img src={device.src} alt={device.alt} loading="lazy" decoding="async" />
             </div>
           ))}
         </div>
@@ -43,7 +43,7 @@ function OneApp() {
         <div className={styles.functions}>
           {FUNCTIONS.map((fn) => (
             <div key={fn} className={styles.function}>
-              <img src={checkInverse} alt="" aria-hidden="true" />
+              <img src={checkInverse} alt="" loading="lazy" decoding="async" aria-hidden="true" />
               <p>{fn}</p>
             </div>
           ))}

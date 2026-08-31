@@ -29,14 +29,14 @@ function AdvancedOperations() {
         </p>
 
         <div className={styles.visual}>
-          <img src={dashboardVisual} alt="SchoolMate operations dashboard with attendance, homework and circular modules" />
+          <img src={dashboardVisual} alt="SchoolMate operations dashboard with attendance, homework and circular modules" loading="lazy" decoding="async" />
         </div>
 
         <h3 className={styles.functionsLabel}>Advanced Functionalities</h3>
         <ul className={styles.functions}>
           {FUNCTIONS.map((fn) => (
             <li key={fn.label} className={styles.function}>
-              <img src={fn.icon} alt="" width={22} height={22} />
+              <img src={fn.icon} alt="" loading="lazy" decoding="async" width={22} height={22} />
               <p>{fn.label}</p>
             </li>
           ))}

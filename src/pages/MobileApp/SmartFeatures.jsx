@@ -59,7 +59,7 @@ function SmartFeatures() {
                 <p className={styles.body}>{feature.body}</p>
               </div>
               <div className={styles.visual}>
-                <img src={feature.image} alt={feature.alt} />
+                <img src={feature.image} alt={feature.alt} loading="lazy" decoding="async" />
               </div>
             </div>
           ))}

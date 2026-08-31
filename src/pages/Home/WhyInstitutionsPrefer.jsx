@@ -17,7 +17,7 @@ function WhyInstitutionsPrefer() {
     <Reveal as="section" className={styles.section}>
       <div className={`container ${styles.row}`}>
         <div className={styles.visual}>
-          <img src={visual} alt="SchoolMate mobile app on a phone" />
+          <img src={visual} alt="SchoolMate mobile app on a phone" loading="lazy" decoding="async" />
         </div>
         <div className={styles.copy}>
           <Eyebrow>Why they choose it</Eyebrow>

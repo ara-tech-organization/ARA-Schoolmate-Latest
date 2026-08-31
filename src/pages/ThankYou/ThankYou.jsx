@@ -39,7 +39,7 @@ function ThankYou() {
       <div className={`container ${styles.content}`}>
         <div className={styles.hero}>
           <span className={styles.iconTile}>
-            <img src={checkIcon} alt="" width={32} height={32} />
+            <img src={checkIcon} alt="" loading="lazy" decoding="async" width={32} height={32} />
           </span>
           <p className={styles.eyebrow}>Enquiry received</p>
           <h1 className={styles.title}>Thank You!</h1>
@@ -59,7 +59,7 @@ function ThankYou() {
           {NEXT_STEPS.map((step) => (
             <div key={step.index} className={styles.step}>
               <span className={styles.stepIconTile}>
-                <img src={step.icon} alt="" width={20} height={20} />
+                <img src={step.icon} alt="" loading="lazy" decoding="async" width={20} height={20} />
               </span>
               <span className={styles.stepIndex}>{step.index}</span>
               <h3 className={styles.stepTitle}>{step.title}</h3>
@@ -73,7 +73,7 @@ function ThankYou() {
           <div className={styles.quickContactLinks}>
             {QUICK_CONTACT.map((item) => (
               <a key={item.label} href={item.href} className={styles.quickContactLink} target="_blank" rel="noreferrer">
-                <img src={item.icon} alt="" width={18} height={18} />
+                <img src={item.icon} alt="" loading="lazy" decoding="async" width={18} height={18} />
                 <span>{item.value}</span>
               </a>
             ))}

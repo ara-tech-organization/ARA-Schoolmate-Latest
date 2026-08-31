@@ -52,15 +52,31 @@
   height: 32px;
   border-radius: var(--radius-full);
   background: var(--bg-muted);
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .indicatorOpen {
-  background: var(--bg-brand);
+  background: var(--bg-brand-subtle);
+  transform: rotate(45deg);
 }
 
 .indicator img {
   width: 18px;
   height: 18px;
+}
+
+.answerWrap {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s ease;
+}
+
+.answerWrapOpen {
+  grid-template-rows: 1fr;
+}
+
+.answerInner {
+  overflow: hidden;
 }
 
 .answer {

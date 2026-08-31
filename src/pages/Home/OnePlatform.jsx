@@ -19,7 +19,7 @@ function OnePlatform() {
 
         <picture className={styles.ecosystem}>
           <source media="(min-width: 768px)" srcSet={ecosystemDesktop} />
-          <img src={ecosystemMobile} alt="SchoolMate module ecosystem connecting attendance, fees, payroll, homework, transport, notifications and reports around the platform hub" />
+          <img src={ecosystemMobile} alt="SchoolMate module ecosystem connecting attendance, fees, payroll, homework, transport, notifications and reports around the platform hub" loading="lazy" decoding="async" />
         </picture>
 
         <p className={styles.closing}>

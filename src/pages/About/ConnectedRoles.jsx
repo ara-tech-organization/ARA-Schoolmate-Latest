@@ -18,7 +18,7 @@ function RoleCard({ role }) {
   return (
     <div className={`${styles.card} ${styles[role.corner]}`}>
       <span className={styles.iconTile}>
-        <img src={role.icon} alt="" width={18} height={18} />
+        <img src={role.icon} alt="" loading="lazy" decoding="async" width={18} height={18} />
       </span>
       <span className={styles.label}>{role.label}</span>
     </div>
@@ -29,14 +29,14 @@ function ConnectedRoles() {
   return (
     <div className={styles.wrap}>
       <div className={styles.diagram}>
-        <img src={connectors} alt="" className={styles.connectors} />
-        <img src={junction} alt="" className={`${styles.junction} ${styles.junctionLeft}`} />
-        <img src={junction} alt="" className={`${styles.junction} ${styles.junctionRight}`} />
+        <img src={connectors} alt="" loading="lazy" decoding="async" className={styles.connectors} />
+        <img src={junction} alt="" loading="lazy" decoding="async" className={`${styles.junction} ${styles.junctionLeft}`} />
+        <img src={junction} alt="" loading="lazy" decoding="async" className={`${styles.junction} ${styles.junctionRight}`} />
         {ROLES.map((role) => (
           <RoleCard key={role.label} role={role} />
         ))}
         <div className={styles.hub}>
-          <img src={brandMark} alt="" className={styles.hubMark} />
+          <img src={brandMark} alt="" loading="lazy" decoding="async" className={styles.hubMark} />
           <span className={styles.hubLabel}>SchoolMate</span>
         </div>
       </div>
@@ -45,21 +45,21 @@ function ConnectedRoles() {
         {ROLES.slice(0, 2).map((role) => (
           <li key={role.label} className={styles.stackedItem}>
             <span className={styles.iconTile}>
-              <img src={role.icon} alt="" width={18} height={18} />
+              <img src={role.icon} alt="" loading="lazy" decoding="async" width={18} height={18} />
             </span>
             <span className={styles.label}>{role.label}</span>
           </li>
         ))}
         <li className={styles.stackedConnector} aria-hidden="true" />
         <li className={styles.stackedHub}>
-          <img src={brandMark} alt="" className={styles.hubMark} />
+          <img src={brandMark} alt="" loading="lazy" decoding="async" className={styles.hubMark} />
           <span className={styles.hubLabel}>SchoolMate</span>
         </li>
         <li className={styles.stackedConnector} aria-hidden="true" />
         {ROLES.slice(2).map((role) => (
           <li key={role.label} className={styles.stackedItem}>
             <span className={styles.iconTile}>
-              <img src={role.icon} alt="" width={18} height={18} />
+              <img src={role.icon} alt="" loading="lazy" decoding="async" width={18} height={18} />
             </span>
             <span className={styles.label}>{role.label}</span>
           </li>

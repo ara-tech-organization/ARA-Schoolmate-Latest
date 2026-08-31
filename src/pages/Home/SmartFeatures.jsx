@@ -39,8 +39,8 @@ function SmartFeatures() {
           </p>
         </div>
         <div className={styles.visual}>
-          <img src={panelTransport} alt="Transport tracking panel showing live bus routes" />
-          <img src={panelFees} alt="Fee collection panel showing payment status" />
+          <img src={panelTransport} alt="Transport tracking panel showing live bus routes" loading="lazy" decoding="async" />
+          <img src={panelFees} alt="Fee collection panel showing payment status" loading="lazy" decoding="async" />
         </div>
       </div>
     </Reveal>

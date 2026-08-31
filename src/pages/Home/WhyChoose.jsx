@@ -40,13 +40,13 @@ function WhyChoose() {
         <div className={styles.comparison}>
           <div className={styles.panelBefore}>
             <span className={styles.badgeBefore}>
-              <img src={closeIcon} alt="" width={15} height={15} />
+              <img src={closeIcon} alt="" loading="lazy" decoding="async" width={15} height={15} />
               Before SchoolMate
             </span>
             <ul className={styles.plainList}>
               {BEFORE_ITEMS.map((label) => (
                 <li key={label}>
-                  <img src={minusIcon} alt="" width={18} height={18} />
+                  <img src={minusIcon} alt="" loading="lazy" decoding="async" width={18} height={18} />
                   <span>{label}</span>
                 </li>
               ))}
@@ -55,13 +55,13 @@ function WhyChoose() {
 
           <div className={styles.transform}>
             <span className={styles.arrow}>
-              <img src={arrowIcon} alt="" width={22} height={22} />
+              <img src={arrowIcon} alt="" loading="lazy" decoding="async" width={22} height={22} />
             </span>
           </div>
 
           <div className={styles.panelAfter}>
             <span className={styles.badgeAfter}>
-              <img src={checkWhiteIcon} alt="" width={15} height={15} />
+              <img src={checkWhiteIcon} alt="" loading="lazy" decoding="async" width={15} height={15} />
               After SchoolMate
             </span>
             <ul className={styles.checkList}>

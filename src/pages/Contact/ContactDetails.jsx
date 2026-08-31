@@ -102,7 +102,7 @@ function ContactDetails() {
                 <li key={item.label}>
                   <Tag className={styles.item} href={item.href} target={item.href ? '_blank' : undefined} rel={item.href ? 'noreferrer' : undefined}>
                     <span className={styles.labelRow}>
-                      <img src={item.icon} alt="" width={20} height={20} />
+                      <img src={item.icon} alt="" loading="lazy" decoding="async" width={20} height={20} />
                       <span className={styles.labelText}>{item.label}</span>
                     </span>
                     <span className={styles.value}>{item.value}</span>

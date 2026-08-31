@@ -79,10 +79,14 @@ function FAQs() {
                 >
                   <span>{faq.question}</span>
                   <span className={[styles.indicator, isOpen ? styles.indicatorOpen : ''].join(' ')}>
-                    <img src={plusIcon} alt="" width={18} height={18} />
+                    <img src={plusIcon} alt="" loading="lazy" decoding="async" width={18} height={18} />
                   </span>
                 </button>
-                {isOpen && <p className={styles.answer}>{faq.answer}</p>}
+                <div className={[styles.answerWrap, isOpen ? styles.answerWrapOpen : ''].join(' ')}>
+                  <div className={styles.answerInner}>
+                    <p className={styles.answer}>{faq.answer}</p>
+                  </div>
+                </div>
               </div>
             )
           })}

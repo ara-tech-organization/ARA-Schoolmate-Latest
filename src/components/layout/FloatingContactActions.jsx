@@ -16,7 +16,7 @@ function FloatingContactActions() {
     <div className={styles.rail}>
       {ACTIONS.map((action) => (
         <a key={action.label} href={action.href} className={styles.action} aria-label={action.label}>
-          <img src={action.icon} alt="" width={21} height={21} />
+          <img src={action.icon} alt="" loading="lazy" decoding="async" width={21} height={21} />
         </a>
       ))}
     </div>

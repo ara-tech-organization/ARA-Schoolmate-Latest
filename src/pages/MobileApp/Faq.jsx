@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import plusIcon from '../../assets/icons/plus.svg'
-import minusIcon from '../../assets/icons/minus.svg'
 import Reveal from '../../components/ui/Reveal'
 import styles from './Faq.module.css'
 
@@ -53,10 +52,14 @@ function Faq() {
                 >
                   <span className={styles.question}>{item.question}</span>
                   <span className={`${styles.indicator} ${open ? styles.indicatorOpen : ''}`}>
-                    <img src={open ? minusIcon : plusIcon} alt="" aria-hidden="true" />
+                    <img src={plusIcon} alt="" loading="lazy" decoding="async" aria-hidden="true" />
                   </span>
                 </button>
-                {open && <p className={styles.answer}>{item.answer}</p>}
+                <div className={`${styles.answerWrap} ${open ? styles.answerWrapOpen : ''}`}>
+                  <div className={styles.answerInner}>
+                    <p className={styles.answer}>{item.answer}</p>
+                  </div>
+                </div>
               </div>
             )
           })}
