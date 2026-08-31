@@ -1,0 +1,72 @@
+.section {
+  padding: var(--section-y) 0;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.visual {
+  width: 100%;
+}
+
+.visual img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.copy {
+  width: 100%;
+}
+
+.heading {
+  font-size: var(--type-size-h3);
+  line-height: var(--type-lh-h3);
+  font-weight: 600;
+  letter-spacing: -0.12px;
+  color: var(--text-primary);
+  margin: var(--space-5) 0 var(--stack-md);
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Tablet: matches the Figma "Tablet 1024" frame, where the row's content
+   width is 928px — Visual 484 / gap 48 / Copy 396. Expressed as
+   percentages of the row so it scales fluidly across the breakpoint. */
+@media (min-width: 768px) {
+  .row {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .visual {
+    width: 52.16%;
+  }
+
+  .copy {
+    width: 42.67%;
+  }
+}
+
+/* Desktop: matches the Figma "Desktop 1440" frame, where the row's content
+   width is 1200px — Visual 266.6 / gap 333.4 / Copy 600. */
+@media (min-width: 1280px) {
+  .visual {
+    width: 22.22%;
+  }
+
+  .copy {
+    width: 50%;
+  }
+}

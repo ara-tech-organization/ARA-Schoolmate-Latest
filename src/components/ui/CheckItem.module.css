@@ -1,0 +1,14 @@
+.item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  list-style: none;
+  font-size: var(--type-size-body);
+  line-height: var(--type-lh-body);
+  color: var(--text-secondary);
+}
+
+.icon {
+  flex-shrink: 0;
+  margin-top: 3px;
+}

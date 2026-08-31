@@ -1,0 +1,102 @@
+.section {
+  /* Figma "Section / 07 Our Vision": 32px (mobile) / 88px (tablet) / 120px (desktop) top+bottom */
+  padding: 32px 0;
+  background: var(--bg-inverse);
+}
+
+.split {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.copy {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.kicker {
+  font-size: var(--type-size-h4);
+  line-height: var(--type-lh-h4);
+  font-weight: 600;
+  letter-spacing: -0.05px;
+  color: var(--text-inverse);
+}
+
+.heading {
+  max-width: 580px;
+  font-size: var(--type-size-h1);
+  line-height: var(--type-lh-h1);
+  font-weight: 600;
+  letter-spacing: -0.72px;
+  color: var(--text-inverse);
+}
+
+.body {
+  max-width: 560px;
+  font-size: var(--type-size-body-lg);
+  line-height: var(--type-lh-body-lg);
+  color: var(--text-on-inverse-muted);
+}
+
+@media (min-width: 1280px) {
+  /* narrower cap so this shorter paragraph still wraps across 4 lines like the one above it */
+  .bodyTight {
+    max-width: 480px;
+  }
+}
+
+.visual {
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboard {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 5% / 7%;
+}
+
+.academics {
+  width: 62%;
+  align-self: flex-end;
+  margin-top: var(--space-5);
+  overflow: hidden;
+  border-radius: 6% / 8%;
+}
+
+@media (min-width: 768px) {
+  .section {
+    padding: 88px 0;
+  }
+
+  .split {
+    /* Figma tablet: Copy 396 / gap 48 / Visual 484 of a 928 content width */
+    flex-direction: row;
+    gap: var(--gutter-page-md);
+  }
+
+  .copy {
+    flex: 0 0 42.67%;
+  }
+
+  .visual {
+    flex: 1 1 auto;
+  }
+}
+
+@media (min-width: 1280px) {
+  .section {
+    padding: 120px 0;
+  }
+
+  .split {
+    /* Figma desktop: Copy 620 / gap 120 / Visual 460 of a 1200 content width */
+    gap: var(--gutter-page-xl);
+  }
+
+  .copy {
+    flex-basis: 51.67%;
+  }
+}

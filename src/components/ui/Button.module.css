@@ -1,0 +1,109 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  border-radius: var(--radius-md);
+  border: 1px solid transparent;
+  font-size: var(--type-size-body);
+  font-weight: 600;
+  line-height: 24px;
+  white-space: nowrap;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.lg {
+  padding: 14px 24px;
+}
+
+.md {
+  padding: 10px 20px;
+}
+
+/* Primary */
+.primary {
+  background: var(--bg-brand);
+  color: var(--text-on-brand);
+}
+
+.primary:hover {
+  background: var(--bg-brand-hover);
+}
+
+.primary:active {
+  background: var(--bg-brand-pressed);
+}
+
+.primary.disabled,
+.primary:disabled {
+  background: var(--bg-muted);
+  color: var(--text-disabled);
+  cursor: not-allowed;
+}
+
+/* Secondary */
+.secondary {
+  background: var(--bg-surface);
+  color: var(--text-primary);
+  border-color: var(--border-default);
+}
+
+.secondary:hover {
+  background: var(--bg-subtle);
+  border-color: var(--border-strong);
+}
+
+.secondary:active {
+  background: var(--bg-muted);
+  border-color: var(--border-strong);
+}
+
+.secondary.disabled,
+.secondary:disabled {
+  background: var(--bg-page);
+  border-color: var(--border-subtle);
+  color: var(--text-disabled);
+  cursor: not-allowed;
+}
+
+/* Ghost */
+.ghost {
+  background: transparent;
+  color: var(--text-primary);
+}
+
+.ghost:hover {
+  background: var(--bg-subtle);
+}
+
+.ghost:active {
+  background: var(--bg-muted);
+}
+
+.ghost.disabled,
+.ghost:disabled {
+  background: transparent;
+  color: var(--text-disabled);
+  cursor: not-allowed;
+}
+
+/* On dark surfaces (CTA band, footer) */
+.onDark.primary {
+  color: var(--text-on-brand);
+}
+
+.onDark.secondary {
+  background: transparent;
+  color: var(--text-inverse);
+  border-color: var(--border-on-inverse-strong);
+}
+
+.onDark.secondary:hover {
+  background: var(--bg-inverse-hover);
+}
+
+.onDark.secondary:active {
+  background: var(--bg-inverse-subtle);
+}

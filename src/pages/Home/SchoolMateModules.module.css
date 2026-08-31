@@ -1,0 +1,123 @@
+.section {
+  padding: var(--section-y) 0;
+}
+
+.heading {
+  font-size: var(--type-size-h2);
+  line-height: var(--type-lh-h2);
+  font-weight: 600;
+  letter-spacing: -0.36px;
+  color: var(--text-primary);
+  text-align: center;
+  margin: var(--space-4) 0 var(--stack-lg);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 28px 24px;
+  box-shadow: var(--shadow-card);
+}
+
+.card.featured {
+  border: 1.5px solid var(--border-brand);
+  box-shadow: var(--shadow-raised);
+}
+
+.name {
+  font-size: var(--type-size-h3);
+  line-height: var(--type-lh-h3);
+  font-weight: 600;
+  letter-spacing: -0.12px;
+  color: var(--text-primary);
+}
+
+.tagline {
+  font-size: var(--type-size-body-sm);
+  line-height: var(--type-lh-body-sm);
+  color: var(--text-secondary);
+  margin-top: var(--space-2);
+}
+
+.price {
+  font-size: var(--type-size-h2);
+  line-height: 44px;
+  font-weight: 600;
+  letter-spacing: -0.36px;
+  color: var(--text-primary);
+  padding: var(--space-4) 0;
+}
+
+.priceBrand {
+  font-size: var(--type-size-h4);
+  line-height: var(--type-lh-h4);
+  letter-spacing: -0.05px;
+  color: var(--text-brand);
+}
+
+.divider {
+  height: 1px;
+  background: var(--border-subtle);
+  margin-bottom: var(--space-4);
+}
+
+.includes {
+  font-size: var(--type-size-body-sm);
+  line-height: var(--type-lh-body-sm);
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: var(--space-2);
+}
+
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  list-style: none;
+  padding: 0;
+  margin: 0 0 var(--space-4);
+}
+
+.feature {
+  font-size: var(--type-size-body-sm);
+  line-height: var(--type-lh-body);
+}
+
+.blurb {
+  font-size: var(--type-size-caption);
+  line-height: var(--type-lh-caption);
+  color: var(--text-tertiary);
+  margin-bottom: var(--space-6);
+}
+
+.cta {
+  margin-top: auto;
+  width: 100%;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--stack-lg);
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1280px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

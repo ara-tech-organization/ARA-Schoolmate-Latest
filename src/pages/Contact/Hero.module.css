@@ -1,0 +1,24 @@
+.hero {
+  background: var(--bg-subtle);
+  padding: var(--section-y) 0;
+}
+
+.copy {
+  max-width: 720px;
+}
+
+.heading {
+  font-size: var(--type-size-h1);
+  line-height: var(--type-lh-h1);
+  font-weight: 600;
+  letter-spacing: -0.72px;
+  color: var(--text-primary);
+  margin: var(--space-4) 0 0;
+}
+
+.body {
+  font-size: var(--type-size-body-lg);
+  line-height: var(--type-lh-body-lg);
+  color: var(--text-secondary);
+  margin: var(--space-6) 0 0;
+}

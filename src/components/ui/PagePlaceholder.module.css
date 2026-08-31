@@ -1,0 +1,21 @@
+.placeholder {
+  padding: var(--stack-2xl) 0;
+  text-align: center;
+  min-height: 40vh;
+  display: flex;
+  align-items: center;
+}
+
+.title {
+  font-size: var(--type-size-h1);
+  line-height: var(--type-lh-h1);
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: var(--space-4);
+}
+
+.body {
+  font-size: var(--type-size-body);
+  line-height: var(--type-lh-body);
+  color: var(--text-secondary);
+}

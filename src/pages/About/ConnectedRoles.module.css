@@ -1,0 +1,190 @@
+.wrap {
+  width: 100%;
+}
+
+/* Hub-and-spoke diagram (tablet + desktop) */
+.diagram {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 720 / 520;
+  display: block;
+}
+
+.connectors {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.junction {
+  position: absolute;
+  width: 1.39%;
+  aspect-ratio: 1 / 1;
+}
+
+.junctionLeft {
+  left: 31.8%;
+  top: 49%;
+}
+
+.junctionRight {
+  left: 66.8%;
+  top: 49%;
+}
+
+.card {
+  position: absolute;
+  width: 29.7%;
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: clamp(10px, 2.7cqw, 20px);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-raised);
+}
+
+.topLeft {
+  left: 0;
+  top: 6.5%;
+}
+
+.topRight {
+  left: 70.3%;
+  top: 6.5%;
+}
+
+.bottomLeft {
+  left: 0;
+  top: 78.1%;
+}
+
+.bottomRight {
+  left: 70.3%;
+  top: 78.1%;
+}
+
+.iconTile {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: clamp(24px, 5cqw, 36px);
+  height: clamp(24px, 5cqw, 36px);
+  border-radius: var(--radius-sm);
+  background: var(--bg-brand-subtle);
+}
+
+.iconTile img {
+  width: 55%;
+  height: 55%;
+}
+
+.label {
+  font-size: clamp(11px, 2cqw, 14px);
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.4;
+}
+
+.hub {
+  position: absolute;
+  left: 32.5%;
+  top: 38.8%;
+  width: 35%;
+  aspect-ratio: 252 / 116;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  background: var(--bg-inverse);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 12px 30px rgba(20, 23, 27, 0.22);
+}
+
+.hubMark {
+  width: clamp(18px, 4.2cqw, 30px);
+  height: clamp(18px, 4.2cqw, 30px);
+}
+
+.hubLabel {
+  font-size: clamp(12px, 2.2cqw, 16px);
+  font-weight: 600;
+  color: var(--text-inverse);
+  white-space: nowrap;
+}
+
+/* Stacked list (mobile only) */
+.stackedList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.stackedItem {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  width: 100%;
+  padding: var(--space-4) var(--space-5);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+}
+
+.stackedItem .iconTile {
+  width: 36px;
+  height: 36px;
+}
+
+.stackedItem .label {
+  font-size: var(--type-size-body);
+}
+
+.stackedConnector {
+  width: 2px;
+  height: 32px;
+  background: var(--border-default);
+}
+
+.stackedHub {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  width: 220px;
+  padding: var(--space-5) 0;
+  background: var(--bg-inverse);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 12px 30px rgba(20, 23, 27, 0.22);
+}
+
+.stackedHub .hubMark {
+  width: 26px;
+  height: 26px;
+}
+
+@media (min-width: 768px) {
+  .diagram {
+    container-type: inline-size;
+  }
+
+  .stackedList {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .diagram {
+    display: none;
+  }
+}

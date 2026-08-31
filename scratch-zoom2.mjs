@@ -1,0 +1,11 @@
+import { chromium } from 'playwright'
+const browser = await chromium.launch()
+const page = await browser.newPage({ viewport: { width: 1280, height: 900 } })
+await page.goto('http://localhost:5230/mobile-app', { waitUntil: 'networkidle' })
+await page.waitForTimeout(4000)
+const heading = page.locator('text=One App, Complete School Control')
+await heading.scrollIntoViewIfNeeded()
+await page.waitForTimeout(500)
+const firstDevice = page.locator('text=One App, Complete School Control').locator('xpath=following::img[1]')
+await firstDevice.screenshot({ path: 'C:/Users/karth/AppData/Local/Temp/claude/c--Users-karth-OneDrive-Documents-Ara-Schoolmate-new/ebc3fc20-aea5-4cb9-9a2b-4ef5e3ec117e/scratchpad/device-zoom.png' })
+await browser.close()

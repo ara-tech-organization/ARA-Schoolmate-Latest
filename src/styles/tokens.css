@@ -1,0 +1,166 @@
+/*
+  Design tokens extracted from the Figma "SchoolMate Website UI" design system
+  (file 2tiU292F2mGV9oDUhuQtuo, page "00 — Design System").
+
+  Breakpoints used across the site (mobile-first):
+    xs   320px – 479px   (base styles)
+    sm   480px – 767px
+    md   768px – 1279px  (Figma "Tablet 1024" frame)
+    lg   1280px – 1439px
+    xl   1440px+         (Figma "Desktop 1440" frame)
+*/
+
+:root {
+  /* Color — text */
+  --text-primary: #14171b;
+  --text-secondary: #565e6b;
+  --text-tertiary: #676e79;
+  --text-brand: #d1131b;
+  --text-on-brand: #ffffff;
+  --text-inverse: #ffffff;
+  --text-on-inverse-muted: #d3d7dd;
+  --text-success: #0a6b4a;
+  --text-attention: #9a3412;
+  --text-on-cta: #111418;
+  --text-on-cta-muted: #4b5563;
+  --text-on-footer: #ffffff;
+  --text-on-footer-subtle: #7f8791;
+  --text-disabled: #9aa1ac;
+
+  /* Color — background */
+  --bg-page: #ffffff;
+  --bg-surface: #ffffff;
+  --bg-subtle: #fafafb;
+  --bg-muted: #f4f5f7;
+  --bg-brand: #d1131b;
+  --bg-brand-hover: #ae0f16;
+  --bg-brand-pressed: #8a0c12;
+  --bg-brand-mark: #ed1f27;
+  --bg-brand-subtle: #fef2f2;
+  --bg-inverse: #14171b;
+  --bg-inverse-hover: #23282f;
+  --bg-inverse-subtle: #23282f;
+  --bg-success-subtle: #d9f2e8;
+  --bg-attention-subtle: #fbe6db;
+  --bg-cta: #fff1f2;
+  --bg-footer: #111418;
+
+  /* Color — border */
+  --border-subtle: #e7e9ed;
+  --border-default: #d3d7dd;
+  --border-strong: #9aa1ac;
+  --border-brand: #d1131b;
+  --border-on-inverse: #23282f;
+  --border-on-inverse-strong: #676e79;
+  --border-on-footer: #292c2f;
+
+  /* Color — icon */
+  --icon-primary: #14171b;
+  --icon-secondary: #565e6b;
+  --icon-tertiary: #676e79;
+  --icon-brand: #d1131b;
+  --icon-success: #0a6b4a;
+  --icon-attention: #9a3412;
+  --icon-mark: #ed1f27;
+  --icon-on-brand: #ffffff;
+
+  /* Radius */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-full: 999px;
+
+  /* Spacing scale */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-7: 32px;
+
+  /* Stack (vertical rhythm) scale */
+  --stack-xs: 16px;
+  --stack-sm: 24px;
+  --stack-md: 32px;
+  --stack-lg: 48px;
+  --stack-xl: 64px;
+  --stack-2xl: 80px;
+
+  /* Layout */
+  --gutter-page: 20px;   /* mobile default, overridden per breakpoint */
+  --gutter-page-md: 48px;
+  --gutter-page-xl: 120px;
+  --header-h: 60px;
+  --header-h-xl: 72px;
+  --section-y: 64px;
+  --section-y-md: 80px;
+  --section-y-xl: 120px;
+  --section-y-xl-lg: 144px;
+  --card-pad: 24px;
+  --card-pad-xl: 32px;
+  --grid-gap: 24px;
+  --content-max: 1200px;
+
+  /* Typography */
+  --font-sans: 'Inter', system-ui, 'Segoe UI', Roboto, sans-serif;
+
+  --type-size-display: 40px;
+  --type-lh-display: 46px;
+  --type-size-h1: 34px;
+  --type-lh-h1: 42px;
+  --type-size-h2: 28px;
+  --type-lh-h2: 36px;
+  --type-size-h3: 22px;
+  --type-lh-h3: 30px;
+  --type-size-h4: 18px;
+  --type-lh-h4: 26px;
+  --type-size-body-lg: 17px;
+  --type-lh-body-lg: 28px;
+  --type-size-body: 16px;
+  --type-lh-body: 26px;
+  --type-size-body-sm: 14px;
+  --type-lh-body-sm: 22px;
+  --type-size-caption: 13px;
+  --type-lh-caption: 20px;
+  --type-size-eyebrow: 13px;
+  --type-lh-eyebrow: 16px;
+
+  /* Elevation */
+  --shadow-card: 0 1px 2px rgba(20, 23, 27, 0.05), 0 0 1px rgba(20, 23, 27, 0.04);
+  --shadow-raised: 0 4px 12px rgba(20, 23, 27, 0.07), 0 1px 2px rgba(20, 23, 27, 0.04);
+}
+
+@media (min-width: 768px) {
+  :root {
+    --gutter-page: var(--gutter-page-md);
+    --section-y: var(--section-y-md);
+
+    --type-size-display: 56px;
+    --type-lh-display: 62px;
+    --type-size-h1: 44px;
+    --type-lh-h1: 52px;
+    --type-size-h2: 34px;
+    --type-lh-h2: 42px;
+    --type-size-h3: 24px;
+    --type-lh-h3: 32px;
+  }
+}
+
+@media (min-width: 1280px) {
+  :root {
+    --gutter-page: var(--gutter-page-xl);
+    --header-h: var(--header-h-xl);
+    --section-y: var(--section-y-xl);
+    --card-pad: var(--card-pad-xl);
+
+    --type-size-display: 64px;
+    --type-lh-display: 68px;
+    --type-size-h1: 48px;
+    --type-lh-h1: 56px;
+    --type-size-h2: 36px;
+    --type-lh-h2: 44px;
+    --type-size-h4: 20px;
+    --type-lh-h4: 28px;
+  }
+}

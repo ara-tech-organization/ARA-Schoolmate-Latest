@@ -1,0 +1,127 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--bg-surface);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.bar {
+  height: var(--header-h);
+  max-width: calc(var(--content-max) + var(--gutter-page-xl) * 2);
+  margin: 0 auto;
+  padding: 0 var(--gutter-page);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-5);
+}
+
+.logo img {
+  height: 32px;
+  width: auto;
+}
+
+.nav {
+  display: none;
+}
+
+.navItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding-top: 4px;
+  text-decoration: none;
+  font-size: var(--type-size-body);
+  font-weight: 500;
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+.navItem::after {
+  content: '';
+  width: 100%;
+  height: 2px;
+  border-radius: 1px;
+  background: var(--bg-brand);
+  opacity: 0;
+}
+
+.navItemActive {
+  color: var(--text-primary);
+}
+
+.navItemActive::after {
+  opacity: 1;
+}
+
+.toggle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.toggle span {
+  display: block;
+  height: 2px;
+  border-radius: 1px;
+  background: var(--text-primary);
+}
+
+@media (min-width: 768px) {
+  .nav {
+    display: flex;
+    align-items: center;
+    gap: var(--space-7);
+  }
+
+  .navCta {
+    margin-left: var(--space-5);
+  }
+
+  .toggle {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .nav {
+    position: fixed;
+    inset: var(--header-h) 0 0 0;
+    background: var(--bg-surface);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-6);
+    padding: var(--space-7) var(--gutter-page);
+    transform: translateX(100%);
+    transition: transform 0.25s ease;
+    overflow-y: auto;
+  }
+
+  .navOpen {
+    display: flex;
+    transform: translateX(0);
+  }
+
+  .navItem {
+    align-items: flex-start;
+    font-size: var(--type-size-h4);
+    padding-top: 0;
+  }
+
+  .navItem::after {
+    display: none;
+  }
+
+  .navCta {
+    width: 100%;
+  }
+}

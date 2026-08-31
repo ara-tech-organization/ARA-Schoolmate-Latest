@@ -1,0 +1,21 @@
+.section {
+  padding: var(--stack-2xl) 0;
+  background: var(--bg-brand);
+  text-align: center;
+}
+
+.logo {
+  height: 44px;
+  width: auto;
+  margin: 0 auto var(--stack-md);
+}
+
+.statement {
+  max-width: 1000px;
+  margin: 0 auto;
+  font-size: var(--type-size-display);
+  line-height: var(--type-lh-display);
+  font-weight: 600;
+  letter-spacing: -1.28px;
+  color: var(--text-on-brand);
+}

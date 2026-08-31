@@ -1,0 +1,116 @@
+.section {
+  background: var(--bg-page);
+  padding-block: 64px;
+}
+
+.row {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  gap: 40px;
+}
+
+.copy {
+  width: 100%;
+  max-width: 600px;
+}
+
+.heading {
+  margin: 0 0 24px;
+  font-weight: 600;
+  color: var(--text-primary);
+  font-size: clamp(28px, 5vw, 36px);
+  line-height: 1.2;
+  letter-spacing: -0.36px;
+}
+
+.subtitle {
+  margin: 0 0 16px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+  color: var(--text-brand);
+}
+
+.lead {
+  margin: 0 0 32px;
+  font-size: 18px;
+  line-height: 30px;
+  color: var(--text-secondary);
+}
+
+.benefitsLabel {
+  margin: 0 0 20px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+  color: var(--text-primary);
+}
+
+.benefits {
+  list-style: none;
+  margin: 0 0 32px;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px 20px;
+}
+
+.closing {
+  margin: 0;
+  font-size: 16px;
+  line-height: 26px;
+  color: var(--text-secondary);
+}
+
+.visual {
+  width: 100%;
+  max-width: 350px;
+}
+
+.visual img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@media (min-width: 640px) {
+  .benefits {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 768px) {
+  .section {
+    padding-block: 80px;
+  }
+
+  .row {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 32px;
+  }
+
+  .copy {
+    max-width: 396px;
+  }
+
+  .visual {
+    max-width: 484px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .section {
+    padding-block: 120px;
+  }
+
+  .copy {
+    max-width: 600px;
+  }
+
+  .visual {
+    max-width: 400px;
+  }
+}

@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import './styles/tokens.css';
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  color: var(--text-secondary);
+  background: var(--bg-page);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, p {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  font-family: inherit;
+}
+
+a {
+  color: inherit;
+}
+
+.container {
+  width: 100%;
+  max-width: calc(var(--content-max) + var(--gutter-page) * 2);
+  margin: 0 auto;
+  padding-left: var(--gutter-page);
+  padding-right: var(--gutter-page);
+}
+
+.eyebrow {
+  font-size: var(--type-size-eyebrow);
+  line-height: var(--type-lh-eyebrow);
+  font-weight: 600;
+  letter-spacing: 1.04px;
+  text-transform: uppercase;
+  color: var(--text-brand);
+}

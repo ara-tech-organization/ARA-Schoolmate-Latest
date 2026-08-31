@@ -1,0 +1,64 @@
+.section {
+  padding: var(--section-y) 0;
+}
+
+.heading {
+  font-size: var(--type-size-h2);
+  line-height: var(--type-lh-h2);
+  font-weight: 600;
+  letter-spacing: -0.36px;
+  color: var(--text-primary);
+  text-align: center;
+  margin: var(--space-4) 0 var(--stack-lg);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--stack-2xl);
+}
+
+.well {
+  background: var(--bg-subtle);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  margin-bottom: var(--space-7);
+}
+
+.well img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.roleTitle {
+  font-size: var(--type-size-h3);
+  line-height: var(--type-lh-h3);
+  font-weight: 600;
+  letter-spacing: -0.12px;
+  color: var(--text-primary);
+  margin-bottom: var(--space-5);
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--stack-lg);
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-6);
+  }
+}
