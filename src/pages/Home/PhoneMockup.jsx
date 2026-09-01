@@ -28,26 +28,29 @@ function PhoneMockup() {
         </div>
 
         <div className={styles.appBar}>
-          <img src={brandMark} alt="" width={12} height={12} />
+          <img src={brandMark} alt="" className={styles.brandIcon} />
           <span>SchoolMate</span>
-          <img src={bellIcon} alt="" width={10} height={10} className={styles.appBarBell} />
+          <img src={bellIcon} alt="" className={`${styles.icon} ${styles.appBarBell}`} />
         </div>
 
         <div className={styles.body}>
           <div className={styles.card}>
             <div className={styles.cardHead}>
-              <img src={attendanceIcon} alt="" width={10} height={10} />
+              <img src={attendanceIcon} alt="" className={styles.icon} />
               <p>Today&rsquo;s Attendance</p>
             </div>
             <div className={styles.attendanceRow}>
-              <span className={styles.chipPresent}>Present</span>
+              <span className={styles.chipPresent}>
+                <span className={styles.chipDot} aria-hidden="true" />
+                Present
+              </span>
               <span className={styles.muted}>Marked 08:42 AM</span>
             </div>
           </div>
 
           <div className={styles.card}>
             <div className={styles.cardHead}>
-              <img src={homeworkIcon} alt="" width={10} height={10} />
+              <img src={homeworkIcon} alt="" className={styles.icon} />
               <p>Homework</p>
             </div>
             <div className={styles.item}>
@@ -62,7 +65,7 @@ function PhoneMockup() {
 
           <div className={styles.card}>
             <div className={styles.cardHead}>
-              <img src={feesIcon} alt="" width={10} height={10} />
+              <img src={feesIcon} alt="" className={styles.icon} />
               <p>Fees</p>
             </div>
             <div className={styles.feeRow}>
@@ -76,7 +79,7 @@ function PhoneMockup() {
 
           <div className={styles.card}>
             <div className={styles.cardHead}>
-              <img src={messageIcon} alt="" width={10} height={10} />
+              <img src={messageIcon} alt="" className={styles.icon} />
               <p>Circulars</p>
             </div>
             <p className={styles.circularText}>Annual Day rehearsal schedule shared with all parents.</p>
@@ -86,7 +89,7 @@ function PhoneMockup() {
         <div className={styles.tabBar}>
           {TABS.map((tab) => (
             <span key={tab.label} className={[styles.tab, tab.active ? styles.tabActive : ''].join(' ')}>
-              <img src={tab.icon} alt="" width={10} height={10} />
+              <img src={tab.icon} alt="" className={styles.tabIcon} />
               {tab.label}
             </span>
           ))}

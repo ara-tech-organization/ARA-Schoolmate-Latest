@@ -32,12 +32,25 @@ const KPIS = [
 ]
 
 const CHART_POINTS = [
-  { day: 'Mon', y: 46 },
-  { day: 'Tue', y: 62 },
-  { day: 'Wed', y: 34 },
-  { day: 'Thu', y: 70 },
-  { day: 'Fri', y: 52 },
+  { day: 'Mon', value: 94.2 },
+  { day: 'Tue', value: 96.1 },
+  { day: 'Wed', value: 92.8 },
+  { day: 'Thu', value: 97.0 },
+  { day: 'Fri', value: 95.4, current: true },
 ]
+
+const CHART_GRID = [100, 95, 90]
+const CHART_MIN = 90
+const CHART_MAX = 100
+const CHART_W = 190
+const CHART_H = 22
+const CHART_TOP = 4
+const CHART_BOTTOM = CHART_TOP + CHART_H
+const CHART_VIEW_W = CHART_W + 30
+const CHART_VIEW_H = CHART_BOTTOM + 6
+
+const chartX = (i) => (i / (CHART_POINTS.length - 1)) * CHART_W
+const chartY = (value) => CHART_TOP + ((CHART_MAX - value) / (CHART_MAX - CHART_MIN)) * CHART_H
 
 const ROWS = [
   { cls: 'Class VI-A', present: 42, absent: 3, rate: '93.3%', status: 'Good' },
@@ -51,13 +64,13 @@ function DashboardMockup() {
     <div className={styles.card}>
       <aside className={styles.sidebar}>
         <div className={styles.brand}>
-          <img src={brandMark} alt="" width={12} height={12} />
+          <img src={brandMark} alt="" className={styles.brandIcon} />
           <span>SchoolMate</span>
         </div>
         <nav className={styles.nav}>
           {NAV_ITEMS.map((item) => (
             <span key={item.label} className={[styles.navItem, item.active ? styles.navItemActive : ''].join(' ')}>
-              <img src={item.icon} alt="" width={9} height={9} />
+              <img src={item.icon} alt="" className={styles.navIcon} />
               {item.label}
             </span>
           ))}
@@ -72,10 +85,10 @@ function DashboardMockup() {
             <span>Live attendance updates</span>
           </div>
           <div className={styles.search}>
-            <img src={searchIcon} alt="" width={8} height={8} />
+            <img src={searchIcon} alt="" className={styles.searchIcon} />
             <span>Search students</span>
           </div>
-          <img src={bellIcon} alt="" width={9} height={9} />
+          <img src={bellIcon} alt="" className={styles.bellIcon} />
           <span className={styles.avatar}>A</span>
         </div>
 
@@ -99,19 +112,49 @@ function DashboardMockup() {
           <div className={styles.chartCard}>
             <p className={styles.cardTitle}>Attendance rate · this week</p>
             <span className={styles.cardSubtitle}>Last 5 school days</span>
-            <svg className={styles.chart} viewBox="0 0 200 60" preserveAspectRatio="none">
-              <polyline
-                points={CHART_POINTS.map((p, i) => `${i * 50},${60 - p.y * 0.7}`).join(' ')}
-                fill="none"
-                stroke="var(--bg-brand)"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
+            <svg className={styles.chart} viewBox={`0 0 ${CHART_VIEW_W} ${CHART_VIEW_H}`}>
+              {CHART_GRID.map((pct) => {
+                const y = chartY(pct)
+                return (
+                  <g key={pct}>
+                    <line x1="0" y1={y} x2={CHART_W} y2={y} className={styles.gridLine} />
+                    <text x={CHART_W + 4} y={y + 2} className={styles.gridLabel}>
+                      {pct}%
+                    </text>
+                  </g>
+                )
+              })}
+              <path
+                d={`M ${chartX(0)} ${CHART_BOTTOM} L ${CHART_POINTS.map((p, i) => `${chartX(i)} ${chartY(p.value)}`).join(' L ')} L ${chartX(CHART_POINTS.length - 1)} ${CHART_BOTTOM} Z`}
+                className={styles.chartArea}
               />
+              <polyline
+                points={CHART_POINTS.map((p, i) => `${chartX(i)},${chartY(p.value)}`).join(' ')}
+                className={styles.chartLine}
+              />
+              {CHART_POINTS.map((p, i) => (
+                <circle
+                  key={p.day}
+                  cx={chartX(i)}
+                  cy={chartY(p.value)}
+                  r={p.current ? 3.4 : 2.6}
+                  className={p.current ? styles.chartDotCurrent : styles.chartDot}
+                />
+              ))}
+              <text
+                x={chartX(CHART_POINTS.length - 1) - 4}
+                y={chartY(CHART_POINTS[CHART_POINTS.length - 1].value) - 6}
+                textAnchor="end"
+                className={styles.chartValueLabel}
+              >
+                {CHART_POINTS[CHART_POINTS.length - 1].value}%
+              </text>
             </svg>
             <div className={styles.chartAxis}>
               {CHART_POINTS.map((p) => (
-                <span key={p.day}>{p.day}</span>
+                <span key={p.day} className={p.current ? styles.chartAxisCurrent : undefined}>
+                  {p.day}
+                </span>
               ))}
             </div>
           </div>

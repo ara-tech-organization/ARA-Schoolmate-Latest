@@ -10,7 +10,7 @@ function MiniAttendanceCard() {
   return (
     <div className={styles.card}>
       <div className={styles.header}>
-        <img src={attendanceIcon} alt="" width={9} height={9} />
+        <img src={attendanceIcon} alt="" className={styles.icon} />
         <div>
           <p className={styles.title}>Mark Attendance</p>
           <span className={styles.subtitle}>Class VI-A · {TOTAL_STUDENTS} students</span>

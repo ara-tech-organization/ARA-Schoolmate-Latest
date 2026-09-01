@@ -17,7 +17,7 @@ function CommunicationCard() {
   return (
     <div className={styles.card}>
       <div className={styles.header}>
-        <img src={messageIcon} alt="" width={10} height={10} />
+        <img src={messageIcon} alt="" className={styles.icon} />
         <div>
           <p className={styles.title}>Communication</p>
           <span className={styles.subtitle}>Circulars · notifications · consent forms</span>
