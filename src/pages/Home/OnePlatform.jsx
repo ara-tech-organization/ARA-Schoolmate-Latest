@@ -1,8 +1,6 @@
-import ecosystemDesktop from '../../assets/images/module-ecosystem-desktop.png'
-import ecosystemMobile from '../../assets/images/module-ecosystem-mobile.png'
 import Eyebrow from '../../components/ui/Eyebrow'
 import Reveal from '../../components/ui/Reveal'
-import Image from '../../components/ui/Image'
+import ModuleEcosystem from './ModuleEcosystem'
 import styles from './OnePlatform.module.css'
 
 function OnePlatform() {
@@ -18,10 +16,9 @@ function OnePlatform() {
 
         <h4 className={styles.modulesLabel}>Integrated Modules Include:</h4>
 
-        <picture className={styles.ecosystem}>
-          <source media="(min-width: 768px)" srcSet={ecosystemDesktop} />
-          <Image src={ecosystemMobile} alt="SchoolMate module ecosystem connecting attendance, fees, payroll, homework, transport, notifications and reports around the platform hub" loading="lazy" decoding="async" />
-        </picture>
+        <div className={styles.ecosystemWrap}>
+          <ModuleEcosystem />
+        </div>
 
         <p className={styles.closing}>
           The integrated architecture and scalable modules of SchoolMate provide benefits for schools looking for an

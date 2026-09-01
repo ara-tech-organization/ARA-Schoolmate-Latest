@@ -1,0 +1,162 @@
+.ecosystem {
+  width: 100%;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 16px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: 10px;
+}
+
+.cardHead {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.icon {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+}
+
+.track {
+  height: 3px;
+  border-radius: 999px;
+  background: var(--border-subtle);
+  overflow: hidden;
+}
+
+.fill {
+  height: 100%;
+  border-radius: 999px;
+  background: var(--bg-brand);
+}
+
+.branch {
+  position: relative;
+  height: 32px;
+}
+
+.stemRow {
+  position: absolute;
+  left: 0;
+  right: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.stem {
+  width: 1px;
+  height: 100%;
+  background: var(--border-subtle);
+  justify-self: center;
+}
+
+.hline {
+  display: none;
+}
+
+.vline {
+  position: absolute;
+  left: 50%;
+  width: 1px;
+  background: var(--border-subtle);
+  transform: translateX(-50%);
+}
+
+.branchStemsTop .stemRow {
+  top: 0;
+  height: 50%;
+}
+
+.branchStemsTop .vline {
+  top: 50%;
+  bottom: 0;
+}
+
+.branchStemsBottom .stemRow {
+  bottom: 0;
+  height: 50%;
+}
+
+.branchStemsBottom .vline {
+  top: 0;
+  bottom: 50%;
+}
+
+.dot {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: var(--bg-brand);
+  transform: translate(-50%, -50%);
+}
+
+.hub {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px 24px;
+  background: var(--bg-inverse);
+  border-radius: 14px;
+  box-shadow: 0 12px 30px rgba(20, 23, 27, 0.16), 0 1.5px 4.5px rgba(20, 23, 27, 0.06);
+}
+
+.hubIcon {
+  width: 28px;
+  height: 28px;
+}
+
+.hubLabel {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-on-brand);
+}
+
+@media (min-width: 768px) {
+  .row {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+
+  .stemRow {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .hline {
+    display: block;
+    position: absolute;
+    left: 12.5%;
+    right: 12.5%;
+    top: 50%;
+    height: 1px;
+    background: var(--border-subtle);
+  }
+
+  .vline {
+    left: 50%;
+  }
+
+  .hub {
+    max-width: 340px;
+    margin: 0 auto;
+  }
+}
