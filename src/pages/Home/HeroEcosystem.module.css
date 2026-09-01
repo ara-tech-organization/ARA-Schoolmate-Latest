@@ -1,0 +1,41 @@
+.ecosystem {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 600 / 533.33;
+  container-type: inline-size;
+}
+
+.dashboard,
+.communication,
+.attendance,
+.phone {
+  position: absolute;
+}
+
+.dashboard {
+  left: 0;
+  top: 13.44%;
+  width: 75%;
+  height: 58.97%;
+}
+
+.communication {
+  left: 56.11%;
+  top: 0;
+  width: 36%;
+  height: 28.61%;
+}
+
+.attendance {
+  left: 2.5%;
+  top: 70.63%;
+  width: 38.67%;
+  height: 21.84%;
+}
+
+.phone {
+  left: 70.28%;
+  top: 33.13%;
+  width: 27.56%;
+  height: 63.6%;
+}

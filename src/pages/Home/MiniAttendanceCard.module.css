@@ -1,0 +1,95 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9cqw;
+  width: 100%;
+  height: 100%;
+  padding: 1.2cqw;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: 1.05cqw;
+  box-shadow: 0 0.08cqw 0.15cqw rgba(20, 23, 27, 0.04), 0 0.3cqw 0.9cqw rgba(20, 23, 27, 0.07);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 0.6cqw;
+}
+
+.title {
+  margin: 0;
+  font-size: 0.95cqw;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.subtitle {
+  font-size: 0.7cqw;
+  color: var(--text-tertiary);
+}
+
+.legend {
+  display: flex;
+  align-items: center;
+  gap: 1.05cqw;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 0.3cqw;
+  font-size: 0.65cqw;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.dot {
+  width: 0.45cqw;
+  height: 0.45cqw;
+  border-radius: 999px;
+}
+
+.dotPresent {
+  background: var(--icon-success);
+}
+
+.dotAbsent {
+  background: var(--icon-attention);
+}
+
+.marked {
+  margin-left: auto;
+  font-size: 0.65cqw;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45cqw;
+}
+
+.pill {
+  flex: 1 1 1.8cqw;
+  min-width: 1.8cqw;
+  padding: 0.3cqw 0;
+  border: 1px solid;
+  border-radius: 0.3cqw;
+  text-align: center;
+  font-size: 0.6cqw;
+  font-weight: 600;
+}
+
+.pillPresent {
+  background: var(--bg-success-subtle);
+  border-color: var(--icon-success);
+  color: var(--text-success);
+}
+
+.pillAbsent {
+  background: var(--bg-attention-subtle);
+  border-color: var(--icon-attention);
+  color: var(--text-attention);
+}

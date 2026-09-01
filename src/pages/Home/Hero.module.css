@@ -69,12 +69,6 @@
   max-width: 560px;
 }
 
-.visual img {
-  width: 100%;
-  height: auto;
-  border-radius: var(--radius-lg);
-}
-
 @media (min-width: 640px) {
   .bullets {
     grid-template-columns: 1fr 1fr;

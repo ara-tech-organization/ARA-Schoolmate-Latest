@@ -1,0 +1,170 @@
+.phone {
+  width: 100%;
+  height: 100%;
+  padding: 1.5cqw 0.9cqw;
+  background: var(--bg-inverse);
+  border-radius: 3.75cqw;
+  box-shadow: 0 0.2cqw 0.55cqw rgba(20, 23, 27, 0.06), 0 1.45cqw 3.6cqw rgba(20, 23, 27, 0.16);
+  overflow: hidden;
+}
+
+.screen {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background: var(--bg-page);
+  border-radius: 2.4cqw;
+  overflow: hidden;
+}
+
+.statusBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.9cqw 1.5cqw 0.3cqw;
+  font-size: 0.75cqw;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.statusIcons {
+  display: flex;
+  align-items: center;
+  gap: 0.3cqw;
+}
+
+.statusIcons span {
+  width: 0.6cqw;
+  height: 0.6cqw;
+  border-radius: 999px;
+  background: var(--text-primary);
+}
+
+.battery {
+  width: 1.5cqw !important;
+  height: 0.75cqw !important;
+  border-radius: 0.15cqw !important;
+  border: 0.1cqw solid var(--text-primary);
+  background: transparent !important;
+}
+
+.appBar {
+  display: flex;
+  align-items: center;
+  gap: 0.6cqw;
+  padding: 0.6cqw 1.5cqw 0.9cqw;
+  font-size: 0.9cqw;
+  font-weight: 600;
+  color: var(--text-primary);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.appBarBell {
+  margin-left: auto;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: 1.05cqw;
+  padding: 1.05cqw 1.5cqw;
+  flex: 1;
+  overflow: hidden;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6cqw;
+  padding: 0.9cqw;
+  border-radius: 0.9cqw;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+}
+
+.cardHead {
+  display: flex;
+  align-items: center;
+  gap: 0.6cqw;
+}
+
+.cardHead p {
+  margin: 0;
+  font-size: 0.8cqw;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.attendanceRow,
+.item,
+.feeRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.7cqw;
+  color: var(--text-secondary);
+}
+
+.chipPresent {
+  padding: 0.15cqw 0.6cqw;
+  border-radius: 999px;
+  background: var(--bg-success-subtle);
+  color: var(--text-success);
+  font-weight: 600;
+  font-size: 0.65cqw;
+}
+
+.muted {
+  color: var(--text-tertiary);
+}
+
+.due {
+  color: var(--text-brand);
+  font-weight: 500;
+}
+
+.feeAmount {
+  margin: 0;
+  font-size: 0.9cqw;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.payButton {
+  padding: 0.45cqw 0.9cqw;
+  border-radius: 0.6cqw;
+  background: var(--bg-brand);
+  color: var(--text-on-brand);
+  font-size: 0.65cqw;
+  font-weight: 600;
+}
+
+.circularText {
+  margin: 0;
+  font-size: 0.65cqw;
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+
+.tabBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0.75cqw 0;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.tab {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.15cqw;
+  font-size: 0.55cqw;
+  color: var(--text-tertiary);
+}
+
+.tabActive {
+  color: var(--text-brand);
+  font-weight: 600;
+}
