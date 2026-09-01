@@ -23,25 +23,45 @@
   padding: 10px 20px;
 }
 
-/* Primary */
+/* Primary — a continuous animated shimmer runs through the fill, with a
+   subtle lift on hover. Modeled on discovertechnologies.co's CTA buttons. */
 .primary {
-  background: var(--bg-brand);
+  position: relative;
+  background: linear-gradient(90deg, var(--bg-brand) 40%, #ff6b6b 50%, var(--bg-brand) 60%) 0 0 / 220% auto;
   color: var(--text-on-brand);
+  animation: ctaShimmer 3.2s linear infinite;
+  transition: transform 0.2s ease;
 }
 
 .primary:hover {
-  background: var(--bg-brand-hover);
+  transform: translateY(-2px);
 }
 
 .primary:active {
-  background: var(--bg-brand-pressed);
+  transform: translateY(0);
 }
 
 .primary.disabled,
 .primary:disabled {
   background: var(--bg-muted);
   color: var(--text-disabled);
+  animation: none;
   cursor: not-allowed;
+}
+
+@keyframes ctaShimmer {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .primary {
+    animation: none;
+  }
 }
 
 /* Secondary */

@@ -16,7 +16,7 @@ function CtaBand() {
         </p>
         <p className={styles.lede}>Upgrade your school with SchoolMate now.</p>
         <div className={styles.actions}>
-          <Button to="/contact" className={styles.sweep}>Get a free Demo</Button>
+          <Button to="/contact">Get a free Demo</Button>
           <Button as="a" href="tel:+918110015152" variant="secondary">Call Us!</Button>
         </div>
       </div>

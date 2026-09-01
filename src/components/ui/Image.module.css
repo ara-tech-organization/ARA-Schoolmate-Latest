@@ -6,6 +6,7 @@
 
 .image.loaded {
   opacity: 1;
+  background: none;
 }
 
 @media (prefers-reduced-motion: reduce) {
