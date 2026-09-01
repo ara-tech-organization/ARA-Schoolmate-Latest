@@ -1,0 +1,157 @@
+.appBar {
+  display: flex;
+  align-items: center;
+  gap: 3.871cqw;
+  padding: 2.581cqw 5.161cqw 3.871cqw;
+  background: var(--bg-surface);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.appBar p {
+  margin: 0;
+  font-size: 4.839cqw;
+  line-height: 7.097cqw;
+  font-weight: 600;
+  color: var(--text-primary);
+  white-space: nowrap;
+}
+
+.back {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 9.677cqw;
+}
+
+.chevronBack {
+  width: 5.806cqw;
+  height: 5.806cqw;
+  transform: rotate(180deg) !important;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.bellIcon {
+  flex-shrink: 0;
+  width: 5.806cqw;
+  height: 5.806cqw;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: 3.871cqw;
+  padding: 5.161cqw;
+  flex: 1;
+  overflow: hidden;
+}
+
+.emergency {
+  display: flex;
+  align-items: center;
+  gap: 3.871cqw;
+  padding: 3.871cqw 5.161cqw;
+  border-radius: 3.226cqw;
+  background: var(--bg-attention-subtle);
+  border: 1px solid var(--icon-attention);
+}
+
+.emergencyIcon {
+  flex-shrink: 0;
+  width: 5.161cqw;
+  height: 5.161cqw;
+}
+
+.copy {
+  display: flex;
+  flex-direction: column;
+  gap: 1.29cqw;
+  min-width: 0;
+}
+
+.emergencyTitle {
+  margin: 0;
+  font-size: 3.549cqw;
+  line-height: 5.161cqw;
+  font-weight: 600;
+  color: var(--text-attention);
+}
+
+.emergencyMeta {
+  margin: 0;
+  font-size: 3.226cqw;
+  line-height: 4.839cqw;
+  color: var(--text-secondary);
+}
+
+.feed {
+  display: flex;
+  flex-direction: column;
+  gap: 3.871cqw;
+  padding: 3.871cqw 5.161cqw;
+  border-radius: 3.226cqw;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+}
+
+.feedTitle {
+  margin: 0;
+  font-size: 3.549cqw;
+  line-height: 5.161cqw;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 3.871cqw;
+  padding: 3.871cqw 0;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.dot {
+  flex-shrink: 0;
+  width: 2.258cqw;
+  height: 2.258cqw;
+  border-radius: 999px;
+}
+
+.dotUnread {
+  background: var(--icon-brand);
+}
+
+.dotRead {
+  background: var(--border-default);
+}
+
+.itemTitleUnread,
+.itemTitleRead {
+  margin: 0;
+  font-size: 3.549cqw;
+  line-height: 5.161cqw;
+  color: var(--text-primary);
+}
+
+.itemTitleUnread {
+  font-weight: 600;
+}
+
+.itemTitleRead {
+  font-weight: 500;
+}
+
+.itemMeta {
+  margin: 0;
+  font-size: 2.903cqw;
+  line-height: 4.194cqw;
+  color: var(--text-tertiary);
+}

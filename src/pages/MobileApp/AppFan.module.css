@@ -1,0 +1,29 @@
+.fan {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 620 / 596;
+}
+
+.attendance,
+.circulars,
+.main {
+  position: absolute;
+}
+
+.attendance {
+  left: 0;
+  top: 12.081%;
+  width: 39%;
+}
+
+.circulars {
+  left: 60.968%;
+  top: 12.081%;
+  width: 39%;
+}
+
+.main {
+  left: 26.935%;
+  top: 0;
+  width: 46%;
+}

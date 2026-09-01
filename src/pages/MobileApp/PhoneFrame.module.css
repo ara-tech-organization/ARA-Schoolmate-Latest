@@ -1,0 +1,69 @@
+.phoneWrap {
+  container-type: inline-size;
+  width: 100%;
+  aspect-ratio: 241.8 / 496.08;
+}
+
+.phone {
+  width: 100%;
+  height: 100%;
+  padding: 3.549cqw;
+  background: var(--bg-inverse);
+  border-radius: 13.55cqw;
+  box-shadow: 0 0.645cqw 1.936cqw rgba(20, 23, 27, 0.06), 0 5.161cqw 12.903cqw rgba(20, 23, 27, 0.16);
+  overflow: hidden;
+}
+
+.screen {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background: var(--bg-subtle);
+  border-radius: 10.32cqw;
+  overflow: hidden;
+}
+
+.statusBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2.581cqw;
+  padding: 3.871cqw 6.452cqw 1.29cqw;
+  background: var(--bg-surface);
+  font-size: 3.549cqw;
+  line-height: 5.161cqw;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.statusIcons {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.806cqw;
+}
+
+.statusIcons span {
+  width: 0.806cqw;
+  border-radius: 0.323cqw;
+  background: var(--icon-primary);
+}
+
+.statusIcons span:nth-child(1) {
+  height: 0.968cqw;
+}
+
+.statusIcons span:nth-child(2) {
+  height: 1.613cqw;
+}
+
+.statusIcons span:nth-child(3) {
+  height: 2.258cqw;
+}
+
+.battery {
+  width: 5.806cqw !important;
+  height: 2.903cqw !important;
+  border-radius: 0.645cqw !important;
+  background: var(--icon-primary) !important;
+}
