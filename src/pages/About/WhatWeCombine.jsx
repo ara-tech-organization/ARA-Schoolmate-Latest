@@ -5,9 +5,8 @@ import timetableIcon from '../../assets/icons/timetable-scheduling.svg'
 import academicIcon from '../../assets/icons/academic-monitoring.svg'
 import transportIcon from '../../assets/icons/transport-management.svg'
 import erpIcon from '../../assets/icons/erp-features.svg'
-import dashboardMockup from '../../assets/images/about-dashboard-mockup.png'
 import Reveal from '../../components/ui/Reveal'
-import Image from '../../components/ui/Image'
+import DashboardMockup from '../Home/DashboardMockup'
 import styles from './WhatWeCombine.module.css'
 
 const CAPABILITIES = [
@@ -44,7 +43,9 @@ function WhatWeCombine() {
           <span className={styles.connectorDot} />
         </div>
 
-        <Image src={dashboardMockup} alt="SchoolMate admin dashboard" loading="lazy" decoding="async" className={styles.dashboard} />
+        <div className={styles.dashboard} role="img" aria-label="SchoolMate admin dashboard showing attendance, homework, fees, and class-wise reports">
+          <DashboardMockup />
+        </div>
       </div>
     </Reveal>
   )
