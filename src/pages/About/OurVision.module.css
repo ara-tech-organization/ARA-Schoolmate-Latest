@@ -73,6 +73,7 @@
   .split {
     /* Figma tablet: Copy 396 / gap 48 / Visual 484 of a 928 content width */
     flex-direction: row;
+    align-items: center;
     gap: var(--gutter-page-md);
   }
 

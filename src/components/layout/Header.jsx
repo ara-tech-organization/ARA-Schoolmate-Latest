@@ -4,6 +4,7 @@ import logo from '../../assets/images/logo-header.png'
 import Button from '../ui/Button'
 import Image from '../ui/Image'
 import Reveal from '../ui/Reveal'
+import RevealGroup from '../ui/RevealGroup'
 import { getHeroRevealDelay } from '../../utils/pageLoaderTiming'
 import styles from './Header.module.css'
 
@@ -24,7 +25,7 @@ function Header() {
           <Image src={logo} alt="SchoolMate" />
         </Link>
 
-        <nav className={[styles.nav, open ? styles.navOpen : ''].filter(Boolean).join(' ')}>
+        <RevealGroup as="nav" className={[styles.nav, open ? styles.navOpen : ''].filter(Boolean).join(' ')}>
           {NAV_ITEMS.map((item) => (
             <NavLink
               key={item.label}
@@ -41,7 +42,7 @@ function Header() {
           <Button to="/contact" size="md" className={styles.navCta}>
             Get a free Demo
           </Button>
-        </nav>
+        </RevealGroup>
 
         <button
           type="button"

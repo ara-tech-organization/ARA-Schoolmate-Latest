@@ -7,6 +7,7 @@ import buildingIcon from '../../assets/icons/building.svg'
 import mapPinIcon from '../../assets/icons/map-pin.svg'
 import Button from '../../components/ui/Button'
 import Reveal from '../../components/ui/Reveal'
+import RevealGroup from '../../components/ui/RevealGroup'
 import styles from './ContactDetails.module.css'
 
 const CONTACT_FORM_ENDPOINT = 'https://araschoolmate.com/api/email.php'
@@ -95,7 +96,7 @@ function ContactDetails() {
     <Reveal as="section" className={styles.section}>
       <div className="container">
         <div className={styles.split}>
-          <ul className={styles.list}>
+          <Reveal as="ul" className={styles.list} direction="right">
             {CONTACT_ITEMS.map((item) => {
               const Tag = item.href ? 'a' : 'div'
               return (
@@ -111,11 +112,11 @@ function ContactDetails() {
                 </li>
               )
             })}
-          </ul>
+          </Reveal>
 
-          <form className={styles.form} onSubmit={handleSubmit}>
+          <Reveal as="form" className={styles.form} onSubmit={handleSubmit} direction="left" delay={120}>
             <h3 className={styles.formTitle}>Get Started Today with SchoolMate</h3>
-            <div className={styles.fields}>
+            <RevealGroup className={styles.fields}>
               {FIELDS.map((field) => (
                 <label key={field.name} className={styles.field}>
                   <span className={styles.fieldLabel}>{field.label}</span>
@@ -139,7 +140,7 @@ function ContactDetails() {
                   className={styles.textarea}
                 />
               </label>
-            </div>
+            </RevealGroup>
 
             {status === 'error' && (
               <p className={styles.formError} role="alert">
@@ -150,7 +151,7 @@ function ContactDetails() {
             <Button type="submit" className={styles.submit} disabled={status === 'submitting'}>
               {status === 'submitting' ? 'Sending…' : 'Get a free Demo'}
             </Button>
-          </form>
+          </Reveal>
         </div>
       </div>
     </Reveal>

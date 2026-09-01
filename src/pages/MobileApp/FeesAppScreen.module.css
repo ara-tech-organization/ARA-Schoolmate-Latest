@@ -1,0 +1,210 @@
+/*
+  Fluid replica of the Figma "App / Fees" screen
+  (file 2tiU292F2mGV9oDUhuQtuo, node 105:2822). Authored at the
+  component's native width of 310px — each value is that design px
+  divided by 310, in cqw against PhoneFrame's inline size.
+*/
+
+.appBar {
+  display: flex;
+  align-items: center;
+  gap: 3.871cqw;
+  padding: 2.581cqw 5.161cqw 3.871cqw;
+  background: var(--bg-surface);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.appBar p {
+  margin: 0;
+  font-size: 4.839cqw;
+  line-height: 7.097cqw;
+  font-weight: 600;
+  color: var(--text-primary);
+  white-space: nowrap;
+}
+
+.back {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 9.677cqw;
+}
+
+.chevronBack {
+  width: 5.806cqw;
+  height: 5.806cqw;
+  transform: rotate(180deg) !important;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.bellIcon {
+  flex-shrink: 0;
+  width: 5.806cqw;
+  height: 5.806cqw;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: 3.871cqw;
+  padding: 5.161cqw;
+  flex: 1;
+  overflow: hidden;
+}
+
+.due {
+  display: flex;
+  flex-direction: column;
+  gap: 3.871cqw;
+  padding: 5.161cqw;
+  border-radius: 3.226cqw;
+  background: var(--bg-inverse);
+}
+
+.dueLabel {
+  margin: 0;
+  font-size: 3.549cqw;
+  line-height: 5.161cqw;
+  font-weight: 500;
+  color: var(--text-on-inverse-muted);
+}
+
+.dueValue {
+  margin: 0;
+  font-size: 8.387cqw;
+  line-height: 12.258cqw;
+  font-weight: 600;
+  color: var(--text-inverse);
+}
+
+.dueRow {
+  display: flex;
+  align-items: center;
+  gap: 3.871cqw;
+}
+
+.dueMeta {
+  margin: 0;
+  font-size: 3.226cqw;
+  line-height: 4.839cqw;
+  color: var(--text-on-inverse-muted);
+  white-space: nowrap;
+}
+
+.payButton {
+  flex-shrink: 0;
+  padding: 2.581cqw 5.161cqw;
+  border-radius: 1.935cqw;
+  background: var(--bg-brand);
+  color: var(--text-on-brand);
+  font-size: 3.549cqw;
+  line-height: 5.161cqw;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.reminder {
+  display: flex;
+  align-items: center;
+  gap: 3.871cqw;
+  padding: 3.871cqw;
+  border-radius: 1.935cqw;
+  background: var(--bg-attention-subtle);
+}
+
+.reminderIcon {
+  flex-shrink: 0;
+  width: 4.839cqw;
+  height: 4.839cqw;
+}
+
+.reminderText {
+  margin: 0;
+  flex: 1;
+  min-width: 0;
+  font-size: 3.226cqw;
+  line-height: 4.839cqw;
+  font-weight: 500;
+  color: var(--text-attention);
+}
+
+.history {
+  display: flex;
+  flex-direction: column;
+  gap: 3.871cqw;
+  padding: 3.871cqw 5.161cqw;
+  border-radius: 3.226cqw;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+}
+
+.historyTitle {
+  margin: 0;
+  font-size: 3.549cqw;
+  line-height: 5.161cqw;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 3.871cqw;
+  padding: 2.581cqw 0;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.copy {
+  display: flex;
+  flex-direction: column;
+  gap: 1.29cqw;
+  flex: 1;
+  min-width: 0;
+}
+
+.title {
+  margin: 0;
+  font-size: 3.871cqw;
+  line-height: 5.484cqw;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.meta {
+  margin: 0;
+  font-size: 3.226cqw;
+  line-height: 4.839cqw;
+  color: var(--text-tertiary);
+}
+
+.chip {
+  display: flex;
+  align-items: center;
+  gap: 1.29cqw;
+  flex-shrink: 0;
+  padding: 1.29cqw 2.581cqw;
+  border-radius: 999px;
+  background: var(--bg-success-subtle);
+  color: var(--text-success);
+  font-size: 3.226cqw;
+  line-height: 4.839cqw;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.dot {
+  width: 1.935cqw;
+  height: 1.935cqw;
+  flex-shrink: 0;
+  border-radius: 999px;
+  background: var(--icon-success);
+}

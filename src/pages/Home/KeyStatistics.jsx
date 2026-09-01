@@ -1,6 +1,7 @@
 import dashboardIcon from '../../assets/icons/stat-dashboard.svg'
 import Eyebrow from '../../components/ui/Eyebrow'
 import Reveal from '../../components/ui/Reveal'
+import RevealGroup from '../../components/ui/RevealGroup'
 import styles from './KeyStatistics.module.css'
 
 const STATS = [
@@ -18,7 +19,7 @@ function KeyStatistics() {
         <Eyebrow align="center" tone="inverse">
           By the numbers
         </Eyebrow>
-        <ul className={styles.grid}>
+        <RevealGroup as="ul" className={styles.grid}>
           {STATS.map((stat) => (
             <li key={stat.label} className={styles.stat}>
               <p className={styles.value}>{stat.value}</p>
@@ -29,7 +30,7 @@ function KeyStatistics() {
             <img src={dashboardIcon} alt="" loading="lazy" decoding="async" className={styles.icon} width={30} height={30} />
             <p className={styles.labelStrong}>Complete All-in-One Dashboard</p>
           </li>
-        </ul>
+        </RevealGroup>
       </div>
     </Reveal>
   )

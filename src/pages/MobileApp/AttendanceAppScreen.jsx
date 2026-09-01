@@ -1,5 +1,6 @@
 import chevronIcon from '../../assets/icons/fn-chevron-right.svg'
 import bellIcon from '../../assets/icons/bell.svg'
+import RevealGroup from '../../components/ui/RevealGroup'
 import styles from './AttendanceAppScreen.module.css'
 
 const WEEK = [
@@ -28,7 +29,7 @@ function AttendanceAppScreen() {
         <img src={bellIcon} alt="" className={styles.bellIcon} />
       </div>
 
-      <div className={styles.body}>
+      <RevealGroup className={styles.body}>
         <div className={styles.card}>
           <div className={styles.row}>
             <div className={styles.copy}>
@@ -40,14 +41,14 @@ function AttendanceAppScreen() {
               Marked 08:42
             </span>
           </div>
-          <div className={styles.week}>
+          <RevealGroup className={styles.week}>
             {WEEK.map((item, i) => (
               <div key={i} className={styles.day}>
                 <span>{item.day}</span>
                 <span className={`${styles.dayDot} ${item.present ? styles.dotSuccess : styles.dotAttention}`} />
               </div>
             ))}
-          </div>
+          </RevealGroup>
         </div>
 
         <div className={styles.stats}>
@@ -63,7 +64,7 @@ function AttendanceAppScreen() {
 
         <div className={styles.history}>
           <p className={styles.historyTitle}>This month</p>
-          <div className={styles.list}>
+          <RevealGroup className={styles.list}>
             {HISTORY.map((item) => (
               <div key={item.date} className={styles.historyRow}>
                 <div className={styles.copy}>
@@ -79,9 +80,9 @@ function AttendanceAppScreen() {
                 </span>
               </div>
             ))}
-          </div>
+          </RevealGroup>
         </div>
-      </div>
+      </RevealGroup>
     </>
   )
 }

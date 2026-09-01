@@ -4,14 +4,7 @@
 }
 
 .frame {
-  display: flex;
-  justify-content: center;
-}
-
-.frame img {
   width: 100%;
   max-width: 1080px;
-  height: auto;
-  overflow: hidden;
-  border-radius: 4% / 7%;
+  margin: 0 auto;
 }

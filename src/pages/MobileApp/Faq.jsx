@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import plusIcon from '../../assets/icons/plus.svg'
 import Reveal from '../../components/ui/Reveal'
+import RevealGroup from '../../components/ui/RevealGroup'
 import styles from './Faq.module.css'
 
 const FAQS = [
@@ -39,7 +40,7 @@ function Faq() {
       <div className="container">
         <h2 className={styles.heading}>Frequently Asked Questions</h2>
 
-        <div className={styles.list}>
+        <RevealGroup className={styles.list}>
           {FAQS.map((item, index) => {
             const open = openIndex === index
             return (
@@ -63,7 +64,7 @@ function Faq() {
               </div>
             )
           })}
-        </div>
+        </RevealGroup>
       </div>
     </Reveal>
   )

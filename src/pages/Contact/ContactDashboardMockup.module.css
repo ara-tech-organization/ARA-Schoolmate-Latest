@@ -1,0 +1,436 @@
+/*
+  Fluid replica of the Figma "Section / 03 Product visual" > "Dashboard"
+  component (file 2tiU292F2mGV9oDUhuQtuo, node 257:6439, dev mode nodes
+  257:5602 / 257:5648). Every cqw value is that design's px divided by the
+  dashboard's own 1080px reference width (1cqw = 10.8px).
+*/
+
+.cardWrap {
+  container-type: inline-size;
+  width: 100%;
+}
+
+.card {
+  display: flex;
+  width: 100%;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: 1.296cqw;
+  box-shadow: 0 0.185cqw 0.556cqw rgba(20, 23, 27, 0.06), 0 1.481cqw 3.704cqw rgba(20, 23, 27, 0.16);
+  overflow: hidden;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  width: 19.63cqw;
+  padding: 1.481cqw 1.111cqw;
+  background: var(--bg-subtle);
+  border-right: 1px solid var(--border-subtle);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.833cqw;
+  padding: 0 0 1.481cqw 0.741cqw;
+  font-size: 1.204cqw;
+  line-height: 1.759cqw;
+  font-weight: 600;
+  color: var(--text-primary);
+  white-space: nowrap;
+}
+
+.brandIcon {
+  flex-shrink: 0;
+  width: 1.852cqw;
+  height: 1.852cqw;
+}
+
+.navGroup {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.navGroupLabel {
+  margin: 0;
+  padding: 1.111cqw 0 0.463cqw 0.741cqw;
+  font-size: 0.833cqw;
+  line-height: 1.204cqw;
+  font-weight: 600;
+  color: var(--text-tertiary);
+  letter-spacing: 0.72px;
+  white-space: nowrap;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+  gap: 0.833cqw;
+  width: 100%;
+  padding: 0.556cqw 0.741cqw;
+  border-radius: 0.556cqw;
+  font-size: 1.111cqw;
+  line-height: 1.574cqw;
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+.navIcon {
+  flex-shrink: 0;
+  width: 1.389cqw;
+  height: 1.389cqw;
+}
+
+.navItemActive {
+  background: var(--bg-brand-subtle);
+  color: var(--text-brand);
+  font-weight: 600;
+}
+
+.spacer {
+  flex: 1 0 0;
+  min-height: 1px;
+}
+
+.support {
+  display: flex;
+  align-items: center;
+  gap: 0.833cqw;
+  width: 100%;
+  padding: 0.556cqw 0 0.556cqw 0.741cqw;
+  font-size: 1.111cqw;
+  line-height: 1.574cqw;
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  gap: 1.111cqw;
+  padding: 1.296cqw 2.222cqw;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.topbarTitle {
+  display: flex;
+  flex-direction: column;
+  gap: 0.093cqw;
+  margin-right: auto;
+  white-space: nowrap;
+}
+
+.topbarTitle p {
+  margin: 0;
+  font-size: 1.481cqw;
+  line-height: 2.13cqw;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.topbarTitle span {
+  font-size: 1.019cqw;
+  line-height: 1.481cqw;
+  color: var(--text-tertiary);
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  gap: 0.741cqw;
+  flex-shrink: 0;
+  width: 15.741cqw;
+  padding: 0.648cqw 1.296cqw 0.648cqw 0.926cqw;
+  border-radius: 0.556cqw;
+  background: var(--bg-subtle);
+  border: 1px solid var(--border-subtle);
+  font-size: 1.111cqw;
+  line-height: 1.574cqw;
+  color: var(--text-tertiary);
+  white-space: nowrap;
+}
+
+.searchIcon {
+  flex-shrink: 0;
+  width: 1.389cqw;
+  height: 1.389cqw;
+}
+
+.bellWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 2.963cqw;
+  height: 2.963cqw;
+}
+
+.bellIcon {
+  flex-shrink: 0;
+  width: 1.574cqw;
+  height: 1.574cqw;
+}
+
+.avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 2.963cqw;
+  height: 2.963cqw;
+  border-radius: 999px;
+  background: var(--bg-brand-subtle);
+  color: var(--text-brand);
+  font-size: 1.111cqw;
+  line-height: 1.574cqw;
+  font-weight: 600;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.481cqw;
+  padding: 1.852cqw 2.222cqw;
+}
+
+.kpiRow {
+  display: flex;
+  gap: 1.296cqw;
+}
+
+.kpi {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.556cqw;
+  padding: 1.204cqw 1.296cqw;
+  border-radius: 0.926cqw;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+}
+
+.kpiLabel {
+  margin: 0;
+  font-size: 1.019cqw;
+  line-height: 1.481cqw;
+  font-weight: 500;
+  color: var(--text-tertiary);
+  white-space: nowrap;
+}
+
+.kpiValueRow {
+  display: flex;
+  align-items: center;
+  gap: 0.741cqw;
+  width: 100%;
+}
+
+.kpiValue {
+  font-size: 2.037cqw;
+  line-height: 2.963cqw;
+  font-weight: 600;
+  color: var(--text-primary);
+  white-space: nowrap;
+}
+
+.delta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.463cqw;
+  padding: 0.278cqw 0.833cqw 0.278cqw 0.648cqw;
+  border-radius: 999px;
+  font-size: 0.926cqw;
+  line-height: 1.389cqw;
+  font-weight: 600;
+  background: var(--bg-success-subtle);
+  color: var(--text-success);
+  white-space: nowrap;
+}
+
+.delta::before {
+  content: '';
+  width: 0.556cqw;
+  height: 0.556cqw;
+  border-radius: 999px;
+  background: currentColor;
+}
+
+.chartCard,
+.tableCard {
+  display: flex;
+  flex-direction: column;
+  gap: 1.111cqw;
+  width: 100%;
+  padding: 1.296cqw 1.481cqw 1.481cqw;
+  border-radius: 0.926cqw;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+}
+
+.cardHead {
+  display: flex;
+  align-items: center;
+  gap: 0.741cqw;
+  width: 100%;
+}
+
+.cardHeadTitles {
+  display: flex;
+  flex-direction: column;
+  gap: 0.093cqw;
+  white-space: nowrap;
+}
+
+.cardTitle {
+  margin: 0;
+  font-size: 1.204cqw;
+  line-height: 1.759cqw;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.cardSubtitle {
+  display: block;
+  font-size: 1.019cqw;
+  line-height: 1.481cqw;
+  color: var(--text-tertiary);
+}
+
+.chart {
+  width: 100%;
+  aspect-ratio: 708 / 112;
+  overflow: visible;
+}
+
+.gridLine {
+  stroke: var(--border-subtle);
+  stroke-width: 1;
+}
+
+.gridLabel {
+  font-size: 10px;
+  fill: var(--text-tertiary);
+}
+
+.chartArea {
+  fill: var(--bg-brand);
+  opacity: 0.08;
+  stroke: none;
+}
+
+.chartLine {
+  fill: none;
+  stroke: var(--bg-brand);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.chartDot {
+  fill: var(--bg-surface);
+  stroke: var(--bg-brand);
+  stroke-width: 2;
+}
+
+.chartDotCurrent {
+  fill: var(--bg-brand);
+  stroke: var(--bg-brand);
+  stroke-width: 2;
+}
+
+.chartValueLabel {
+  font-size: 11px;
+  font-weight: 600;
+  fill: var(--text-brand);
+}
+
+.chartAxis {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 4.8%;
+  font-size: 0.926cqw;
+  line-height: 1.389cqw;
+  color: var(--text-tertiary);
+}
+
+.chartAxisCurrent {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.tableHead,
+.tableRow {
+  display: grid;
+  grid-template-columns: 16.296cqw 10cqw 10cqw 10cqw 1fr;
+  align-items: center;
+  width: 100%;
+}
+
+.tableHead {
+  font-size: 1.019cqw;
+  line-height: 1.481cqw;
+  font-weight: 500;
+  color: var(--text-tertiary);
+  padding-bottom: 0.741cqw;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.tableRow {
+  font-size: 1.111cqw;
+  line-height: 1.574cqw;
+  color: var(--text-secondary);
+  padding: 0.833cqw 0;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.tableRow span:first-child {
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.463cqw;
+  justify-self: start;
+  padding: 0.278cqw 0.833cqw 0.278cqw 0.648cqw;
+  border-radius: 999px;
+  font-size: 0.926cqw;
+  line-height: 1.389cqw;
+  font-weight: 600;
+}
+
+.chip::before {
+  content: '';
+  width: 0.556cqw;
+  height: 0.556cqw;
+  border-radius: 999px;
+  background: currentColor;
+}
+
+.chipGood {
+  background: var(--bg-success-subtle);
+  color: var(--text-success);
+}
+
+.chipLow {
+  background: var(--bg-attention-subtle);
+  color: var(--text-attention);
+}

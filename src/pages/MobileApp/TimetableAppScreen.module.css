@@ -1,0 +1,206 @@
+/*
+  Fluid replica of the Figma "App / Timetable" screen
+  (file 2tiU292F2mGV9oDUhuQtuo, node 105:2889). Authored at the
+  component's native width of 310px — each value is that design px
+  divided by 310, in cqw against PhoneFrame's inline size.
+*/
+
+.appBar {
+  display: flex;
+  align-items: center;
+  gap: 3.871cqw;
+  padding: 2.581cqw 5.161cqw 3.871cqw;
+  background: var(--bg-surface);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.appBar p {
+  margin: 0;
+  font-size: 4.839cqw;
+  line-height: 7.097cqw;
+  font-weight: 600;
+  color: var(--text-primary);
+  white-space: nowrap;
+}
+
+.back {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 9.677cqw;
+}
+
+.chevronBack {
+  width: 5.806cqw;
+  height: 5.806cqw;
+  transform: rotate(180deg) !important;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.bellIcon {
+  flex-shrink: 0;
+  width: 5.806cqw;
+  height: 5.806cqw;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: 3.871cqw;
+  padding: 5.161cqw;
+  flex: 1;
+  overflow: hidden;
+}
+
+.days {
+  display: flex;
+  align-items: center;
+  gap: 2.581cqw;
+}
+
+.day,
+.dayActive {
+  flex: 1;
+  min-width: 0;
+  padding: 2.581cqw 0;
+  border-radius: 1.935cqw;
+  text-align: center;
+  font-size: 3.226cqw;
+  line-height: 4.839cqw;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.dayActive {
+  background: var(--bg-brand);
+  color: var(--text-on-brand);
+}
+
+.day {
+  background: var(--bg-muted);
+  color: var(--text-secondary);
+}
+
+.schedule,
+.examBanner,
+.calendar {
+  display: flex;
+  flex-direction: column;
+  gap: 3.871cqw;
+  padding: 3.871cqw 5.161cqw;
+  border-radius: 3.226cqw;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+}
+
+.scheduleTitle,
+.calendarTitle {
+  margin: 0;
+  font-size: 3.549cqw;
+  line-height: 5.161cqw;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.period {
+  display: flex;
+  align-items: center;
+  gap: 3.871cqw;
+  padding: 2.581cqw 0;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.periodTime {
+  flex-shrink: 0;
+  width: 13.548cqw;
+  margin: 0;
+  font-size: 3.549cqw;
+  line-height: 5.161cqw;
+  font-weight: 600;
+  color: var(--text-brand);
+}
+
+.periodSubject {
+  flex: 1;
+  min-width: 0;
+  margin: 0;
+  font-size: 3.871cqw;
+  line-height: 5.484cqw;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.examBanner {
+  flex-direction: row;
+  align-items: center;
+  background: var(--bg-brand-subtle);
+  border-color: var(--border-brand);
+}
+
+.examIcon {
+  flex-shrink: 0;
+  width: 5.161cqw;
+  height: 5.161cqw;
+}
+
+.examCopy {
+  display: flex;
+  flex-direction: column;
+  gap: 1.29cqw;
+  flex: 1;
+  min-width: 0;
+}
+
+.examTitle {
+  margin: 0;
+  font-size: 3.549cqw;
+  line-height: 5.161cqw;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.examMeta {
+  margin: 0;
+  font-size: 3.226cqw;
+  line-height: 4.839cqw;
+  color: var(--text-secondary);
+}
+
+.event {
+  display: flex;
+  align-items: center;
+  gap: 3.871cqw;
+  padding: 2.581cqw 0;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.eventDot {
+  flex-shrink: 0;
+  width: 2.258cqw;
+  height: 2.258cqw;
+  border-radius: 999px;
+  background: var(--icon-brand);
+}
+
+.eventName {
+  flex: 1;
+  min-width: 0;
+  margin: 0;
+  font-size: 3.549cqw;
+  line-height: 5.161cqw;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.eventDate {
+  flex-shrink: 0;
+  margin: 0;
+  font-size: 3.226cqw;
+  line-height: 4.839cqw;
+  color: var(--text-tertiary);
+  white-space: nowrap;
+}

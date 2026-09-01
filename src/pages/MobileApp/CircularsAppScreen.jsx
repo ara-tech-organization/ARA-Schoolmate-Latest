@@ -1,6 +1,7 @@
 import chevronIcon from '../../assets/icons/fn-chevron-right.svg'
 import bellIcon from '../../assets/icons/bell.svg'
 import bellAttentionIcon from '../../assets/icons/fn-bell-attention.svg'
+import RevealGroup from '../../components/ui/RevealGroup'
 import styles from './CircularsAppScreen.module.css'
 
 const FEED = [
@@ -22,7 +23,7 @@ function CircularsAppScreen() {
         <img src={bellIcon} alt="" className={styles.bellIcon} />
       </div>
 
-      <div className={styles.body}>
+      <RevealGroup className={styles.body}>
         <div className={styles.emergency}>
           <img src={bellAttentionIcon} alt="" className={styles.emergencyIcon} />
           <div className={styles.copy}>
@@ -33,7 +34,7 @@ function CircularsAppScreen() {
 
         <div className={styles.feed}>
           <p className={styles.feedTitle}>Circulars &amp; announcements</p>
-          <div className={styles.list}>
+          <RevealGroup className={styles.list}>
             {FEED.map((item) => (
               <div key={item.title} className={styles.item}>
                 <span className={`${styles.dot} ${item.unread ? styles.dotUnread : styles.dotRead}`} aria-hidden="true" />
@@ -43,9 +44,9 @@ function CircularsAppScreen() {
                 </div>
               </div>
             ))}
-          </div>
+          </RevealGroup>
         </div>
-      </div>
+      </RevealGroup>
     </>
   )
 }

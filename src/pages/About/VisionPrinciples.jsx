@@ -1,4 +1,5 @@
 import Reveal from '../../components/ui/Reveal'
+import RevealGroup from '../../components/ui/RevealGroup'
 import styles from './VisionPrinciples.module.css'
 
 const PRINCIPLES = [
@@ -14,14 +15,14 @@ function VisionPrinciples() {
       <div className="container">
         <p className={styles.lead}>We strive to build technology that is:</p>
 
-        <ul className={styles.grid}>
+        <RevealGroup as="ul" className={styles.grid}>
           {PRINCIPLES.map((item) => (
             <li key={item.index} className={styles.item}>
               <span className={styles.index}>{item.index}</span>
               <span className={styles.label}>{item.label}</span>
             </li>
           ))}
-        </ul>
+        </RevealGroup>
       </div>
     </Reveal>
   )

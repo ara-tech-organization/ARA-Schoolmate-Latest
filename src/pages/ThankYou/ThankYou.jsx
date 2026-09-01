@@ -5,6 +5,8 @@ import calendarIcon from '../../assets/icons/fn-calendar.svg'
 import phoneIcon from '../../assets/icons/phone.svg'
 import whatsappIcon from '../../assets/icons/whatsapp.svg'
 import Button from '../../components/ui/Button'
+import Reveal from '../../components/ui/Reveal'
+import RevealGroup from '../../components/ui/RevealGroup'
 import styles from './ThankYou.module.css'
 
 const NEXT_STEPS = [
@@ -35,27 +37,31 @@ const QUICK_CONTACT = [
 
 function ThankYou() {
   return (
-    <section className={styles.section}>
+    <Reveal as="section" className={styles.section}>
       <div className={`container ${styles.content}`}>
         <div className={styles.hero}>
-          <span className={styles.iconTile}>
+          <Reveal as="span" className={styles.iconTile} direction="down">
             <img src={checkIcon} alt="" loading="lazy" decoding="async" width={32} height={32} />
-          </span>
-          <p className={styles.eyebrow}>Enquiry received</p>
-          <h1 className={styles.title}>Thank You!</h1>
-          <p className={styles.body}>
+          </Reveal>
+          <Reveal as="p" className={styles.eyebrow} direction="down" delay={60}>
+            Enquiry received
+          </Reveal>
+          <Reveal as="h1" className={styles.title} direction="down" delay={100}>
+            Thank You!
+          </Reveal>
+          <Reveal as="p" className={styles.body} direction="up" delay={160}>
             We&rsquo;ve received your enquiry and a member of the SchoolMate team will get back to you shortly.
-          </p>
+          </Reveal>
 
-          <div className={styles.actions}>
+          <Reveal as="div" className={styles.actions} direction="up" delay={220}>
             <Button to="/">Back to Home</Button>
             <Button to="/about" variant="secondary">
               Learn About SchoolMate
             </Button>
-          </div>
+          </Reveal>
         </div>
 
-        <div className={styles.steps}>
+        <RevealGroup className={styles.steps}>
           {NEXT_STEPS.map((step) => (
             <div key={step.index} className={styles.step}>
               <span className={styles.stepIconTile}>
@@ -66,21 +72,21 @@ function ThankYou() {
               <p className={styles.stepBody}>{step.body}</p>
             </div>
           ))}
-        </div>
+        </RevealGroup>
 
         <div className={styles.quickContact}>
           <p className={styles.quickContactLabel}>Need us sooner?</p>
-          <div className={styles.quickContactLinks}>
+          <RevealGroup className={styles.quickContactLinks}>
             {QUICK_CONTACT.map((item) => (
               <a key={item.label} href={item.href} className={styles.quickContactLink} target="_blank" rel="noreferrer">
                 <img src={item.icon} alt="" loading="lazy" decoding="async" width={18} height={18} />
                 <span>{item.value}</span>
               </a>
             ))}
-          </div>
+          </RevealGroup>
         </div>
       </div>
-    </section>
+    </Reveal>
   )
 }
 

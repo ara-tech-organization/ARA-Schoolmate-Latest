@@ -3,6 +3,7 @@ import fileTextIcon from '../../assets/icons/file-text.svg'
 import usersIcon from '../../assets/icons/users.svg'
 import monitorIcon from '../../assets/icons/monitor.svg'
 import Reveal from '../../components/ui/Reveal'
+import RevealGroup from '../../components/ui/RevealGroup'
 import styles from './WhySchoolsPrefer.module.css'
 
 const REASONS = [
@@ -34,7 +35,7 @@ function WhySchoolsPrefer() {
       <div className="container">
         <h2 className={styles.heading}>Why Do Schools Prefer SchoolMate Mobile App?</h2>
 
-        <div className={styles.grid}>
+        <RevealGroup className={styles.grid}>
           {REASONS.map((reason) => (
             <div key={reason.title} className={styles.card}>
               <div className={styles.iconTile}>
@@ -46,7 +47,7 @@ function WhySchoolsPrefer() {
               </div>
             </div>
           ))}
-        </div>
+        </RevealGroup>
       </div>
     </Reveal>
   )

@@ -8,7 +8,7 @@ function Hero() {
   return (
     <Reveal as="section" className={styles.hero} delay={getHeroRevealDelay()}>
       <div className={`container ${styles.row}`}>
-        <div className={styles.copy}>
+        <Reveal as="div" className={styles.copy} direction="right" delay={getHeroRevealDelay()}>
           <h1 className={styles.heading}>Smart School Management at Your Fingertips</h1>
           <p className={styles.lead}>
             SchoolMate Mobile App – a powerful and easy-to-use mobile solution for administrators,
@@ -31,11 +31,11 @@ function Hero() {
               Call Us!
             </Button>
           </div>
-        </div>
+        </Reveal>
 
-        <div className={styles.visual}>
+        <Reveal as="div" className={styles.visual} direction="left" delay={getHeroRevealDelay() + 120}>
           <AppFan />
-        </div>
+        </Reveal>
       </div>
     </Reveal>
   )

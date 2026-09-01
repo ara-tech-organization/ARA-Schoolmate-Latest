@@ -1,21 +1,62 @@
 import checkInverse from '../../assets/icons/check-circle-inverse.svg'
-import appMockup from '../../assets/images/app-mockup-standalone.png'
-import appAttendance from '../../assets/images/app-attendance.png'
-import appHomework from '../../assets/images/app-homework.png'
-import appFees from '../../assets/images/app-fees.png'
-import appTimetable from '../../assets/images/app-timetable.png'
-import appCirculars from '../../assets/images/app-circulars.png'
 import Reveal from '../../components/ui/Reveal'
-import Image from '../../components/ui/Image'
+import RevealGroup from '../../components/ui/RevealGroup'
+import PhoneMockup from '../Home/PhoneMockup'
+import PhoneFrame from './PhoneFrame'
+import AttendanceAppScreen from './AttendanceAppScreen'
+import HomeworkAppScreen from './HomeworkAppScreen'
+import FeesAppScreen from './FeesAppScreen'
+import TimetableAppScreen from './TimetableAppScreen'
+import CircularsAppScreen from './CircularsAppScreen'
 import styles from './OneApp.module.css'
 
 const DEVICES = [
-  { src: appMockup, alt: 'SchoolMate parent dashboard app screen' },
-  { src: appAttendance, alt: 'SchoolMate attendance app screen' },
-  { src: appHomework, alt: 'SchoolMate homework app screen' },
-  { src: appFees, alt: 'SchoolMate fees app screen' },
-  { src: appTimetable, alt: 'SchoolMate timetable app screen' },
-  { src: appCirculars, alt: 'SchoolMate circulars app screen' },
+  { key: 'dashboard', node: <PhoneMockup />, alt: 'SchoolMate parent dashboard app screen' },
+  {
+    key: 'attendance',
+    node: (
+      <PhoneFrame>
+        <AttendanceAppScreen />
+      </PhoneFrame>
+    ),
+    alt: 'SchoolMate attendance app screen',
+  },
+  {
+    key: 'homework',
+    node: (
+      <PhoneFrame>
+        <HomeworkAppScreen />
+      </PhoneFrame>
+    ),
+    alt: 'SchoolMate homework app screen',
+  },
+  {
+    key: 'fees',
+    node: (
+      <PhoneFrame>
+        <FeesAppScreen />
+      </PhoneFrame>
+    ),
+    alt: 'SchoolMate fees app screen',
+  },
+  {
+    key: 'timetable',
+    node: (
+      <PhoneFrame>
+        <TimetableAppScreen />
+      </PhoneFrame>
+    ),
+    alt: 'SchoolMate timetable app screen',
+  },
+  {
+    key: 'circulars',
+    node: (
+      <PhoneFrame>
+        <CircularsAppScreen />
+      </PhoneFrame>
+    ),
+    alt: 'SchoolMate circulars app screen',
+  },
 ]
 
 const FUNCTIONS = [
@@ -33,22 +74,22 @@ function OneApp() {
         <h2 className={styles.heading}>One App, Complete School Control</h2>
         <p className={styles.lead}>The SchoolMate Mobile App is designed to function as:</p>
 
-        <div className={styles.devices}>
+        <RevealGroup className={styles.devices}>
           {DEVICES.map((device) => (
-            <div key={device.alt} className={styles.device}>
-              <Image src={device.src} alt={device.alt} loading="lazy" decoding="async" />
+            <div key={device.key} className={styles.device} role="img" aria-label={device.alt}>
+              {device.node}
             </div>
           ))}
-        </div>
+        </RevealGroup>
 
-        <div className={styles.functions}>
+        <RevealGroup className={styles.functions}>
           {FUNCTIONS.map((fn) => (
             <div key={fn} className={styles.function}>
               <img src={checkInverse} alt="" loading="lazy" decoding="async" aria-hidden="true" />
               <p>{fn}</p>
             </div>
           ))}
-        </div>
+        </RevealGroup>
 
         <p className={styles.closing}>
           SchoolMate helps institutions modernise school operations with cloud-based security and

@@ -6,7 +6,7 @@ function AboutIntro() {
   return (
     <Reveal as="section" className={styles.section}>
       <div className={`container ${styles.split}`}>
-        <div className={styles.copy}>
+        <Reveal as="div" className={styles.copy} direction="right">
           <p className={styles.lead}>
             SchoolMate is a smart schooling software for schools and colleges to simplify administration, improve
             communication, and manage academics.
@@ -19,11 +19,11 @@ function AboutIntro() {
             Today, SchoolMate is a robust student school management system that connects administrators, teachers,
             students, and parents in a centralized cloud-based solution.
           </p>
-        </div>
+        </Reveal>
 
-        <div className={styles.visual}>
+        <Reveal as="div" className={styles.visual} direction="left" delay={120}>
           <ConnectedRoles />
-        </div>
+        </Reveal>
       </div>
     </Reveal>
   )

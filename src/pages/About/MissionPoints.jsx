@@ -1,4 +1,5 @@
 import Reveal from '../../components/ui/Reveal'
+import RevealGroup from '../../components/ui/RevealGroup'
 import styles from './MissionPoints.module.css'
 
 const STEPS = [
@@ -15,7 +16,7 @@ function MissionPoints() {
       <div className="container">
         <p className={styles.lead}>SchoolMate is the schooling software of choice for institutions looking for:</p>
 
-        <ol className={styles.timeline}>
+        <RevealGroup as="ol" className={styles.timeline}>
           {STEPS.map((step) => (
             <li key={step.index} className={styles.step}>
               <span className={styles.index}>{step.index}</span>
@@ -23,7 +24,7 @@ function MissionPoints() {
               <span className={styles.stepLabel}>{step.label}</span>
             </li>
           ))}
-        </ol>
+        </RevealGroup>
 
         <p className={styles.closing}>
           We believe schools should focus less on paperwork and more on building student success.
