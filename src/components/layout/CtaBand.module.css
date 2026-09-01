@@ -56,3 +56,34 @@
     max-width: none;
   }
 }
+
+/* Light sweep — a continuous animated shimmer runs through the primary CTA's
+   fill, with a subtle lift on hover. */
+a.sweep {
+  position: relative;
+  background: linear-gradient(90deg, var(--bg-brand) 30%, var(--bg-brand-mark) 50%, var(--bg-brand) 70%) 0 0 / 200%
+    auto;
+  animation: ctaShimmer 2.2s linear infinite;
+  box-shadow: 0 4px 15px rgba(209, 19, 27, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+a.sweep:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(209, 19, 27, 0.4);
+}
+
+@keyframes ctaShimmer {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  a.sweep {
+    animation: none;
+  }
+}
