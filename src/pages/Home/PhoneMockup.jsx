@@ -4,7 +4,7 @@ import attendanceIcon from '../../assets/icons/fn-user-check.svg'
 import homeworkIcon from '../../assets/icons/tile-book.svg'
 import feesIcon from '../../assets/icons/fee-management.svg'
 import messageIcon from '../../assets/icons/tile-message.svg'
-import homeIcon from '../../assets/icons/stat-dashboard.svg'
+import homeIcon from '../../assets/icons/fn-home.svg'
 import styles from './PhoneMockup.module.css'
 
 const TABS = [
