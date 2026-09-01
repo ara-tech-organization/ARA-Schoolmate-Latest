@@ -42,15 +42,18 @@ const CHART_POINTS = [
 const CHART_GRID = [100, 95, 90]
 const CHART_MIN = 90
 const CHART_MAX = 100
-const CHART_W = 190
-const CHART_H = 22
-const CHART_TOP = 4
-const CHART_BOTTOM = CHART_TOP + CHART_H
-const CHART_VIEW_W = CHART_W + 30
-const CHART_VIEW_H = CHART_BOTTOM + 6
+// Plot geometry lifted straight from the Figma "Chart card" export (640px-wide reference frame).
+const CHART_VIEW_W = 453.12
+const CHART_VIEW_H = 75.52
+const CHART_GRID_W = 431.36
+const CHART_LABEL_X = 436.48
+const CHART_LABEL_OFFSET = 4.48
+const CHART_DATA_LEFT = 5.12
+const CHART_DATA_RIGHT = 426.24
 
-const chartX = (i) => (i / (CHART_POINTS.length - 1)) * CHART_W
-const chartY = (value) => CHART_TOP + ((CHART_MAX - value) / (CHART_MAX - CHART_MIN)) * CHART_H
+const chartX = (i) =>
+  CHART_DATA_LEFT + (i / (CHART_POINTS.length - 1)) * (CHART_DATA_RIGHT - CHART_DATA_LEFT)
+const chartY = (value) => ((CHART_MAX - value) / (CHART_MAX - CHART_MIN)) * CHART_VIEW_H
 
 const ROWS = [
   { cls: 'Class VI-A', present: 42, absent: 3, rate: '93.3%', status: 'Good' },
@@ -61,6 +64,7 @@ const ROWS = [
 
 function DashboardMockup() {
   return (
+    <div className={styles.cardWrap}>
     <div className={styles.card}>
       <aside className={styles.sidebar}>
         <div className={styles.brand}>
@@ -110,22 +114,35 @@ function DashboardMockup() {
           </div>
 
           <div className={styles.chartCard}>
-            <p className={styles.cardTitle}>Attendance rate · this week</p>
-            <span className={styles.cardSubtitle}>Last 5 school days</span>
-            <svg className={styles.chart} viewBox={`0 0 ${CHART_VIEW_W} ${CHART_VIEW_H}`}>
+            <div className={styles.cardHead}>
+              <div className={styles.cardHeadTitles}>
+                <p className={styles.cardTitle}>Attendance rate · this week</p>
+                <span className={styles.cardSubtitle}>Last 5 school days</span>
+              </div>
+            </div>
+            <svg
+              className={styles.chart}
+              viewBox={`0 0 ${CHART_VIEW_W} ${CHART_VIEW_H}`}
+              preserveAspectRatio="none"
+            >
               {CHART_GRID.map((pct) => {
                 const y = chartY(pct)
                 return (
                   <g key={pct}>
-                    <line x1="0" y1={y} x2={CHART_W} y2={y} className={styles.gridLine} />
-                    <text x={CHART_W + 4} y={y + 2} className={styles.gridLabel}>
+                    <line x1="0" y1={y} x2={CHART_GRID_W} y2={y} className={styles.gridLine} />
+                    <text
+                      x={CHART_LABEL_X}
+                      y={y - CHART_LABEL_OFFSET}
+                      dominantBaseline="hanging"
+                      className={styles.gridLabel}
+                    >
                       {pct}%
                     </text>
                   </g>
                 )
               })}
               <path
-                d={`M ${chartX(0)} ${CHART_BOTTOM} L ${CHART_POINTS.map((p, i) => `${chartX(i)} ${chartY(p.value)}`).join(' L ')} L ${chartX(CHART_POINTS.length - 1)} ${CHART_BOTTOM} Z`}
+                d={`M ${chartX(0)} ${CHART_VIEW_H} L ${CHART_POINTS.map((p, i) => `${chartX(i)} ${chartY(p.value)}`).join(' L ')} L ${chartX(CHART_POINTS.length - 1)} ${CHART_VIEW_H} Z`}
                 className={styles.chartArea}
               />
               <polyline
@@ -137,14 +154,14 @@ function DashboardMockup() {
                   key={p.day}
                   cx={chartX(i)}
                   cy={chartY(p.value)}
-                  r={p.current ? 3.4 : 2.6}
+                  r={p.current ? 3.2 : 2.56}
                   className={p.current ? styles.chartDotCurrent : styles.chartDot}
                 />
               ))}
               <text
-                x={chartX(CHART_POINTS.length - 1) - 4}
-                y={chartY(CHART_POINTS[CHART_POINTS.length - 1].value) - 6}
-                textAnchor="end"
+                x={396.8}
+                y={19.38}
+                dominantBaseline="hanging"
                 className={styles.chartValueLabel}
               >
                 {CHART_POINTS[CHART_POINTS.length - 1].value}%
@@ -160,7 +177,9 @@ function DashboardMockup() {
           </div>
 
           <div className={styles.tableCard}>
-            <p className={styles.cardTitle}>Class-wise attendance · today</p>
+            <div className={styles.tableCardHead}>
+              <p className={styles.cardTitle}>Class-wise attendance · today</p>
+            </div>
             <div className={styles.tableHead}>
               <span>Class</span>
               <span>Present</span>
@@ -182,6 +201,7 @@ function DashboardMockup() {
           </div>
         </div>
       </div>
+    </div>
     </div>
   )
 }

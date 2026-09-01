@@ -1,7 +1,12 @@
-.phone {
+.phoneWrap {
   container-type: inline-size;
   width: 100%;
   aspect-ratio: 266.6 / 546.96;
+}
+
+.phone {
+  width: 100%;
+  height: 100%;
   padding: 3.549cqw;
   background: var(--bg-inverse);
   border-radius: 13.55cqw;

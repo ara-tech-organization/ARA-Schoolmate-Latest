@@ -15,6 +15,7 @@ const MESSAGES = [
 
 function CommunicationCard() {
   return (
+    <div className={styles.cardWrap}>
     <div className={styles.card}>
       <div className={styles.header}>
         <img src={messageIcon} alt="" className={styles.icon} />
@@ -46,6 +47,7 @@ function CommunicationCard() {
           </li>
         ))}
       </ul>
+    </div>
     </div>
   )
 }

@@ -8,39 +8,44 @@ const ROLLS = Array.from({ length: 30 }, (_, i) => i + 1)
 
 function MiniAttendanceCard() {
   return (
+    <div className={styles.cardWrap}>
     <div className={styles.card}>
       <div className={styles.header}>
-        <img src={attendanceIcon} alt="" className={styles.icon} />
-        <div>
+        <img src={attendanceIcon} alt="" className={styles.icon} aria-hidden="true" />
+        <div className={styles.headerText}>
           <p className={styles.title}>Mark Attendance</p>
           <span className={styles.subtitle}>Class VI-A · {TOTAL_STUDENTS} students</span>
         </div>
       </div>
 
-      <div className={styles.legend}>
-        <span className={styles.legendItem}>
-          <span className={`${styles.dot} ${styles.dotPresent}`} />
-          Present
-        </span>
-        <span className={styles.legendItem}>
-          <span className={`${styles.dot} ${styles.dotAbsent}`} />
-          Absent
-        </span>
-        <span className={styles.marked}>
-          {MARKED_COUNT} / {TOTAL_STUDENTS} marked
-        </span>
-      </div>
-
-      <div className={styles.grid}>
-        {ROLLS.map((roll) => (
-          <span
-            key={roll}
-            className={[styles.pill, ABSENT_ROLLS.includes(roll) ? styles.pillAbsent : styles.pillPresent].join(' ')}
-          >
-            {roll}
+      <div className={styles.body}>
+        <div className={styles.legend}>
+          <span className={styles.legendItem}>
+            <span className={`${styles.dot} ${styles.dotPresent}`} aria-hidden="true" />
+            Present
           </span>
-        ))}
+          <span className={styles.legendItem}>
+            <span className={`${styles.dot} ${styles.dotAbsent}`} aria-hidden="true" />
+            Absent
+          </span>
+          <span className={styles.spacer} />
+          <span className={styles.marked}>
+            {MARKED_COUNT} / {TOTAL_STUDENTS} marked
+          </span>
+        </div>
+
+        <div className={styles.grid}>
+          {ROLLS.map((roll) => (
+            <span
+              key={roll}
+              className={[styles.pill, ABSENT_ROLLS.includes(roll) ? styles.pillAbsent : styles.pillPresent].join(' ')}
+            >
+              {roll}
+            </span>
+          ))}
+        </div>
       </div>
+    </div>
     </div>
   )
 }

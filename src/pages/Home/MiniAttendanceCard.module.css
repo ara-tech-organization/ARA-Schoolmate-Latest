@@ -1,62 +1,90 @@
-.card {
+/*
+  Fluid replica of the Figma "Panel / Mark attendance" component as used
+  inside "Product ecosystem" (file 2tiU292F2mGV9oDUhuQtuo, node
+  83:2290;80:1378). Authored at a native width of 278.4px — each value is
+  that design px divided by 278.4, in cqw against the card's own inline
+  size (container-type is set on .card itself).
+*/
+
+.cardWrap {
   container-type: inline-size;
+  width: 100%;
+  aspect-ratio: 278.4 / 139.78;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  gap: 2.33cqw;
-  width: 100%;
-  aspect-ratio: 232 / 116.48;
-  padding: 3.1cqw;
   background: var(--bg-surface);
   border: 1px solid var(--border-subtle);
-  border-radius: 2.72cqw;
-  box-shadow: 0 0.21cqw 0.39cqw rgba(20, 23, 27, 0.04), 0 0.78cqw 2.33cqw rgba(20, 23, 27, 0.07);
+  border-radius: 2.917cqw;
+  box-shadow: 0 0.208cqw 0.417cqw rgba(20, 23, 27, 0.04), 0 0.833cqw 2.5cqw rgba(20, 23, 27, 0.07);
+  overflow: hidden;
 }
 
 .header {
   display: flex;
   align-items: center;
-  gap: 1.55cqw;
+  gap: 2.083cqw;
+  padding: 3.125cqw 3.75cqw;
+  border-bottom: 1px solid var(--border-subtle);
 }
 
 .icon {
   flex-shrink: 0;
-  width: 2.33cqw;
-  height: 2.33cqw;
+  width: 3.542cqw;
+  height: 3.542cqw;
+}
+
+.headerText {
+  display: flex;
+  flex-direction: column;
+  gap: 0.208cqw;
+  min-width: 0;
 }
 
 .title {
   margin: 0;
-  font-size: 2.46cqw;
-  line-height: 3.5cqw;
+  font-size: 2.709cqw;
+  line-height: 3.959cqw;
   font-weight: 600;
   color: var(--text-primary);
 }
 
 .subtitle {
-  font-size: 1.81cqw;
-  line-height: 2.59cqw;
+  font-size: 2.083cqw;
+  line-height: 3.125cqw;
   color: var(--text-tertiary);
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: 2.917cqw;
+  padding: 3.333cqw 3.75cqw 3.75cqw;
 }
 
 .legend {
   display: flex;
   align-items: center;
-  gap: 2.72cqw;
+  gap: 3.333cqw;
 }
 
 .legendItem {
   display: flex;
   align-items: center;
-  gap: 0.78cqw;
-  font-size: 1.68cqw;
-  line-height: 2.41cqw;
+  gap: 1.25cqw;
+  font-size: 2.291cqw;
+  line-height: 3.333cqw;
   font-weight: 500;
   color: var(--text-secondary);
 }
 
 .dot {
-  width: 1.16cqw;
-  height: 1.16cqw;
+  width: 1.459cqw;
+  height: 1.459cqw;
   border-radius: 999px;
 }
 
@@ -68,10 +96,13 @@
   background: var(--icon-attention);
 }
 
+.spacer {
+  flex: 1;
+}
+
 .marked {
-  margin-left: auto;
-  font-size: 1.68cqw;
-  line-height: 2.41cqw;
+  font-size: 2.291cqw;
+  line-height: 3.333cqw;
   font-weight: 600;
   color: var(--text-primary);
 }
@@ -79,18 +110,17 @@
 .grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.16cqw;
+  gap: 1.667cqw;
 }
 
 .pill {
-  flex: 1 1 4.66cqw;
-  min-width: 4.66cqw;
-  padding: 0.78cqw 0;
+  flex: 1 1 7.5cqw;
+  min-width: 7.5cqw;
   border: 1px solid;
-  border-radius: 0.78cqw;
+  border-radius: 1.25cqw;
   text-align: center;
-  font-size: 1.55cqw;
-  line-height: 2.2cqw;
+  font-size: 2.291cqw;
+  line-height: 3.333cqw;
   font-weight: 600;
 }
 
