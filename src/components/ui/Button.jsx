@@ -27,7 +27,7 @@ function Button({
   if (!disabled && to) {
     return (
       <Link to={to} className={classes} {...rest}>
-        {children}
+        <span className={styles.label}>{children}</span>
       </Link>
     )
   }
@@ -35,14 +35,14 @@ function Button({
   if (!disabled && (as === 'a' || href)) {
     return (
       <a href={href} className={classes} {...rest}>
-        {children}
+        <span className={styles.label}>{children}</span>
       </a>
     )
   }
 
   return (
     <button type="button" className={classes} disabled={disabled} {...rest}>
-      {children}
+      <span className={styles.label}>{children}</span>
     </button>
   )
 }
