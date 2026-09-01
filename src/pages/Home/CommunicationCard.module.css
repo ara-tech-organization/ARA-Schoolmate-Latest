@@ -2,10 +2,9 @@
   container-type: inline-size;
   display: flex;
   flex-direction: column;
-  gap: 2.917cqw;
   width: 100%;
   aspect-ratio: 216 / 152.55;
-  padding: 3.333cqw 3.75cqw 3.75cqw;
+  padding: 0 3.75cqw 3.75cqw;
   background: var(--bg-surface);
   border: 1px solid var(--border-subtle);
   border-radius: 2.917cqw;
@@ -16,6 +15,7 @@
   display: flex;
   align-items: flex-start;
   gap: 2.083cqw;
+  padding-top: 3.125cqw;
   padding-bottom: 3.125cqw;
   border-bottom: 1px solid var(--border-subtle);
 }
@@ -44,6 +44,7 @@
 .kpiRow {
   display: flex;
   gap: 2.5cqw;
+  margin-top: 3.333cqw;
 }
 
 .kpi {
@@ -74,7 +75,7 @@
   display: flex;
   flex-direction: column;
   list-style: none;
-  margin: 0;
+  margin: 2.917cqw 0 0;
   padding: 0;
 }
 

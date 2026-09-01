@@ -156,8 +156,8 @@
 .content {
   display: flex;
   flex-direction: column;
-  gap: 1.5cqw;
-  padding: 1.7cqw 2.4cqw;
+  gap: 1.8cqw;
+  padding: 2cqw 2.4cqw;
 }
 
 .kpiRow {
@@ -227,6 +227,19 @@
   border: 1px solid var(--border-subtle);
 }
 
+.cardHead {
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  gap: 0.8cqw;
+}
+
+.cardHeadTitles {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1cqw;
+}
+
 .cardTitle {
   margin: 0;
   font-size: 1.3cqw;
@@ -237,7 +250,6 @@
 
 .cardSubtitle {
   display: block;
-  margin-top: -1cqw;
   font-size: 1.1cqw;
   line-height: 1.6cqw;
   color: var(--text-tertiary);
@@ -245,17 +257,17 @@
 
 .chart {
   width: 100%;
-  aspect-ratio: 220 / 32;
+  aspect-ratio: 453.12 / 75.52;
   overflow: visible;
 }
 
 .gridLine {
   stroke: var(--border-subtle);
-  stroke-width: 1;
+  stroke-width: 0.64;
 }
 
 .gridLabel {
-  font-size: 5px;
+  font-size: 6.4px;
   fill: var(--text-tertiary);
 }
 
@@ -268,7 +280,7 @@
 .chartLine {
   fill: none;
   stroke: var(--bg-brand);
-  stroke-width: 1.6;
+  stroke-width: 1.28;
   stroke-linecap: round;
   stroke-linejoin: round;
 }
@@ -276,25 +288,25 @@
 .chartDot {
   fill: var(--bg-surface);
   stroke: var(--bg-brand);
-  stroke-width: 1.6;
+  stroke-width: 1.28;
 }
 
 .chartDotCurrent {
   fill: var(--bg-brand);
   stroke: var(--bg-brand);
-  stroke-width: 1.6;
+  stroke-width: 1.28;
 }
 
 .chartValueLabel {
-  font-size: 6px;
+  font-size: 7.04px;
   font-weight: 600;
-  fill: var(--bg-brand);
+  fill: var(--text-brand);
 }
 
 .chartAxis {
   display: flex;
   justify-content: space-between;
-  padding-right: 13.6%;
+  padding-right: 4.8%;
   font-size: 1cqw;
   line-height: 1.5cqw;
   color: var(--text-tertiary);
