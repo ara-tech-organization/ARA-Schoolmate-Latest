@@ -1,6 +1,9 @@
-.stack {
+.stackWrap {
   container-type: inline-size;
   width: 100%;
+}
+
+.stack {
   display: flex;
   flex-direction: column;
   gap: 3.636cqw;

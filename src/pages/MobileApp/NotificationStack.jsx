@@ -9,19 +9,21 @@ const NOTIFICATIONS = [
 
 function NotificationStack() {
   return (
-    <div className={styles.stack} aria-hidden="true">
-      {NOTIFICATIONS.map((item) => (
-        <div key={item.title} className={styles.card}>
-          <div className={styles.head}>
-            <img src={brandMark} alt="" className={styles.mark} />
-            <p className={styles.brand}>SchoolMate</p>
-            <span className={styles.spacer} />
-            <p className={styles.time}>{item.time}</p>
+    <div className={styles.stackWrap} aria-hidden="true">
+      <div className={styles.stack}>
+        {NOTIFICATIONS.map((item) => (
+          <div key={item.title} className={styles.card}>
+            <div className={styles.head}>
+              <img src={brandMark} alt="" className={styles.mark} />
+              <p className={styles.brand}>SchoolMate</p>
+              <span className={styles.spacer} />
+              <p className={styles.time}>{item.time}</p>
+            </div>
+            <p className={styles.title}>{item.title}</p>
+            <p className={styles.body}>{item.body}</p>
           </div>
-          <p className={styles.title}>{item.title}</p>
-          <p className={styles.body}>{item.body}</p>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   )
 }
