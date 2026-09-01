@@ -1,0 +1,22 @@
+.visual {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 400 / 548;
+}
+
+.phone,
+.stack {
+  position: absolute;
+}
+
+.phone {
+  left: 0;
+  top: 0;
+  width: 66.65%;
+}
+
+.stack {
+  left: 29.5%;
+  top: 52.19%;
+  width: 69.3%;
+}

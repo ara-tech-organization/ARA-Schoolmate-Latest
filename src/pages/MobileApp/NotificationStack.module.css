@@ -1,0 +1,65 @@
+.stack {
+  container-type: inline-size;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 3.636cqw;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 2.424cqw;
+  padding: 3.636cqw 4.848cqw;
+  border-radius: 4.242cqw;
+  background: var(--bg-surface);
+  box-shadow: 0 1.818cqw 5.455cqw rgba(20, 23, 27, 0.14);
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  gap: 2.424cqw;
+}
+
+.mark {
+  flex-shrink: 0;
+  width: 4.848cqw;
+  height: 4.848cqw;
+}
+
+.brand {
+  margin: 0;
+  font-size: 3.03cqw;
+  line-height: 4.545cqw;
+  font-weight: 600;
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.time {
+  margin: 0;
+  font-size: 3.03cqw;
+  line-height: 4.545cqw;
+  color: var(--text-tertiary);
+  white-space: nowrap;
+}
+
+.title {
+  margin: 0;
+  font-size: 3.636cqw;
+  line-height: 5.151cqw;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.body {
+  margin: 0;
+  font-size: 3.333cqw;
+  line-height: 4.848cqw;
+  color: var(--text-secondary);
+}

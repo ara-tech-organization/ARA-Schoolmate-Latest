@@ -1,5 +1,6 @@
 import CheckItem from '../../components/ui/CheckItem'
 import Reveal from '../../components/ui/Reveal'
+import WhyChooseVisual from './WhyChooseVisual'
 import styles from './WhyChoose.module.css'
 
 const BENEFITS = [
@@ -16,23 +17,33 @@ function WhyChoose() {
     <Reveal as="section" className={styles.section}>
       <div className={`container ${styles.row}`}>
         <div className={styles.copy}>
-          <h2 className={styles.heading}>Why Choose the SchoolMate Mobile App?</h2>
-          <p className={styles.subtitle}>Real-Time Communication Made Simple</p>
-          <p className={styles.lead}>
+          <Reveal as="h2" className={styles.heading} direction="down">
+            Why Choose the SchoolMate Mobile App?
+          </Reveal>
+          <Reveal as="p" className={styles.subtitle} direction="up" delay={60}>
+            Real-Time Communication Made Simple
+          </Reveal>
+          <Reveal as="p" className={styles.lead} direction="up" delay={120}>
             The schoolmate mobile app enables schools to create better relationships with parents,
             teachers, and students through instant communication and real-time alerts.
-          </p>
-          <p className={styles.benefitsLabel}>Key Benefits</p>
-          <ul className={styles.benefits}>
+          </Reveal>
+          <Reveal as="p" className={styles.benefitsLabel} direction="right" delay={180}>
+            Key Benefits
+          </Reveal>
+          <Reveal as="ul" className={styles.benefits} direction="up" delay={220}>
             {BENEFITS.map((benefit) => (
               <CheckItem key={benefit}>{benefit}</CheckItem>
             ))}
-          </ul>
-          <p className={styles.closing}>
+          </Reveal>
+          <Reveal as="p" className={styles.closing} direction="left" delay={280}>
             The SchoolMate app is an advanced student school management system that improves
             engagement while reducing manual administrative work.
-          </p>
+          </Reveal>
         </div>
+
+        <Reveal as="div" className={styles.visual} direction="left" delay={120}>
+          <WhyChooseVisual />
+        </Reveal>
       </div>
     </Reveal>
   )

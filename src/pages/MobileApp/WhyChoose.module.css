@@ -5,12 +5,19 @@
 
 .row {
   display: flex;
-  justify-content: center;
+  flex-direction: column-reverse;
+  align-items: center;
+  gap: 40px;
 }
 
 .copy {
   width: 100%;
   max-width: 600px;
+}
+
+.visual {
+  width: 100%;
+  max-width: 350px;
 }
 
 .heading {
@@ -61,17 +68,6 @@
   color: var(--text-secondary);
 }
 
-.visual {
-  width: 100%;
-  max-width: 350px;
-}
-
-.visual img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
 @media (min-width: 640px) {
   .benefits {
     grid-template-columns: 1fr 1fr;
@@ -85,9 +81,9 @@
 
   .row {
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
     justify-content: space-between;
-    gap: 32px;
+    gap: 40px;
   }
 
   .copy {
@@ -95,7 +91,7 @@
   }
 
   .visual {
-    max-width: 484px;
+    max-width: 400px;
   }
 }
 
