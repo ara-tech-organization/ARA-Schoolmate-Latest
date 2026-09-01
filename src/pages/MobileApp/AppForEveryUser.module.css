@@ -31,17 +31,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 32px;
+  padding: 8.333% 15.886%;
   margin-bottom: 28px;
 }
 
-.visual img {
+.phoneSlot {
   width: 100%;
-  max-width: 220px;
-  height: auto;
-  display: block;
-  overflow: hidden;
-  border-radius: 13% / 6.5%;
 }
 
 .title {

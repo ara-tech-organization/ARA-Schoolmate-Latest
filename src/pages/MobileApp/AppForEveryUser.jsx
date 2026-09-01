@@ -1,17 +1,18 @@
 import CheckItem from '../../components/ui/CheckItem'
-import roleParents from '../../assets/images/role-parents.png'
-import roleTeachers from '../../assets/images/role-teachers.png'
-import roleAdmins from '../../assets/images/role-admins.png'
 import Reveal from '../../components/ui/Reveal'
-import Image from '../../components/ui/Image'
+import RevealGroup from '../../components/ui/RevealGroup'
+import PhoneFrame from './PhoneFrame'
+import PhoneMockup from '../Home/PhoneMockup'
+import AttendanceAppScreen from './AttendanceAppScreen'
+import CircularsAppScreen from './CircularsAppScreen'
 import styles from './AppForEveryUser.module.css'
 
 const ROLES = [
   {
     key: 'parents',
     title: 'For Parents',
-    image: roleParents,
     alt: 'SchoolMate app parent dashboard',
+    visual: <PhoneMockup />,
     items: [
       'Monitor attendance and homework',
       'Receive instant school updates',
@@ -23,8 +24,12 @@ const ROLES = [
   {
     key: 'teachers',
     title: 'For Teachers',
-    image: roleTeachers,
     alt: 'SchoolMate app attendance screen for teachers',
+    visual: (
+      <PhoneFrame>
+        <AttendanceAppScreen />
+      </PhoneFrame>
+    ),
     items: [
       'Mark attendance digitally',
       'Upload homework and marks',
@@ -35,8 +40,12 @@ const ROLES = [
   {
     key: 'admins',
     title: 'For School Administrators',
-    image: roleAdmins,
     alt: 'SchoolMate app circulars screen for administrators',
+    visual: (
+      <PhoneFrame>
+        <CircularsAppScreen />
+      </PhoneFrame>
+    ),
     items: [
       'Manage communication centrally',
       'Monitor attendance reports',
@@ -52,11 +61,11 @@ function AppForEveryUser() {
       <div className="container">
         <h2 className={styles.heading}>SchoolMate App for Every User</h2>
 
-        <div className={styles.grid}>
+        <RevealGroup className={styles.grid}>
           {ROLES.map((role) => (
             <div key={role.key} className={styles.card}>
-              <div className={styles.visual}>
-                <Image src={role.image} alt={role.alt} loading="lazy" decoding="async" />
+              <div className={styles.visual} role="img" aria-label={role.alt}>
+                <div className={styles.phoneSlot}>{role.visual}</div>
               </div>
               <h3 className={styles.title}>{role.title}</h3>
               <ul className={styles.items}>
@@ -66,7 +75,7 @@ function AppForEveryUser() {
               </ul>
             </div>
           ))}
-        </div>
+        </RevealGroup>
       </div>
     </Reveal>
   )
