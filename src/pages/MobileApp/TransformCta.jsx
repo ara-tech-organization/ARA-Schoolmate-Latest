@@ -1,14 +1,13 @@
 import Button from '../../components/ui/Button'
-import visual from '../../assets/images/transform-cta-visual.png'
 import Reveal from '../../components/ui/Reveal'
-import Image from '../../components/ui/Image'
+import TransformVisual from './TransformVisual'
 import styles from './TransformCta.module.css'
 
 function TransformCta() {
   return (
     <Reveal as="section" className={styles.section}>
       <div className={`container ${styles.row}`}>
-        <div className={styles.copy}>
+        <Reveal as="div" className={styles.copy} direction="right">
           <h2 className={styles.heading}>Transform Your School Digitally</h2>
           <p className={styles.lead}>
             SchoolMate Mobile App helps schools to streamline administration, improve communication,
@@ -27,11 +26,11 @@ function TransformCta() {
               Call Us!
             </Button>
           </div>
-        </div>
+        </Reveal>
 
-        <div className={styles.visual}>
-          <Image src={visual} alt="SchoolMate fees screen and mobile app mockup" loading="lazy" decoding="async" />
-        </div>
+        <Reveal as="div" className={styles.visual} direction="left" delay={120}>
+          <TransformVisual />
+        </Reveal>
       </div>
     </Reveal>
   )

@@ -1,0 +1,22 @@
+.visual {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 452 / 560;
+}
+
+.fees,
+.main {
+  position: absolute;
+}
+
+.fees {
+  left: 0;
+  top: 10.714%;
+  width: 52.124%;
+}
+
+.main {
+  left: 44.248%;
+  top: 0;
+  width: 58.981%;
+}
