@@ -23,6 +23,7 @@ function PhoneMockup() {
           <span className={styles.statusIcons} aria-hidden="true">
             <span />
             <span />
+            <span />
             <span className={styles.battery} />
           </span>
         </div>

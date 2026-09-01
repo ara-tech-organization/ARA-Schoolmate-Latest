@@ -1,11 +1,11 @@
 .phone {
   container-type: inline-size;
   width: 100%;
-  aspect-ratio: 165.33 / 339.2;
-  padding: 5.44cqw 3.27cqw;
+  aspect-ratio: 266.6 / 546.96;
+  padding: 3.549cqw;
   background: var(--bg-inverse);
-  border-radius: 13.6cqw;
-  box-shadow: 0 0.73cqw 2cqw rgba(20, 23, 27, 0.06), 0 5.26cqw 13.06cqw rgba(20, 23, 27, 0.16);
+  border-radius: 13.55cqw;
+  box-shadow: 0 0.645cqw 1.936cqw rgba(20, 23, 27, 0.06), 0 5.163cqw 12.906cqw rgba(20, 23, 27, 0.16);
   overflow: hidden;
 }
 
@@ -15,7 +15,7 @@
   width: 100%;
   height: 100%;
   background: var(--bg-page);
-  border-radius: 8.71cqw;
+  border-radius: 10.325cqw;
   overflow: hidden;
 }
 
@@ -23,39 +23,51 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 3.27cqw 5.44cqw 1.09cqw;
-  font-size: 2.72cqw;
+  padding: 3.871cqw 5.808cqw 1.936cqw 6.453cqw;
+  font-size: 3.549cqw;
+  line-height: 5.163cqw;
   font-weight: 600;
   color: var(--text-primary);
 }
 
 .statusIcons {
   display: flex;
-  align-items: center;
-  gap: 1.09cqw;
+  align-items: flex-end;
+  gap: 0.807cqw;
 }
 
 .statusIcons span {
-  width: 2.18cqw;
-  height: 2.18cqw;
-  border-radius: 999px;
+  width: 0.807cqw;
+  border-radius: 0.323cqw;
   background: var(--text-primary);
 }
 
+.statusIcons span:nth-child(1) {
+  height: 0.968cqw;
+}
+
+.statusIcons span:nth-child(2) {
+  height: 1.613cqw;
+}
+
+.statusIcons span:nth-child(3) {
+  height: 2.258cqw;
+}
+
 .battery {
-  width: 5.44cqw !important;
-  height: 2.72cqw !important;
-  border-radius: 0.54cqw !important;
-  border: 0.36cqw solid var(--text-primary);
-  background: transparent !important;
+  width: 5.808cqw !important;
+  height: 2.904cqw !important;
+  border-radius: 0.645cqw !important;
+  background: var(--text-primary) !important;
 }
 
 .appBar {
   display: flex;
   align-items: center;
-  gap: 2.18cqw;
-  padding: 2.18cqw 5.44cqw 3.27cqw;
-  font-size: 3.27cqw;
+  gap: 2.904cqw;
+  padding: 2.581cqw 4.518cqw 4.518cqw 5.808cqw;
+  font-size: 4.839cqw;
+  line-height: 7.097cqw;
   font-weight: 600;
   color: var(--text-primary);
   border-bottom: 1px solid var(--border-subtle);
@@ -63,25 +75,27 @@
 
 .brandIcon {
   flex-shrink: 0;
-  width: 7.26cqw;
-  height: 7.26cqw;
+  width: 7.744cqw;
+  height: 7.744cqw;
 }
 
 .icon {
   flex-shrink: 0;
-  width: 6.05cqw;
-  height: 6.05cqw;
+  width: 5.163cqw;
+  height: 5.163cqw;
 }
 
 .appBarBell {
+  width: 6.131cqw;
+  height: 6.131cqw;
   margin-left: auto;
 }
 
 .body {
   display: flex;
   flex-direction: column;
-  gap: 3.81cqw;
-  padding: 3.81cqw 5.44cqw;
+  gap: 3.871cqw;
+  padding: 5.163cqw;
   flex: 1;
   overflow: hidden;
 }
@@ -89,9 +103,9 @@
 .card {
   display: flex;
   flex-direction: column;
-  gap: 2.18cqw;
-  padding: 3.27cqw;
-  border-radius: 3.27cqw;
+  gap: 3.226cqw;
+  padding: 4.194cqw 4.518cqw;
+  border-radius: 3.226cqw;
   background: var(--bg-surface);
   border: 1px solid var(--border-subtle);
 }
@@ -99,12 +113,13 @@
 .cardHead {
   display: flex;
   align-items: center;
-  gap: 2.18cqw;
+  gap: 2.581cqw;
 }
 
 .cardHead p {
   margin: 0;
-  font-size: 2.9cqw;
+  font-size: 3.871cqw;
+  line-height: 5.486cqw;
   font-weight: 600;
   color: var(--text-primary);
 }
@@ -115,25 +130,33 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 2.54cqw;
+  gap: 2.581cqw;
+  font-size: 3.549cqw;
+  line-height: 5.163cqw;
   color: var(--text-secondary);
+}
+
+.item span:first-child {
+  font-size: 3.871cqw;
+  line-height: 5.486cqw;
 }
 
 .chipPresent {
   display: flex;
   align-items: center;
-  gap: 1.09cqw;
-  padding: 0.54cqw 2.18cqw;
+  gap: 1.613cqw;
+  padding: 1.291cqw 3.226cqw 1.291cqw 2.581cqw;
   border-radius: 999px;
   background: var(--bg-success-subtle);
   color: var(--text-success);
   font-weight: 600;
-  font-size: 2.36cqw;
+  font-size: 3.549cqw;
+  line-height: 5.163cqw;
 }
 
 .chipDot {
-  width: 1.31cqw;
-  height: 1.31cqw;
+  width: 1.936cqw;
+  height: 1.936cqw;
   flex-shrink: 0;
   border-radius: 999px;
   background: var(--icon-success);
@@ -143,6 +166,11 @@
   color: var(--text-tertiary);
 }
 
+.feeRow .muted {
+  font-size: 3.226cqw;
+  line-height: 4.841cqw;
+}
+
 .due {
   color: var(--text-brand);
   font-weight: 500;
@@ -150,24 +178,26 @@
 
 .feeAmount {
   margin: 0;
-  font-size: 3.27cqw;
+  font-size: 5.486cqw;
+  line-height: 8.068cqw;
   font-weight: 600;
   color: var(--text-primary);
 }
 
 .payButton {
-  padding: 1.63cqw 3.27cqw;
-  border-radius: 2.18cqw;
+  padding: 2.581cqw 4.518cqw;
+  border-radius: 1.936cqw;
   background: var(--bg-brand);
   color: var(--text-on-brand);
-  font-size: 2.36cqw;
+  font-size: 3.549cqw;
+  line-height: 5.163cqw;
   font-weight: 600;
 }
 
 .circularText {
   margin: 0;
-  font-size: 2.36cqw;
-  line-height: 1.5;
+  font-size: 3.549cqw;
+  line-height: 1.454;
   color: var(--text-secondary);
 }
 
@@ -175,7 +205,7 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  padding: 2.72cqw 0;
+  padding: 2.904cqw 0 4.518cqw;
   border-top: 1px solid var(--border-subtle);
 }
 
@@ -183,14 +213,15 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.54cqw;
-  font-size: 2cqw;
+  gap: 1.291cqw;
+  font-size: 2.904cqw;
+  line-height: 4.194cqw;
   color: var(--text-tertiary);
 }
 
 .tabIcon {
-  width: 5cqw;
-  height: 5cqw;
+  width: 6.131cqw;
+  height: 6.131cqw;
 }
 
 .tabActive {

@@ -1,8 +1,7 @@
-import visual from '../../assets/images/mobile-app-institutions.png'
 import Eyebrow from '../../components/ui/Eyebrow'
 import CheckItem from '../../components/ui/CheckItem'
 import Reveal from '../../components/ui/Reveal'
-import Image from '../../components/ui/Image'
+import PhoneMockup from './PhoneMockup'
 import styles from './WhyInstitutionsPrefer.module.css'
 
 const ITEMS = [
@@ -17,8 +16,8 @@ function WhyInstitutionsPrefer() {
   return (
     <Reveal as="section" className={styles.section}>
       <div className={`container ${styles.row}`}>
-        <div className={styles.visual}>
-          <Image src={visual} alt="SchoolMate mobile app on a phone" loading="lazy" decoding="async" />
+        <div className={styles.visual} role="img" aria-label="SchoolMate mobile app showing today's attendance, homework, fees, and circulars">
+          <PhoneMockup />
         </div>
         <div className={styles.copy}>
           <Eyebrow>Why they choose it</Eyebrow>
