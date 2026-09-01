@@ -1,0 +1,53 @@
+/*
+  Fluid replica of the Figma "Composition / About hero band" component
+  (file 2tiU292F2mGV9oDUhuQtuo, node 98:1951). Each panel's left/top/width
+  is that design px divided by the composite's own canvas (1259.6 x 551.38).
+  The backdrop is an image-slot placeholder (Figma note: "replace fill with
+  photograph") — approximated here as a dark grid pattern until a real
+  photo is supplied.
+*/
+
+.band {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1259.6 / 551.38;
+  container-type: inline-size;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.backdrop {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 95.268%;
+  height: 77.986%;
+  background-color: #14090b;
+  background-image:
+    repeating-linear-gradient(0deg, rgba(209, 19, 27, 0.18) 0 1px, transparent 1px 48px),
+    repeating-linear-gradient(90deg, rgba(209, 19, 27, 0.18) 0 1px, transparent 1px 48px);
+}
+
+.dashboard,
+.phone,
+.communication {
+  position: absolute;
+}
+
+.dashboard {
+  left: 6.192%;
+  top: 21.401%;
+  width: 49.222%;
+}
+
+.phone {
+  left: 60.337%;
+  top: 15.96%;
+  width: 16.735%;
+}
+
+.communication {
+  left: 80.184%;
+  top: 54.409%;
+  width: 19.816%;
+}

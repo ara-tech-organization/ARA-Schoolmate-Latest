@@ -1,4 +1,3 @@
-import dashboardVisual from '../../assets/images/dashboard-operations.png'
 import chartIcon from '../../assets/icons/fn-chart.svg'
 import bookIcon from '../../assets/icons/fn-book.svg'
 import userCheckIcon from '../../assets/icons/fn-user-check.svg'
@@ -7,7 +6,7 @@ import busIcon from '../../assets/icons/fn-bus.svg'
 import calendarIcon from '../../assets/icons/fn-calendar.svg'
 import Eyebrow from '../../components/ui/Eyebrow'
 import Reveal from '../../components/ui/Reveal'
-import Image from '../../components/ui/Image'
+import DashboardMockup from './DashboardMockup'
 import styles from './AdvancedOperations.module.css'
 
 const FUNCTIONS = [
@@ -30,7 +29,7 @@ function AdvancedOperations() {
         </p>
 
         <div className={styles.visual}>
-          <Image src={dashboardVisual} alt="SchoolMate operations dashboard with attendance, homework and circular modules" loading="lazy" decoding="async" />
+          <DashboardMockup />
         </div>
 
         <h3 className={styles.functionsLabel}>Advanced Functionalities</h3>

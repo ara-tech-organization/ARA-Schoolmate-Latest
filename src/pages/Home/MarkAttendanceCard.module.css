@@ -1,0 +1,131 @@
+/*
+  Fluid replica of the Figma "Panel / Mark attendance" component
+  (file 2tiU292F2mGV9oDUhuQtuo, node 86:2877 inside "Visual well" 86:2868).
+  Sized in cqw against the well's inline size (container-type set in
+  EveryUser.module.css) so every offset keeps the exact ratio authored in
+  Figma — card is 336/384 = 87.5cqw wide, and each internal value below is
+  that same property (in px, at the 384px-wide frame) divided by 384.
+*/
+
+.card {
+  width: 87.5cqw;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: 2.552cqw;
+  box-shadow: var(--shadow-raised);
+  overflow: hidden;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 1.823cqw;
+  padding: 2.734cqw 3.281cqw;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.icon {
+  width: 3.099cqw;
+  height: 3.099cqw;
+  flex-shrink: 0;
+}
+
+.headerText {
+  display: flex;
+  flex-direction: column;
+  gap: 0.182cqw;
+  min-width: 0;
+}
+
+.title {
+  margin: 0;
+  font-size: 2.37cqw;
+  line-height: 3.464cqw;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.subtitle {
+  margin: 0;
+  font-size: 1.823cqw;
+  line-height: 2.734cqw;
+  color: var(--text-tertiary);
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: 2.552cqw;
+  padding: 2.917cqw 3.281cqw 3.281cqw;
+}
+
+.legend {
+  display: flex;
+  align-items: center;
+  gap: 2.917cqw;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 1.094cqw;
+  font-size: 2.005cqw;
+  line-height: 2.917cqw;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.dot {
+  width: 1.276cqw;
+  height: 1.276cqw;
+  flex-shrink: 0;
+  border-radius: var(--radius-full);
+}
+
+.dotPresent {
+  background: var(--icon-success);
+}
+
+.dotAbsent {
+  background: var(--icon-attention);
+}
+
+.spacer {
+  flex: 1;
+}
+
+.marked {
+  font-size: 2.005cqw;
+  line-height: 2.917cqw;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.458cqw;
+}
+
+.pill {
+  width: 6.562cqw;
+  flex-shrink: 0;
+  border: 1px solid;
+  border-radius: 1.094cqw;
+  text-align: center;
+  font-size: 2.005cqw;
+  line-height: 2.917cqw;
+  font-weight: 600;
+}
+
+.pillPresent {
+  background: var(--bg-success-subtle);
+  border-color: var(--icon-success);
+  color: var(--text-success);
+}
+
+.pillAbsent {
+  background: var(--bg-attention-subtle);
+  border-color: var(--icon-attention);
+  color: var(--text-attention);
+}

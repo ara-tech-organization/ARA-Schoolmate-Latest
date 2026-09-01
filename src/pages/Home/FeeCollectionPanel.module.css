@@ -1,0 +1,219 @@
+/*
+  Fluid replica of the Figma "Panel / Fee collection" component
+  (file 2tiU292F2mGV9oDUhuQtuo, node 38:129 inside "Section / 08 What We Offer").
+  Authored at a native width of 480px — each value is that design px divided
+  by 480, in cqw against the wrapping frame's inline size.
+*/
+
+.card {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: 2.917cqw;
+  box-shadow: var(--shadow-raised);
+  overflow: hidden;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 2.083cqw;
+  padding: 3.125cqw 3.75cqw;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.icon {
+  width: 3.542cqw;
+  height: 3.542cqw;
+  flex-shrink: 0;
+}
+
+.headerText {
+  display: flex;
+  flex-direction: column;
+  gap: 0.208cqw;
+  min-width: 0;
+}
+
+.title {
+  margin: 0;
+  font-size: 2.708cqw;
+  line-height: 3.958cqw;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.subtitle {
+  margin: 0;
+  font-size: 2.083cqw;
+  line-height: 3.125cqw;
+  color: var(--text-tertiary);
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: 2.917cqw;
+  padding: 3.333cqw 3.75cqw 3.75cqw;
+}
+
+.amounts {
+  display: flex;
+  align-items: flex-end;
+  gap: 2.083cqw;
+  width: 100%;
+}
+
+.collected {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.417cqw;
+}
+
+.pending {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.417cqw;
+}
+
+.amountLabel {
+  margin: 0;
+  font-size: 2.292cqw;
+  line-height: 3.333cqw;
+  font-weight: 500;
+  color: var(--text-tertiary);
+  white-space: nowrap;
+}
+
+.collectedValue {
+  margin: 0;
+  font-size: 5.417cqw;
+  line-height: 7.917cqw;
+  font-weight: 600;
+  color: var(--text-primary);
+  white-space: nowrap;
+}
+
+.pendingValue {
+  margin: 0;
+  font-size: 3.125cqw;
+  line-height: 4.583cqw;
+  font-weight: 600;
+  color: var(--text-attention);
+  white-space: nowrap;
+}
+
+.progressTrack {
+  width: 100%;
+  height: 2.083cqw;
+  background: var(--bg-muted);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: var(--bg-brand);
+  border-radius: var(--radius-full);
+}
+
+.meta {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.667cqw;
+  width: 100%;
+  font-size: 2.292cqw;
+  line-height: 3.333cqw;
+}
+
+.metaPct {
+  flex-shrink: 0;
+  font-weight: 600;
+  color: var(--text-primary);
+  white-space: nowrap;
+}
+
+.metaReminders {
+  flex: 1;
+  min-width: 0;
+  color: var(--text-tertiary);
+  text-align: right;
+}
+
+.rows {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 2.083cqw;
+  padding: 1.875cqw 0;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.rowClass {
+  flex: 1;
+  min-width: 0;
+  margin: 0;
+  font-size: 2.5cqw;
+  line-height: 3.542cqw;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.rowAmount {
+  flex-shrink: 0;
+  margin: 0;
+  font-size: 2.5cqw;
+  line-height: 3.542cqw;
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+.chip {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 1.042cqw;
+  padding: 0.625cqw 1.875cqw 0.625cqw 1.458cqw;
+  border-radius: var(--radius-full);
+  font-size: 2.083cqw;
+  line-height: 3.125cqw;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.chipSuccess {
+  background: var(--bg-success-subtle);
+  color: var(--text-success);
+}
+
+.chipAttention {
+  background: var(--bg-attention-subtle);
+  color: var(--text-attention);
+}
+
+.dot {
+  width: 1.25cqw;
+  height: 1.25cqw;
+  flex-shrink: 0;
+  border-radius: var(--radius-full);
+}
+
+.dotSuccess {
+  background: var(--icon-success);
+}
+
+.dotAttention {
+  background: var(--icon-attention);
+}

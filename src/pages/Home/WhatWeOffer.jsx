@@ -1,13 +1,12 @@
 import messageIcon from '../../assets/icons/tile-message.svg'
 import bookIcon from '../../assets/icons/tile-book.svg'
 import userCheckIcon from '../../assets/icons/tile-user-check.svg'
-import panelCommunication from '../../assets/images/panel-communication.png'
-import panelAcademics from '../../assets/images/panel-academics.png'
-import panelAttendance from '../../assets/images/panel-attendance.png'
 import Eyebrow from '../../components/ui/Eyebrow'
 import CheckItem from '../../components/ui/CheckItem'
 import Reveal from '../../components/ui/Reveal'
-import Image from '../../components/ui/Image'
+import CommunicationPanel from './CommunicationPanel'
+import AcademicsPanel from './AcademicsPanel'
+import AttendancePanel from './AttendancePanel'
 import styles from './WhatWeOffer.module.css'
 
 const CAPABILITIES = [
@@ -21,8 +20,8 @@ const CAPABILITIES = [
       'Digital consent forms',
       'School news and updates',
     ],
-    visual: panelCommunication,
-    alt: 'Communication panel showing delivered circulars and consent forms',
+    visual: <CommunicationPanel />,
+    frameClass: 'frameCommunication',
   },
   {
     icon: bookIcon,
@@ -34,8 +33,8 @@ const CAPABILITIES = [
       'Marks and result management',
       'Academic calendars',
     ],
-    visual: panelAcademics,
-    alt: 'Academics panel showing homework and exam timetable',
+    visual: <AcademicsPanel />,
+    frameClass: 'frameAcademics',
     reverse: true,
   },
   {
@@ -48,8 +47,8 @@ const CAPABILITIES = [
       'Performance analytics',
       'Daily activity tracking',
     ],
-    visual: panelAttendance,
-    alt: 'Attendance panel showing a class mark-attendance grid',
+    visual: <AttendancePanel />,
+    frameClass: 'frameAttendance',
   },
 ]
 
@@ -63,7 +62,7 @@ function WhatWeOffer() {
         <div className={styles.list}>
           {CAPABILITIES.map((cap) => (
             <div key={cap.title} className={[styles.capability, cap.reverse ? styles.reverse : ''].join(' ')}>
-              <div className={styles.copy}>
+              <Reveal as="div" className={styles.copy} direction={cap.reverse ? 'left' : 'right'}>
                 <span className={styles.iconTile}>
                   <img src={cap.icon} alt="" loading="lazy" decoding="async" width={24} height={24} />
                 </span>
@@ -73,10 +72,10 @@ function WhatWeOffer() {
                     <CheckItem key={label}>{label}</CheckItem>
                   ))}
                 </ul>
-              </div>
-              <div className={styles.visual}>
-                <Image src={cap.visual} alt={cap.alt} loading="lazy" decoding="async" />
-              </div>
+              </Reveal>
+              <Reveal as="div" className={styles.visual} direction={cap.reverse ? 'right' : 'left'} delay={120}>
+                <div className={[styles.visualFrame, styles[cap.frameClass]].join(' ')}>{cap.visual}</div>
+              </Reveal>
             </div>
           ))}
         </div>

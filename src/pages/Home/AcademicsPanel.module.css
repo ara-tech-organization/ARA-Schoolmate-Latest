@@ -1,0 +1,205 @@
+/*
+  Fluid replica of the Figma "Panel / Academics" component
+  (file 2tiU292F2mGV9oDUhuQtuo, node 85:2459 inside "Section / 08 What We Offer").
+  Authored at a native width of 540px — each value is that design px divided
+  by 540, in cqw against the wrapping frame's inline size.
+*/
+
+.card {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: 2.917cqw;
+  box-shadow: var(--shadow-raised);
+  overflow: hidden;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 2.083cqw;
+  padding: 3.125cqw 3.75cqw;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.icon {
+  width: 3.542cqw;
+  height: 3.542cqw;
+  flex-shrink: 0;
+}
+
+.headerText {
+  display: flex;
+  flex-direction: column;
+  gap: 0.208cqw;
+  min-width: 0;
+}
+
+.title {
+  margin: 0;
+  font-size: 2.709cqw;
+  line-height: 3.958cqw;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.subtitle {
+  margin: 0;
+  font-size: 2.083cqw;
+  line-height: 3.125cqw;
+  color: var(--text-tertiary);
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: 2.917cqw;
+  padding: 3.333cqw 3.75cqw 3.75cqw;
+}
+
+.tabs {
+  display: flex;
+  align-items: center;
+  gap: 1.25cqw;
+}
+
+.tab {
+  padding: 1.458cqw 2.917cqw;
+  border-radius: var(--radius-full);
+  background: var(--bg-subtle);
+  font-size: 2.293cqw;
+  line-height: 3.333cqw;
+  font-weight: 600;
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+.tabActive {
+  background: var(--bg-brand);
+  color: var(--text-on-brand);
+}
+
+.rows {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2.083cqw;
+  padding: 2.083cqw 0;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.copy {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.417cqw;
+}
+
+.rowTitle {
+  margin: 0;
+  font-size: 2.5cqw;
+  line-height: 3.542cqw;
+  font-weight: 500;
+  color: var(--text-primary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.rowMeta {
+  font-size: 2.083cqw;
+  line-height: 3.125cqw;
+  color: var(--text-tertiary);
+}
+
+.chip {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 1.042cqw;
+  padding: 0.625cqw 1.875cqw 0.625cqw 1.458cqw;
+  border-radius: var(--radius-full);
+  font-size: 2.083cqw;
+  line-height: 3.125cqw;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.chipAttention {
+  background: var(--bg-attention-subtle);
+  color: var(--text-attention);
+}
+
+.chipMuted {
+  background: var(--bg-muted);
+  color: var(--text-secondary);
+}
+
+.chipSuccess {
+  background: var(--bg-success-subtle);
+  color: var(--text-success);
+}
+
+.dot {
+  width: 1.25cqw;
+  height: 1.25cqw;
+  flex-shrink: 0;
+  border-radius: var(--radius-full);
+}
+
+.dotAttention {
+  background: var(--icon-attention);
+}
+
+.dotMuted {
+  background: var(--icon-tertiary);
+}
+
+.dotSuccess {
+  background: var(--icon-success);
+}
+
+.studyMaterial {
+  display: flex;
+  align-items: center;
+  gap: 2.083cqw;
+  padding: 2.083cqw 2.5cqw;
+  background: var(--bg-subtle);
+  border-radius: 1.25cqw;
+}
+
+.studyIcon {
+  width: 3.333cqw;
+  height: 3.333cqw;
+  flex-shrink: 0;
+}
+
+.studyCopy {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.417cqw;
+}
+
+.studyTitle {
+  margin: 0;
+  font-size: 2.293cqw;
+  line-height: 3.333cqw;
+  font-weight: 500;
+  color: var(--text-primary);
+  white-space: nowrap;
+}
+
+.studyMeta {
+  font-size: 2.083cqw;
+  line-height: 3.125cqw;
+  color: var(--text-tertiary);
+}

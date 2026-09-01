@@ -29,13 +29,9 @@
 
 .visual {
   width: 100%;
+  aspect-ratio: 1080 / 754.92;
+  container-type: inline-size;
   margin-bottom: var(--stack-xl);
-}
-
-.visual img {
-  width: 100%;
-  height: auto;
-  border-radius: var(--radius-lg);
 }
 
 .functionsLabel {

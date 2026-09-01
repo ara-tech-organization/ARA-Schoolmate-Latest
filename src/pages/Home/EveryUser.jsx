@@ -1,18 +1,17 @@
-import teachersVisual from '../../assets/images/every-user-teachers.png'
-import parentsVisual from '../../assets/images/every-user-parents.png'
-import adminsVisual from '../../assets/images/every-user-admins.png'
 import Eyebrow from '../../components/ui/Eyebrow'
 import Button from '../../components/ui/Button'
 import CheckItem from '../../components/ui/CheckItem'
 import Reveal from '../../components/ui/Reveal'
-import Image from '../../components/ui/Image'
+import RevealGroup from '../../components/ui/RevealGroup'
+import MarkAttendanceCard from './MarkAttendanceCard'
+import ParentPhoneCard from './ParentPhoneCard'
+import AdminDashboardCard from './AdminDashboardCard'
 import styles from './EveryUser.module.css'
 
 const ROLES = [
   {
     title: 'For Teachers',
-    visual: teachersVisual,
-    alt: 'Mark attendance panel with a class roll-number grid',
+    visual: <MarkAttendanceCard />,
     items: [
       'Mark attendance instantly',
       'Upload homework and marks',
@@ -22,8 +21,7 @@ const ROLES = [
   },
   {
     title: 'For Parents',
-    visual: parentsVisual,
-    alt: 'SchoolMate mobile app showing attendance, homework, fees and circulars',
+    visual: <ParentPhoneCard />,
     items: [
       'Monitor attendance and homework',
       'View exam schedules and results',
@@ -34,8 +32,7 @@ const ROLES = [
   },
   {
     title: 'For School Administrators',
-    visual: adminsVisual,
-    alt: 'SchoolMate admin dashboard showing attendance analytics',
+    visual: <AdminDashboardCard />,
     items: [
       'Centralized dashboards',
       'Fee and finance tracking',
@@ -53,12 +50,10 @@ function EveryUser() {
         <Eyebrow align="center">Built for every role</Eyebrow>
         <h2 className={styles.heading}>Powerful Features for Every User</h2>
 
-        <div className={styles.grid}>
+        <RevealGroup className={styles.grid}>
           {ROLES.map((role) => (
             <div key={role.title} className={styles.role}>
-              <div className={styles.well}>
-                <Image src={role.visual} alt={role.alt} loading="lazy" decoding="async" />
-              </div>
+              <div className={`${styles.well} ${styles.wellCard}`}>{role.visual}</div>
               <h3 className={styles.roleTitle}>{role.title}</h3>
               <ul className={styles.items}>
                 {role.items.map((label) => (
@@ -67,7 +62,7 @@ function EveryUser() {
               </ul>
             </div>
           ))}
-        </div>
+        </RevealGroup>
 
         <div className={styles.actions}>
           <Button to="/contact">Get a free Demo</Button>

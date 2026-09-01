@@ -1,14 +1,13 @@
-import visual from '../../assets/images/dashboard-admin.png'
 import Eyebrow from '../../components/ui/Eyebrow'
 import Reveal from '../../components/ui/Reveal'
-import Image from '../../components/ui/Image'
+import DashboardMockup from './DashboardMockup'
 import styles from './FutureOfAdministration.module.css'
 
 function FutureOfAdministration() {
   return (
     <Reveal as="section" className={styles.section}>
       <div className={`container ${styles.row}`}>
-        <div className={styles.copy}>
+        <Reveal as="div" className={styles.copy} direction="right">
           <Eyebrow>One smart dashboard</Eyebrow>
           <h2 className={styles.heading}>The Future of Digital School Administration Starts Here</h2>
           <p className={styles.body}>
@@ -19,10 +18,10 @@ function FutureOfAdministration() {
             Our software removes paperwork, reduces manual work, and allows schools to run their day-to-day
             activities through a single smart dashboard.
           </p>
-        </div>
-        <div className={styles.visual}>
-          <Image src={visual} alt="SchoolMate attendance dashboard" loading="lazy" decoding="async" />
-        </div>
+        </Reveal>
+        <Reveal as="div" className={styles.visual} direction="left" delay={120}>
+          <DashboardMockup />
+        </Reveal>
       </div>
     </Reveal>
   )

@@ -1,8 +1,31 @@
 .reveal {
   opacity: 0;
-  transform: translateY(16px);
-  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: opacity 0.45s cubic-bezier(0.16, 1, 0.3, 1), transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
   transition-delay: var(--reveal-delay, 0s);
+}
+
+.reveal.up {
+  --child-x: 0px;
+  --child-y: 16px;
+  transform: translateY(22px);
+}
+
+.reveal.down {
+  --child-x: 0px;
+  --child-y: -16px;
+  transform: translateY(-22px);
+}
+
+.reveal.left {
+  --child-x: 20px;
+  --child-y: 0px;
+  transform: translateX(28px);
+}
+
+.reveal.right {
+  --child-x: -20px;
+  --child-y: 0px;
+  transform: translateX(-28px);
 }
 
 .reveal.inView {
@@ -10,65 +33,79 @@
   transform: none;
 }
 
+/* Children animate along the same axis as their Reveal container, so a
+   left/right section doesn't slide sideways while its own heading and
+   copy fade straight up underneath it. */
 .reveal :is(h1, h2, h3, h4),
 .reveal p,
 .reveal form,
 .reveal li,
 .reveal button,
-.reveal a {
+.reveal a,
+.reveal img {
   opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: translate(var(--child-x, 0px), var(--child-y, 16px));
+  transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal img {
+  transform: translate(var(--child-x, 0px), var(--child-y, 16px)) scale(0.95);
 }
 
 .reveal.inView :is(h1, h2, h3, h4) {
   opacity: 1;
   transform: none;
-  transition-delay: calc(var(--reveal-delay, 0s) + 0.05s);
+  transition-delay: calc(var(--reveal-delay, 0s) + 0.03s);
 }
 
 .reveal.inView p,
 .reveal.inView form {
   opacity: 1;
   transform: none;
-  transition-delay: calc(var(--reveal-delay, 0s) + 0.15s);
+  transition-delay: calc(var(--reveal-delay, 0s) + 0.09s);
 }
 
 .reveal.inView li {
   opacity: 1;
   transform: none;
-  transition-delay: calc(var(--reveal-delay, 0s) + 0.15s);
+  transition-delay: calc(var(--reveal-delay, 0s) + 0.05s);
 }
 
 .reveal.inView li:nth-child(2) {
-  transition-delay: calc(var(--reveal-delay, 0s) + 0.2s);
+  transition-delay: calc(var(--reveal-delay, 0s) + 0.13s);
 }
 
 .reveal.inView li:nth-child(3) {
-  transition-delay: calc(var(--reveal-delay, 0s) + 0.25s);
+  transition-delay: calc(var(--reveal-delay, 0s) + 0.21s);
 }
 
 .reveal.inView li:nth-child(4) {
-  transition-delay: calc(var(--reveal-delay, 0s) + 0.3s);
+  transition-delay: calc(var(--reveal-delay, 0s) + 0.29s);
 }
 
 .reveal.inView li:nth-child(5) {
-  transition-delay: calc(var(--reveal-delay, 0s) + 0.35s);
+  transition-delay: calc(var(--reveal-delay, 0s) + 0.37s);
 }
 
 .reveal.inView li:nth-child(6) {
-  transition-delay: calc(var(--reveal-delay, 0s) + 0.4s);
+  transition-delay: calc(var(--reveal-delay, 0s) + 0.45s);
 }
 
 .reveal.inView li:nth-child(n + 7) {
-  transition-delay: calc(var(--reveal-delay, 0s) + 0.45s);
+  transition-delay: calc(var(--reveal-delay, 0s) + 0.5s);
 }
 
 .reveal.inView button,
 .reveal.inView a {
   opacity: 1;
   transform: none;
-  transition-delay: calc(var(--reveal-delay, 0s) + 0.3s);
+  transition-delay: calc(var(--reveal-delay, 0s) + 0.18s);
+}
+
+.reveal.inView img {
+  opacity: 1;
+  transform: none;
+  transition-delay: calc(var(--reveal-delay, 0s) + 0.12s);
 }
 
 @media (prefers-reduced-motion: reduce) {

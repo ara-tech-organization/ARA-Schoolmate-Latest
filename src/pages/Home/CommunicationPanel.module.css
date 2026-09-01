@@ -1,0 +1,169 @@
+/*
+  Fluid replica of the Figma "Panel / Communication" component
+  (file 2tiU292F2mGV9oDUhuQtuo, node 85:2381 inside "Section / 08 What We Offer").
+  The panel is authored at a native width of 540px, so every value below is
+  that property's design px divided by 540, expressed in cqw against the
+  panel's own inline size (container-type is set on the wrapping frame in
+  WhatWeOffer.module.css).
+*/
+
+.card {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: 2.917cqw;
+  box-shadow: var(--shadow-raised);
+  overflow: hidden;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 2.083cqw;
+  padding: 3.125cqw 3.75cqw;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.icon {
+  width: 3.542cqw;
+  height: 3.542cqw;
+  flex-shrink: 0;
+}
+
+.headerText {
+  display: flex;
+  flex-direction: column;
+  gap: 0.208cqw;
+  min-width: 0;
+}
+
+.title {
+  margin: 0;
+  font-size: 2.709cqw;
+  line-height: 3.958cqw;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.subtitle {
+  margin: 0;
+  font-size: 2.083cqw;
+  line-height: 3.125cqw;
+  color: var(--text-tertiary);
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: 2.917cqw;
+  padding: 3.333cqw 3.75cqw 3.75cqw;
+}
+
+.kpiRow {
+  display: flex;
+  gap: 2.5cqw;
+}
+
+.kpi {
+  flex: 1;
+  min-width: 0;
+  padding: 2.083cqw 2.5cqw;
+  background: var(--bg-subtle);
+  border-radius: 1.25cqw;
+}
+
+.kpiLabel {
+  margin: 0 0 0.833cqw;
+  font-size: 2.083cqw;
+  line-height: 3.125cqw;
+  font-weight: 500;
+  color: var(--text-tertiary);
+  white-space: nowrap;
+}
+
+.kpiValue {
+  margin: 0;
+  font-size: 3.542cqw;
+  line-height: 5.208cqw;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.rows {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2.083cqw;
+  padding: 2.083cqw 0;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.copy {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.417cqw;
+}
+
+.rowTitle {
+  margin: 0;
+  font-size: 2.5cqw;
+  line-height: 3.542cqw;
+  font-weight: 500;
+  color: var(--text-primary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.rowMeta {
+  font-size: 2.083cqw;
+  line-height: 3.125cqw;
+  color: var(--text-tertiary);
+}
+
+.chip {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 1.042cqw;
+  padding: 0.625cqw 1.875cqw 0.625cqw 1.458cqw;
+  border-radius: var(--radius-full);
+  font-size: 2.083cqw;
+  line-height: 3.125cqw;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.chipSuccess {
+  background: var(--bg-success-subtle);
+  color: var(--text-success);
+}
+
+.chipAttention {
+  background: var(--bg-attention-subtle);
+  color: var(--text-attention);
+}
+
+.dot {
+  width: 1.25cqw;
+  height: 1.25cqw;
+  flex-shrink: 0;
+  border-radius: var(--radius-full);
+}
+
+.dotSuccess {
+  background: var(--icon-success);
+}
+
+.dotAttention {
+  background: var(--icon-attention);
+}

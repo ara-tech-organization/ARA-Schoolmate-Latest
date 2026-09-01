@@ -61,11 +61,21 @@
   width: 100%;
 }
 
-.visual img {
+.visualFrame {
+  container-type: inline-size;
   width: 100%;
-  height: auto;
-  overflow: hidden;
-  border-radius: 5% / 7%;
+}
+
+.frameCommunication {
+  aspect-ratio: 540 / 381.375;
+}
+
+.frameAcademics {
+  aspect-ratio: 540 / 418.5;
+}
+
+.frameAttendance {
+  aspect-ratio: 540 / 271.125;
 }
 
 .closing {

@@ -10,6 +10,8 @@ import reportsIcon from '../../assets/icons/monitor.svg'
 import communicationIcon from '../../assets/icons/tile-message.svg'
 import searchIcon from '../../assets/icons/search.svg'
 import bellIcon from '../../assets/icons/bell.svg'
+import Reveal from '../../components/ui/Reveal'
+import RevealGroup from '../../components/ui/RevealGroup'
 import styles from './DashboardMockup.module.css'
 
 const NAV_ITEMS = [
@@ -97,7 +99,7 @@ function DashboardMockup() {
         </div>
 
         <div className={styles.content}>
-          <div className={styles.kpiRow}>
+          <RevealGroup className={styles.kpiRow}>
             {KPIS.map((kpi) => (
               <div key={kpi.label} className={styles.kpi}>
                 <p className={styles.kpiLabel}>{kpi.label}</p>
@@ -111,9 +113,9 @@ function DashboardMockup() {
                 </div>
               </div>
             ))}
-          </div>
+          </RevealGroup>
 
-          <div className={styles.chartCard}>
+          <Reveal as="div" className={styles.chartCard} direction="up" delay={100}>
             <div className={styles.cardHead}>
               <div className={styles.cardHeadTitles}>
                 <p className={styles.cardTitle}>Attendance rate · this week</p>
@@ -174,9 +176,9 @@ function DashboardMockup() {
                 </span>
               ))}
             </div>
-          </div>
+          </Reveal>
 
-          <div className={styles.tableCard}>
+          <Reveal as="div" className={styles.tableCard} direction="up" delay={180}>
             <div className={styles.tableCardHead}>
               <p className={styles.cardTitle}>Class-wise attendance · today</p>
             </div>
@@ -187,18 +189,20 @@ function DashboardMockup() {
               <span>Rate</span>
               <span>Status</span>
             </div>
-            {ROWS.map((row) => (
-              <div key={row.cls} className={styles.tableRow}>
-                <span>{row.cls}</span>
-                <span>{row.present}</span>
-                <span>{row.absent}</span>
-                <span>{row.rate}</span>
-                <span className={[styles.chip, row.status === 'Low' ? styles.chipLow : styles.chipGood].join(' ')}>
-                  {row.status}
-                </span>
-              </div>
-            ))}
-          </div>
+            <RevealGroup as="div">
+              {ROWS.map((row) => (
+                <div key={row.cls} className={styles.tableRow}>
+                  <span>{row.cls}</span>
+                  <span>{row.present}</span>
+                  <span>{row.absent}</span>
+                  <span>{row.rate}</span>
+                  <span className={[styles.chip, row.status === 'Low' ? styles.chipLow : styles.chipGood].join(' ')}>
+                    {row.status}
+                  </span>
+                </div>
+              ))}
+            </RevealGroup>
+          </Reveal>
         </div>
       </div>
     </div>

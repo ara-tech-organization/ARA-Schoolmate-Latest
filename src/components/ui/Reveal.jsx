@@ -1,10 +1,12 @@
 import useInView from '../../hooks/useInView'
 import styles from './Reveal.module.css'
 
-function Reveal({ as: Tag = 'div', className = '', delay = 0, style, children, ...rest }) {
+function Reveal({ as: Tag = 'div', className = '', delay = 0, direction = 'up', style, children, ...rest }) {
   const [ref, inView] = useInView()
 
-  const classes = [styles.reveal, inView ? styles.inView : '', className].filter(Boolean).join(' ')
+  const classes = [styles.reveal, styles[direction], inView ? styles.inView : '', className]
+    .filter(Boolean)
+    .join(' ')
   const mergedStyle = delay ? { ...style, '--reveal-delay': `${delay}ms` } : style
 
   return (

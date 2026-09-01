@@ -18,7 +18,7 @@ function Hero() {
   return (
     <Reveal as="section" className={styles.hero} delay={getHeroRevealDelay()}>
       <div className={`container ${styles.row}`}>
-        <div className={styles.copy}>
+        <Reveal as="div" className={styles.copy} direction="right" delay={getHeroRevealDelay()}>
           <div className={styles.context}>
             <span className={styles.rule} />
             <p>SchoolMate – Smart Digital Solution for Modern Schools</p>
@@ -42,11 +42,11 @@ function Hero() {
           </ul>
 
           <Button to="/contact">Get Started Today with SchoolMate</Button>
-        </div>
+        </Reveal>
 
-        <div className={styles.visual}>
+        <Reveal as="div" className={styles.visual} direction="left" delay={getHeroRevealDelay() + 120}>
           <HeroEcosystem />
-        </div>
+        </Reveal>
       </div>
     </Reveal>
   )

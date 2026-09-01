@@ -1,7 +1,6 @@
-import dashboardMockup from '../../assets/images/about-dashboard-mockup.png'
-import academicsMockup from '../../assets/images/about-academics-mockup.png'
 import Reveal from '../../components/ui/Reveal'
-import Image from '../../components/ui/Image'
+import DashboardMockup from '../Home/DashboardMockup'
+import AcademicsPanel from '../Home/AcademicsPanel'
 import styles from './OurVision.module.css'
 
 function OurVision() {
@@ -23,8 +22,12 @@ function OurVision() {
         </div>
 
         <div className={styles.visual}>
-          <Image src={dashboardMockup} alt="SchoolMate admin dashboard" loading="lazy" decoding="async" className={styles.dashboard} />
-          <Image src={academicsMockup} alt="SchoolMate academics panel" loading="lazy" decoding="async" className={styles.academics} />
+          <div className={styles.dashboard}>
+            <DashboardMockup />
+          </div>
+          <div className={styles.academics}>
+            <AcademicsPanel />
+          </div>
         </div>
       </div>
     </Reveal>

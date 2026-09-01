@@ -26,10 +26,12 @@
   margin-bottom: var(--space-7);
 }
 
-.well img {
-  width: 100%;
-  height: auto;
-  display: block;
+.wellCard {
+  container-type: inline-size;
+  aspect-ratio: 384 / 420;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .roleTitle {

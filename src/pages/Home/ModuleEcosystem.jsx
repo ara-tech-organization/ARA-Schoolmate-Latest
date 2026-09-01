@@ -7,6 +7,8 @@ import homeworkIcon from '../../assets/icons/tile-book.svg'
 import transportIcon from '../../assets/icons/fn-bus.svg'
 import notificationsIcon from '../../assets/icons/fn-bell.svg'
 import reportsIcon from '../../assets/icons/fn-chart.svg'
+import Reveal from '../../components/ui/Reveal'
+import RevealGroup from '../../components/ui/RevealGroup'
 import styles from './ModuleEcosystem.module.css'
 
 const TOP_MODULES = [
@@ -25,7 +27,7 @@ const BOTTOM_MODULES = [
 
 function ModuleRow({ modules }) {
   return (
-    <div className={styles.row}>
+    <RevealGroup className={styles.row}>
       {modules.map((module) => (
         <div key={module.label} className={styles.card}>
           <div className={styles.cardHead}>
@@ -37,7 +39,7 @@ function ModuleRow({ modules }) {
           </div>
         </div>
       ))}
-    </div>
+    </RevealGroup>
   )
 }
 
@@ -65,10 +67,10 @@ function ModuleEcosystem() {
     <div className={styles.ecosystem} role="img" aria-label="SchoolMate module ecosystem connecting attendance, biometric integration, fee and payroll management, homework and timetable tools, transport tracking, notifications, and reports around the platform hub">
       <ModuleRow modules={TOP_MODULES} />
       <Branch stemsOn="top" />
-      <div className={styles.hub}>
+      <Reveal as="div" className={styles.hub} direction="up" delay={180}>
         <img src={brandMark} alt="" className={styles.hubIcon} />
         <span className={styles.hubLabel}>SchoolMate</span>
-      </div>
+      </Reveal>
       <Branch stemsOn="bottom" />
       <ModuleRow modules={BOTTOM_MODULES} />
     </div>

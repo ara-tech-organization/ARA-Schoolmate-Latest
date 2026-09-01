@@ -1,0 +1,272 @@
+/*
+  Fluid replica of the Figma "Mockup / Mobile app" component
+  (file 2tiU292F2mGV9oDUhuQtuo, node 86:2983 inside "Visual well" 86:2982).
+  Sized in cqw against the well's inline size (container-type set in
+  EveryUser.module.css) — phone is 181.321/384 = 47.219cqw wide, and every
+  value below is that same property (in px, at the 384px-wide well) divided
+  by 384.
+*/
+
+.phone {
+  width: 47.219cqw;
+  position: relative;
+  background: var(--bg-inverse);
+  border-radius: 6.397cqw;
+  box-shadow: 0 0.1523cqw 0.457cqw rgba(20, 23, 27, 0.06), 0 1.2185cqw 3.0464cqw rgba(20, 23, 27, 0.16);
+  overflow: hidden;
+}
+
+.screen {
+  margin: 1.6745cqw;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-subtle);
+  border-radius: 4.8742cqw;
+  overflow: hidden;
+}
+
+.statusBar {
+  display: flex;
+  align-items: center;
+  gap: 0.1523cqw;
+  padding: 1.8279cqw 2.7417cqw 0.9138cqw 3.0464cqw;
+  background: var(--bg-surface);
+}
+
+.statusTime {
+  font-size: 1.6745cqw;
+  line-height: 2.437cqw;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.statusSpacer {
+  flex: 1;
+}
+
+.statusSignal {
+  width: 0.3807cqw;
+  border-radius: 0.1523cqw;
+  background: var(--icon-primary);
+}
+
+.statusBattery {
+  width: 2.7417cqw;
+  height: 1.3708cqw;
+  border-radius: 0.3047cqw;
+  background: var(--icon-primary);
+}
+
+.appBar {
+  display: flex;
+  align-items: center;
+  gap: 1.3708cqw;
+  padding: 1.2185cqw 2.1326cqw 2.1326cqw 2.7417cqw;
+  background: var(--bg-surface);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.appBar img {
+  width: 3.6557cqw;
+  height: 3.6557cqw;
+  flex-shrink: 0;
+}
+
+.appBarName {
+  font-size: 2.2839cqw;
+  line-height: 3.351cqw;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.appBarSpacer {
+  flex: 1;
+}
+
+.appBarBell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4.5695cqw;
+  flex-shrink: 0;
+}
+
+.appBarBell img {
+  width: 2.894cqw;
+  height: 2.894cqw;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8279cqw;
+  padding: 2.437cqw;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5232cqw;
+  padding: 1.9802cqw 2.1326cqw;
+  border-radius: 1.5232cqw;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+}
+
+.cardHead {
+  display: flex;
+  align-items: center;
+  gap: 1.2185cqw;
+}
+
+.cardHead img {
+  width: 2.437cqw;
+  height: 2.437cqw;
+  flex-shrink: 0;
+}
+
+.cardHead p {
+  flex: 1;
+  margin: 0;
+  min-width: 0;
+  font-size: 1.8281cqw;
+  line-height: 2.5893cqw;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 1.2185cqw;
+}
+
+.chipPresent {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7617cqw;
+  padding: 0.6094cqw 1.5232cqw 0.6094cqw 1.2185cqw;
+  border-radius: 999px;
+  background: var(--bg-success-subtle);
+}
+
+.chipDot {
+  width: 0.9138cqw;
+  height: 0.9138cqw;
+  border-radius: 999px;
+  background: var(--icon-success);
+}
+
+.chipPresent span {
+  font-size: 1.6745cqw;
+  line-height: 2.437cqw;
+  font-weight: 600;
+  color: var(--text-success);
+}
+
+.muted {
+  font-size: 1.6745cqw;
+  line-height: 2.437cqw;
+  color: var(--text-tertiary);
+}
+
+.itemDot {
+  width: 0.7617cqw;
+  height: 0.7617cqw;
+  border-radius: 999px;
+  background: var(--border-strong);
+  flex-shrink: 0;
+}
+
+.itemLabel {
+  flex: 1;
+  min-width: 0;
+  font-size: 1.8281cqw;
+  line-height: 2.5893cqw;
+  color: var(--text-secondary);
+}
+
+.due {
+  font-size: 1.6745cqw;
+  line-height: 2.437cqw;
+  font-weight: 500;
+  color: var(--text-attention);
+  white-space: nowrap;
+}
+
+.dueMuted {
+  composes: due;
+  color: var(--text-tertiary);
+}
+
+.feeAmount {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.1523cqw;
+}
+
+.feeAmount p {
+  margin: 0;
+  font-size: 2.5885cqw;
+  line-height: 3.8081cqw;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.feeAmount span {
+  font-size: 1.5234cqw;
+  line-height: 2.2849cqw;
+  color: var(--text-tertiary);
+}
+
+.payButton {
+  padding: 1.2185cqw 2.1326cqw;
+  border-radius: 0.9138cqw;
+  background: var(--bg-brand);
+  color: var(--text-on-brand);
+  font-size: 1.6745cqw;
+  line-height: 2.437cqw;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.circularText {
+  align-self: stretch;
+  margin: 0;
+  font-size: 1.6745cqw;
+  line-height: 2.437cqw;
+  color: var(--text-secondary);
+}
+
+.tabBar {
+  display: flex;
+  padding: 1.3708cqw 0 2.1326cqw;
+  background: var(--bg-surface);
+  border-top: 1px solid var(--border-subtle);
+}
+
+.tab {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6094cqw;
+}
+
+.tab img {
+  width: 2.894cqw;
+  height: 2.894cqw;
+}
+
+.tab span {
+  font-size: 1.3698cqw;
+  line-height: 1.9802cqw;
+  color: var(--text-tertiary);
+}
+
+.tabActive span {
+  color: var(--text-brand);
+  font-weight: 600;
+}

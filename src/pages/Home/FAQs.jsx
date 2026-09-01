@@ -2,6 +2,7 @@ import { useState } from 'react'
 import plusIcon from '../../assets/icons/faq-plus.svg'
 import Eyebrow from '../../components/ui/Eyebrow'
 import Reveal from '../../components/ui/Reveal'
+import RevealGroup from '../../components/ui/RevealGroup'
 import styles from './FAQs.module.css'
 
 const FAQS = [
@@ -66,7 +67,7 @@ function FAQs() {
         <Eyebrow align="center">Questions</Eyebrow>
         <h2 className={styles.heading}>Frequently Asked Questions (FAQs)</h2>
 
-        <div className={styles.list}>
+        <RevealGroup className={styles.list}>
           {FAQS.map((faq, index) => {
             const isOpen = index === openIndex
             return (
@@ -90,7 +91,7 @@ function FAQs() {
               </div>
             )
           })}
-        </div>
+        </RevealGroup>
       </div>
     </Reveal>
   )

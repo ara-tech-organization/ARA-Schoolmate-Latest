@@ -6,13 +6,17 @@ function Trusted() {
   return (
     <Reveal as="section" className={styles.section}>
       <div className={`container ${styles.content}`}>
-        <Eyebrow align="center">Credibility</Eyebrow>
-        <h2 className={styles.heading}>Trusted by Growing Educational Institutions</h2>
-        <p className={styles.body}>
+        <Reveal as="div" direction="down">
+          <Eyebrow align="center">Credibility</Eyebrow>
+        </Reveal>
+        <Reveal as="h2" className={styles.heading} direction="down" delay={60}>
+          Trusted by Growing Educational Institutions
+        </Reveal>
+        <Reveal as="p" className={styles.body} direction="up" delay={140}>
           Schools and institutions choose SchoolMate for its measurable improvements in efficiency, engagement, and
           communication.
-        </p>
-        <span className={styles.rule} />
+        </Reveal>
+        <Reveal as="span" className={styles.rule} direction="up" delay={220} />
       </div>
     </Reveal>
   )

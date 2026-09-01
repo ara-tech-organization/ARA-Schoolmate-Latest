@@ -2,6 +2,7 @@ import Eyebrow from '../../components/ui/Eyebrow'
 import Button from '../../components/ui/Button'
 import CheckItem from '../../components/ui/CheckItem'
 import Reveal from '../../components/ui/Reveal'
+import RevealGroup from '../../components/ui/RevealGroup'
 import styles from './SchoolMateModules.module.css'
 
 const PLANS = [
@@ -82,7 +83,7 @@ function SchoolMateModules() {
         <Eyebrow align="center">Modules</Eyebrow>
         <h2 className={styles.heading}>SchoolMate Modules</h2>
 
-        <div className={styles.grid}>
+        <RevealGroup className={styles.grid}>
           {PLANS.map((plan) => (
             <div key={plan.name} className={[styles.card, plan.featured ? styles.featured : ''].join(' ')}>
               <h3 className={styles.name}>{plan.name}</h3>
@@ -105,7 +106,7 @@ function SchoolMateModules() {
               </Button>
             </div>
           ))}
-        </div>
+        </RevealGroup>
 
         <div className={styles.actions}>
           <Button to="/contact">Get a free Demo</Button>

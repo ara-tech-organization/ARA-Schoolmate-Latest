@@ -3,6 +3,8 @@ import { NavLink, Link } from 'react-router-dom'
 import logo from '../../assets/images/logo-header.png'
 import Button from '../ui/Button'
 import Image from '../ui/Image'
+import Reveal from '../ui/Reveal'
+import { getHeroRevealDelay } from '../../utils/pageLoaderTiming'
 import styles from './Header.module.css'
 
 const NAV_ITEMS = [
@@ -16,7 +18,7 @@ function Header() {
   const [open, setOpen] = useState(false)
 
   return (
-    <header className={styles.header}>
+    <Reveal as="header" className={styles.header} direction="down" delay={getHeroRevealDelay()}>
       <div className={styles.bar}>
         <Link to="/" className={styles.logo}>
           <Image src={logo} alt="SchoolMate" />
@@ -53,7 +55,7 @@ function Header() {
           <span />
         </button>
       </div>
-    </header>
+    </Reveal>
   )
 }
 

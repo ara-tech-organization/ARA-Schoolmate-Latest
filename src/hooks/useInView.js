@@ -12,10 +12,9 @@ function useInView() {
 
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
-          setInView(true)
-          observer.disconnect()
-        }
+        // Toggle both ways (rather than firing once and disconnecting) so the
+        // reveal replays every time the element scrolls back into view.
+        setInView(entry.isIntersecting)
       },
       { threshold: 0.15, rootMargin: '0px 0px -80px 0px' },
     )

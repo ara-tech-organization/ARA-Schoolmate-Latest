@@ -1,5 +1,6 @@
 import Eyebrow from '../../components/ui/Eyebrow'
 import Reveal from '../../components/ui/Reveal'
+import RevealGroup from '../../components/ui/RevealGroup'
 import styles from './OurImpact.module.css'
 
 const IMPACTS = [
@@ -17,14 +18,14 @@ function OurImpact() {
       <div className="container">
         <Eyebrow>Outcomes</Eyebrow>
         <h2 className={styles.heading}>Our Impact</h2>
-        <ul className={styles.grid}>
+        <RevealGroup as="ul" className={styles.grid}>
           {IMPACTS.map((label, i) => (
             <li key={label} className={styles.item}>
               <span className={styles.index}>{String(i + 1).padStart(2, '0')}</span>
               <p>{label}</p>
             </li>
           ))}
-        </ul>
+        </RevealGroup>
       </div>
     </Reveal>
   )

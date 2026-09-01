@@ -1,9 +1,8 @@
-import panelTransport from '../../assets/images/panel-transport.png'
-import panelFees from '../../assets/images/panel-fees.png'
 import Eyebrow from '../../components/ui/Eyebrow'
 import CheckItem from '../../components/ui/CheckItem'
 import Reveal from '../../components/ui/Reveal'
-import Image from '../../components/ui/Image'
+import TransportTrackingPanel from './TransportTrackingPanel'
+import FeeCollectionPanel from './FeeCollectionPanel'
 import styles from './SmartFeatures.module.css'
 
 const HIGHLIGHTS = [
@@ -19,7 +18,7 @@ function SmartFeatures() {
   return (
     <Reveal as="section" className={styles.section}>
       <div className={`container ${styles.row}`}>
-        <div className={styles.copy}>
+        <Reveal as="div" className={styles.copy} direction="right">
           <Eyebrow>Outcomes</Eyebrow>
           <h2 className={styles.heading}>Smart Features That Drive Results</h2>
           <p className={styles.body}>
@@ -38,10 +37,14 @@ function SmartFeatures() {
             The platform also comes with advanced student information management software capabilities for better
             handling of records and analytics.
           </p>
-        </div>
+        </Reveal>
         <div className={styles.visual}>
-          <Image src={panelTransport} alt="Transport tracking panel showing live bus routes" loading="lazy" decoding="async" />
-          <Image src={panelFees} alt="Fee collection panel showing payment status" loading="lazy" decoding="async" />
+          <Reveal as="div" className={`${styles.frame} ${styles.frameTransport}`} direction="left" delay={120}>
+            <TransportTrackingPanel />
+          </Reveal>
+          <Reveal as="div" className={`${styles.frame} ${styles.frameFees}`} direction="left" delay={220}>
+            <FeeCollectionPanel />
+          </Reveal>
         </div>
       </div>
     </Reveal>

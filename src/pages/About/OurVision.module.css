@@ -54,16 +54,15 @@
 
 .dashboard {
   width: 100%;
-  overflow: hidden;
-  border-radius: 5% / 7%;
 }
 
 .academics {
-  width: 62%;
+  /* Figma "Section / 07 Our Vision" visual canvas: 460 wide, Academics inset 172/288/460 */
+  width: 62.609%;
   align-self: flex-end;
   margin-top: var(--space-5);
-  overflow: hidden;
-  border-radius: 6% / 8%;
+  container-type: inline-size;
+  aspect-ratio: 540 / 418.5;
 }
 
 @media (min-width: 768px) {

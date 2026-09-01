@@ -5,6 +5,7 @@ import homeworkIcon from '../../assets/icons/tile-book.svg'
 import feesIcon from '../../assets/icons/fee-management.svg'
 import messageIcon from '../../assets/icons/tile-message.svg'
 import homeIcon from '../../assets/icons/fn-home.svg'
+import RevealGroup from '../../components/ui/RevealGroup'
 import styles from './PhoneMockup.module.css'
 
 const TABS = [
@@ -35,7 +36,7 @@ function PhoneMockup() {
             <img src={bellIcon} alt="" className={`${styles.icon} ${styles.appBarBell}`} />
           </div>
 
-          <div className={styles.body}>
+          <RevealGroup className={styles.body}>
             <div className={styles.card}>
               <div className={styles.cardHead}>
                 <img src={attendanceIcon} alt="" className={styles.icon} />
@@ -86,7 +87,7 @@ function PhoneMockup() {
               </div>
               <p className={styles.circularText}>Annual Day rehearsal schedule shared with all parents.</p>
             </div>
-          </div>
+          </RevealGroup>
 
           <div className={styles.tabBar}>
             {TABS.map((tab) => (

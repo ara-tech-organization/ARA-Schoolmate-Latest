@@ -1,0 +1,421 @@
+/*
+  Fluid replica of the Figma "Mockup / Dashboard" component
+  (file 2tiU292F2mGV9oDUhuQtuo, node 86:3099 inside "Visual well" 86:3098).
+  Sized in cqw against the well's inline size (container-type set in
+  EveryUser.module.css) — card is 336/384 = 87.5cqw wide, and every value
+  below is that same property (in px, at the 384px-wide well) divided by 384.
+*/
+
+.card {
+  width: 87.5cqw;
+  display: flex;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: 1.224cqw;
+  box-shadow: 0 0.0885cqw 0.1745cqw rgba(20, 23, 27, 0.06), 0 0.7005cqw 1.75cqw rgba(20, 23, 27, 0.16);
+  overflow: hidden;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  width: 18.55cqw;
+  padding: 1.5755cqw 1.224cqw;
+  background: var(--bg-subtle);
+  border-right: 1px solid var(--border-subtle);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.875cqw;
+  padding: 0 0 1.9245cqw 0.7005cqw;
+}
+
+.brand img {
+  width: 1.9245cqw;
+  height: 1.9245cqw;
+  flex-shrink: 0;
+}
+
+.brandName {
+  font-size: 1.224cqw;
+  line-height: 1.75cqw;
+  font-weight: 600;
+  color: var(--text-primary);
+  white-space: nowrap;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1745cqw;
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+  gap: 0.875cqw;
+  padding: 0.7865cqw 0.7005cqw;
+  border-radius: 0.526cqw;
+}
+
+.navItem img {
+  width: 1.487cqw;
+  height: 1.487cqw;
+  flex-shrink: 0;
+}
+
+.navLabel {
+  flex: 1;
+  font-size: 1.138cqw;
+  line-height: 1.6615cqw;
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+.navItemActive {
+  background: var(--bg-brand-subtle);
+}
+
+.navItemActive .navLabel {
+  color: var(--text-brand);
+  font-weight: 600;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.support {
+  display: flex;
+  align-items: center;
+  padding: 0.7865cqw 0 0.7865cqw 0.7005cqw;
+  font-size: 1.138cqw;
+  line-height: 1.6615cqw;
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  gap: 1.0495cqw;
+  padding: 1.224cqw 2.099cqw;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.topbarTitle {
+  display: flex;
+  flex-direction: column;
+  gap: 0.0885cqw;
+  white-space: nowrap;
+}
+
+.topbarTitle p {
+  margin: 0;
+  font-size: 1.401cqw;
+  line-height: 2.013cqw;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.topbarTitle span {
+  font-size: 0.9635cqw;
+  line-height: 1.401cqw;
+  color: var(--text-tertiary);
+}
+
+.topbarSpacer {
+  flex: 1;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  gap: 0.7005cqw;
+  width: 15.75cqw;
+  padding: 0.612cqw 1.224cqw 0.612cqw 0.875cqw;
+  border-radius: 0.526cqw;
+  background: var(--bg-subtle);
+  border: 1px solid var(--border-subtle);
+  white-space: nowrap;
+}
+
+.search img {
+  width: 1.3125cqw;
+  height: 1.3125cqw;
+  flex-shrink: 0;
+}
+
+.search span {
+  font-size: 1.0495cqw;
+  line-height: 1.487cqw;
+  color: var(--text-tertiary);
+}
+
+.bellWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.7995cqw;
+  flex-shrink: 0;
+}
+
+.bellWrap img {
+  width: 1.5755cqw;
+  height: 1.5755cqw;
+}
+
+.avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.7995cqw;
+  height: 2.7995cqw;
+  flex-shrink: 0;
+  border-radius: 999px;
+  background: var(--bg-brand-subtle);
+  color: var(--text-brand);
+  font-size: 1.0495cqw;
+  line-height: 1.487cqw;
+  font-weight: 600;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5755cqw;
+  padding: 1.75cqw 2.099cqw;
+}
+
+.kpiRow {
+  display: flex;
+  gap: 1.224cqw;
+}
+
+.kpi {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.526cqw;
+  min-width: 0;
+  padding: 1.138cqw 1.224cqw;
+  border-radius: 0.875cqw;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+}
+
+.kpiLabel {
+  margin: 0;
+  font-size: 0.9635cqw;
+  line-height: 1.401cqw;
+  font-weight: 500;
+  color: var(--text-tertiary);
+  white-space: nowrap;
+}
+
+.kpiValueRow {
+  display: flex;
+  align-items: center;
+  gap: 0.7005cqw;
+}
+
+.kpiValue {
+  font-size: 2.099cqw;
+  line-height: 3.0625cqw;
+  font-weight: 600;
+  color: var(--text-primary);
+  white-space: nowrap;
+}
+
+.delta {
+  padding: 0.1745cqw 0.612cqw 0.1745cqw 0.526cqw;
+  border-radius: 999px;
+  font-size: 0.875cqw;
+  line-height: 1.3125cqw;
+  font-weight: 600;
+  background: var(--bg-success-subtle);
+  color: var(--text-success);
+  white-space: nowrap;
+}
+
+.deltaDown {
+  background: var(--bg-attention-subtle);
+  color: var(--text-attention);
+}
+
+.chartCard,
+.tableCard {
+  display: flex;
+  flex-direction: column;
+  padding: 1.224cqw 1.401cqw 1.401cqw;
+  border-radius: 0.875cqw;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+}
+
+.chartCard {
+  gap: 1.224cqw;
+}
+
+.cardHead {
+  display: flex;
+  align-items: center;
+  gap: 0.7005cqw;
+}
+
+.cardTitle {
+  margin: 0;
+  font-size: 1.138cqw;
+  line-height: 1.6615cqw;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.cardSubtitle {
+  margin: 0.0885cqw 0 0;
+  font-size: 0.9635cqw;
+  line-height: 1.401cqw;
+  color: var(--text-tertiary);
+}
+
+.headSpacer {
+  flex: 1;
+}
+
+.plot {
+  position: relative;
+  height: 10.3255cqw;
+}
+
+.chart {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.chartLabel {
+  position: absolute;
+  right: 0;
+  font-size: 0.875cqw;
+  color: var(--text-tertiary);
+}
+
+.chartValue {
+  position: absolute;
+  font-size: 0.9635cqw;
+  font-weight: 600;
+  color: var(--text-brand);
+}
+
+.axis {
+  display: flex;
+  padding-right: 2.974cqw;
+}
+
+.axisTick {
+  flex: 1;
+  font-size: 0.875cqw;
+  color: var(--text-tertiary);
+}
+
+.axisTick:not(:first-child) {
+  text-align: center;
+}
+
+.axisTick:last-child {
+  text-align: right;
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.tableCard {
+  gap: 0;
+}
+
+.tableCard .cardHead {
+  padding-bottom: 0.7005cqw;
+}
+
+.tableHead,
+.tableRow {
+  display: flex;
+  align-items: center;
+}
+
+.tableHead {
+  padding-bottom: 0.7005cqw;
+  font-size: 0.9635cqw;
+  font-weight: 500;
+  color: var(--text-tertiary);
+}
+
+.tableRow {
+  padding: 0.875cqw 0;
+  border-top: 1px solid var(--border-subtle);
+  font-size: 1.0495cqw;
+  color: var(--text-secondary);
+}
+
+.colClass {
+  width: 15.401cqw;
+  flex-shrink: 0;
+}
+
+.colValue {
+  width: 9.4505cqw;
+  flex-shrink: 0;
+}
+
+.colStatus {
+  flex: 1;
+}
+
+.tableRow .colClass {
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4375cqw;
+  padding: 0.263cqw 0.7865cqw 0.263cqw 0.612cqw;
+  border-radius: 999px;
+  font-size: 0.875cqw;
+  font-weight: 600;
+}
+
+.chipDot {
+  width: 0.526cqw;
+  height: 0.526cqw;
+  border-radius: 999px;
+}
+
+.chipGood {
+  background: var(--bg-success-subtle);
+  color: var(--text-success);
+}
+
+.chipGood .chipDot {
+  background: var(--icon-success);
+}
+
+.chipLow {
+  background: var(--bg-attention-subtle);
+  color: var(--text-attention);
+}
+
+.chipLow .chipDot {
+  background: var(--icon-attention);
+}

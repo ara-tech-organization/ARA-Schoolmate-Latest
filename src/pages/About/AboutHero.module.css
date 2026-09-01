@@ -1,5 +1,5 @@
 .hero {
-  padding: var(--stack-xl) 0 var(--section-y);
+  padding: var(--section-y) 0;
 }
 
 .title {
@@ -12,40 +12,3 @@
   margin-bottom: var(--stack-lg);
 }
 
-.band {
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-}
-
-.band img {
-  width: 100%;
-  height: auto;
-  border-radius: var(--radius-lg);
-}
-
-.imgDesktop,
-.imgTablet {
-  display: none;
-}
-
-@media (min-width: 1280px) {
-  .imgDesktop {
-    display: block;
-  }
-
-  .imgMobile,
-  .imgTablet {
-    display: none;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 1279px) {
-  .imgTablet {
-    display: block;
-  }
-
-  .imgDesktop,
-  .imgMobile {
-    display: none;
-  }
-}

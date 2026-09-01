@@ -35,13 +35,8 @@
 
 .visual {
   width: 100%;
-}
-
-.visual img {
-  width: 100%;
-  height: auto;
-  overflow: hidden;
-  border-radius: 6% / 8%;
+  aspect-ratio: 640 / 447.36;
+  container-type: inline-size;
 }
 
 @media (min-width: 768px) {

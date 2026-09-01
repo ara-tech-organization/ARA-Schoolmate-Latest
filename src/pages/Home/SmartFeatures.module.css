@@ -18,10 +18,10 @@
 }
 
 .body {
-  font-size: var(--type-size-body-lg);
-  line-height: var(--type-lh-body-lg);
+  font-size: 18px;
+  line-height: 30px;
   color: var(--text-secondary);
-  margin-bottom: var(--stack-md);
+  margin-bottom: 36px;
 }
 
 .highlightsLabel {
@@ -36,7 +36,7 @@
 .highlights {
   display: grid;
   grid-template-columns: 1fr;
-  gap: var(--space-4) var(--space-5);
+  gap: var(--space-5);
   list-style: none;
   padding: 0;
   margin: 0 0 var(--stack-md);
@@ -55,14 +55,20 @@
 .visual {
   display: flex;
   flex-direction: column;
-  gap: var(--space-6);
+  gap: var(--space-5);
 }
 
-.visual img {
+.frame {
+  container-type: inline-size;
   width: 100%;
-  height: auto;
-  overflow: hidden;
-  border-radius: 5% / 7%;
+}
+
+.frameTransport {
+  aspect-ratio: 540 / 414;
+}
+
+.frameFees {
+  aspect-ratio: 540 / 382.5;
 }
 
 @media (min-width: 640px) {
@@ -74,15 +80,20 @@
 @media (min-width: 768px) {
   .row {
     flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     gap: var(--stack-2xl);
   }
 
   .copy {
     flex: 0 0 auto;
-    width: 45%;
+    width: 50%;
+    max-width: 600px;
   }
 
   .visual {
-    flex: 1 1 auto;
+    flex: 0 1 460px;
+    width: 100%;
+    max-width: 460px;
   }
 }

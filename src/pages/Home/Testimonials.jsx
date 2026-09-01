@@ -1,5 +1,6 @@
 import Eyebrow from '../../components/ui/Eyebrow'
 import Reveal from '../../components/ui/Reveal'
+import RevealGroup from '../../components/ui/RevealGroup'
 import styles from './Testimonials.module.css'
 
 const FEATURED = {
@@ -28,16 +29,16 @@ function Testimonials() {
         <h2 className={styles.heading}>Testimonials</h2>
 
         <div className={styles.layout}>
-          <div className={styles.featured}>
+          <Reveal as="div" className={styles.featured} direction="right">
             <span className={styles.featuredRule} />
             <p className={styles.featuredQuote}>{FEATURED.quote}</p>
             <div className={styles.attribution}>
               <span className={styles.monogramDark}>{FEATURED.name.charAt(0)}</span>
               <p className={styles.nameDark}>{FEATURED.name}</p>
             </div>
-          </div>
+          </Reveal>
 
-          <div className={styles.grid}>
+          <RevealGroup className={styles.grid}>
             {TESTIMONIALS.map((t) => (
               <div key={t.name} className={styles.card}>
                 <span className={styles.rule} />
@@ -48,7 +49,7 @@ function Testimonials() {
                 </div>
               </div>
             ))}
-          </div>
+          </RevealGroup>
         </div>
       </div>
     </Reveal>

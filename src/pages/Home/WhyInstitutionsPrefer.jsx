@@ -16,10 +16,16 @@ function WhyInstitutionsPrefer() {
   return (
     <Reveal as="section" className={styles.section}>
       <div className={`container ${styles.row}`}>
-        <div className={styles.visual} role="img" aria-label="SchoolMate mobile app showing today's attendance, homework, fees, and circulars">
+        <Reveal
+          as="div"
+          className={styles.visual}
+          direction="right"
+          role="img"
+          aria-label="SchoolMate mobile app showing today's attendance, homework, fees, and circulars"
+        >
           <PhoneMockup />
-        </div>
-        <div className={styles.copy}>
+        </Reveal>
+        <Reveal as="div" className={styles.copy} direction="left" delay={120}>
           <Eyebrow>Why they choose it</Eyebrow>
           <h3 className={styles.heading}>Why Institutions Prefer SchoolMate?</h3>
           <ul className={styles.items}>
@@ -27,7 +33,7 @@ function WhyInstitutionsPrefer() {
               <CheckItem key={label}>{label}</CheckItem>
             ))}
           </ul>
-        </div>
+        </Reveal>
       </div>
     </Reveal>
   )
