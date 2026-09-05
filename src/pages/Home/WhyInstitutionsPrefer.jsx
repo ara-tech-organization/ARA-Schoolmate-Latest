@@ -19,13 +19,13 @@ function WhyInstitutionsPrefer() {
         <Reveal
           as="div"
           className={styles.visual}
-          direction="right"
+          direction="up"
           role="img"
           aria-label="SchoolMate mobile app showing today's attendance, homework, fees, and circulars"
         >
           <PhoneMockup />
         </Reveal>
-        <Reveal as="div" className={styles.copy} direction="left" delay={120}>
+        <Reveal as="div" className={styles.copy} direction="up" delay={120}>
           <Eyebrow>Why they choose it</Eyebrow>
           <h3 className={styles.heading}>Why Institutions Prefer SchoolMate?</h3>
           <ul className={styles.items}>

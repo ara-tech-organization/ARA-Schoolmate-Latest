@@ -29,7 +29,7 @@ function Testimonials() {
         <h2 className={styles.heading}>Testimonials</h2>
 
         <div className={styles.layout}>
-          <Reveal as="div" className={styles.featured} direction="right">
+          <Reveal as="div" className={styles.featured} direction="up">
             <span className={styles.featuredRule} />
             <p className={styles.featuredQuote}>{FEATURED.quote}</p>
             <div className={styles.attribution}>

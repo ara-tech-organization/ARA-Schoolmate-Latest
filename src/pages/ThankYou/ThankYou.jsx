@@ -40,13 +40,13 @@ function ThankYou() {
     <Reveal as="section" className={styles.section}>
       <div className={`container ${styles.content}`}>
         <div className={styles.hero}>
-          <Reveal as="span" className={styles.iconTile} direction="down">
+          <Reveal as="span" className={styles.iconTile} direction="up">
             <img src={checkIcon} alt="" loading="lazy" decoding="async" width={32} height={32} />
           </Reveal>
-          <Reveal as="p" className={styles.eyebrow} direction="down" delay={60}>
+          <Reveal as="p" className={styles.eyebrow} direction="up" delay={60}>
             Enquiry received
           </Reveal>
-          <Reveal as="h1" className={styles.title} direction="down" delay={100}>
+          <Reveal as="h1" className={styles.title} direction="up" delay={100}>
             Thank You!
           </Reveal>
           <Reveal as="p" className={styles.body} direction="up" delay={160}>

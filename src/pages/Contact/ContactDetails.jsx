@@ -96,7 +96,7 @@ function ContactDetails() {
     <Reveal as="section" className={styles.section}>
       <div className="container">
         <div className={styles.split}>
-          <Reveal as="ul" className={styles.list} direction="right">
+          <Reveal as="ul" className={styles.list} direction="up">
             {CONTACT_ITEMS.map((item) => {
               const Tag = item.href ? 'a' : 'div'
               return (
@@ -114,7 +114,7 @@ function ContactDetails() {
             })}
           </Reveal>
 
-          <Reveal as="form" className={styles.form} onSubmit={handleSubmit} direction="left" delay={120}>
+          <Reveal as="form" className={styles.form} onSubmit={handleSubmit} direction="up" delay={120}>
             <h3 className={styles.formTitle}>Get Started Today with SchoolMate</h3>
             <RevealGroup className={styles.fields}>
               {FIELDS.map((field) => (

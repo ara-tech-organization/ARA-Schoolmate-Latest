@@ -6,10 +6,10 @@ function Trusted() {
   return (
     <Reveal as="section" className={styles.section}>
       <div className={`container ${styles.content}`}>
-        <Reveal as="div" direction="down">
+        <Reveal as="div" direction="up">
           <Eyebrow align="center">Credibility</Eyebrow>
         </Reveal>
-        <Reveal as="h2" className={styles.heading} direction="down" delay={60}>
+        <Reveal as="h2" className={styles.heading} direction="up" delay={60}>
           Trusted by Growing Educational Institutions
         </Reveal>
         <Reveal as="p" className={styles.body} direction="up" delay={140}>

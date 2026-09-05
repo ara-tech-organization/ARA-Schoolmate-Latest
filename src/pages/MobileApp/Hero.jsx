@@ -1,39 +1,40 @@
 import Button from '../../components/ui/Button'
 import Reveal from '../../components/ui/Reveal'
 import AppFan from './AppFan'
-import { getHeroRevealDelay } from '../../utils/pageLoaderTiming'
 import styles from './Hero.module.css'
 
 function Hero() {
   return (
-    <Reveal as="section" className={styles.hero} delay={getHeroRevealDelay()}>
+    <Reveal as="section" className={styles.hero}>
       <div className={`container ${styles.row}`}>
-        <Reveal as="div" className={styles.copy} direction="right" delay={getHeroRevealDelay()}>
-          <h1 className={styles.heading}>Smart School Management at Your Fingertips</h1>
-          <p className={styles.lead}>
+        <div className={styles.copy}>
+          <Reveal as="h1" className={styles.heading} direction="up">
+            Smart School Management at Your Fingertips
+          </Reveal>
+          <Reveal as="p" className={styles.lead} direction="up" delay={60}>
             SchoolMate Mobile App – a powerful and easy-to-use mobile solution for administrators,
             teachers, students, and parents. Stay connected with your school and institution anytime,
             anywhere.
-          </p>
-          <p className={styles.body}>
+          </Reveal>
+          <Reveal as="p" className={styles.body} direction="up" delay={120}>
             SchoolMate: a single secure dashboard that allows easy communication, attendance, and
             homework tracking, fees management, and academic performance monitoring.
-          </p>
-          <p className={styles.body}>
+          </Reveal>
+          <Reveal as="p" className={styles.body} direction="up" delay={180}>
             SchoolMate is a modern schooling software and smartschool management system that assists
             schools in managing daily operations effectively and keeping parents informed in real time.
-          </p>
-          <div className={styles.actions}>
+          </Reveal>
+          <Reveal as="div" className={styles.actions} direction="up" delay={240}>
             <Button to="/contact">
               Get a free Demo
             </Button>
             <Button as="a" href="tel:+918110015152" variant="secondary">
               Call Us!
             </Button>
-          </div>
-        </Reveal>
+          </Reveal>
+        </div>
 
-        <Reveal as="div" className={styles.visual} direction="left" delay={getHeroRevealDelay() + 120}>
+        <Reveal as="div" className={styles.visual} direction="up" delay={120}>
           <AppFan />
         </Reveal>
       </div>

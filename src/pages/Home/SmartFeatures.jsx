@@ -18,7 +18,7 @@ function SmartFeatures() {
   return (
     <Reveal as="section" className={styles.section}>
       <div className={`container ${styles.row}`}>
-        <Reveal as="div" className={styles.copy} direction="right">
+        <Reveal as="div" className={styles.copy} direction="up">
           <Eyebrow>Outcomes</Eyebrow>
           <h2 className={styles.heading}>Smart Features That Drive Results</h2>
           <p className={styles.body}>
@@ -39,10 +39,10 @@ function SmartFeatures() {
           </p>
         </Reveal>
         <div className={styles.visual}>
-          <Reveal as="div" className={`${styles.frame} ${styles.frameTransport}`} direction="left" delay={120}>
+          <Reveal as="div" className={`${styles.frame} ${styles.frameTransport}`} direction="up" delay={120}>
             <TransportTrackingPanel />
           </Reveal>
-          <Reveal as="div" className={`${styles.frame} ${styles.frameFees}`} direction="left" delay={220}>
+          <Reveal as="div" className={`${styles.frame} ${styles.frameFees}`} direction="up" delay={220}>
             <FeeCollectionPanel />
           </Reveal>
         </div>

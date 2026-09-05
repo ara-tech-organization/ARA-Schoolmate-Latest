@@ -16,7 +16,7 @@ function StandOut() {
   return (
     <Reveal as="section" className={styles.section}>
       <div className={`container ${styles.row}`}>
-        <Reveal as="div" className={styles.copy} direction="right">
+        <Reveal as="div" className={styles.copy} direction="up">
           <Eyebrow>What sets it apart</Eyebrow>
           <h2 className={styles.heading}>Why Does SchoolMate Stand Out?</h2>
           <h3 className={styles.subheading}>Designed for Modern Educational Institutions</h3>
@@ -33,7 +33,7 @@ function StandOut() {
             all sizes.
           </p>
         </Reveal>
-        <Reveal as="div" className={styles.panel} direction="left" delay={120}>
+        <Reveal as="div" className={styles.panel} direction="up" delay={120}>
           <h3 className={styles.panelHeading}>Why Schools Prefer SchoolMate?</h3>
           <ul className={styles.items}>
             {PANEL_ITEMS.map((label) => (

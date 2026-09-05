@@ -7,28 +7,30 @@ function TransformCta() {
   return (
     <Reveal as="section" className={styles.section}>
       <div className={`container ${styles.row}`}>
-        <Reveal as="div" className={styles.copy} direction="right">
-          <h2 className={styles.heading}>Transform Your School Digitally</h2>
-          <p className={styles.lead}>
+        <div className={styles.copy}>
+          <Reveal as="h2" className={styles.heading} direction="up">
+            Transform Your School Digitally
+          </Reveal>
+          <Reveal as="p" className={styles.lead} direction="up" delay={60}>
             SchoolMate Mobile App helps schools to streamline administration, improve communication,
             and deliver smarter educational experiences.
-          </p>
-          <p className={styles.body}>
+          </Reveal>
+          <Reveal as="p" className={styles.body} direction="up" delay={120}>
             SchoolMate is the one powerful mobile platform containing all the tools your institution
             needs, from attendance tracking and communications tools to fee management and academic
             monitoring.
-          </p>
-          <div className={styles.actions}>
+          </Reveal>
+          <Reveal as="div" className={styles.actions} direction="up" delay={180}>
             <Button to="/contact" onDark>
               Get a free Demo
             </Button>
             <Button as="a" href="tel:+918110015152" variant="secondary" onDark>
               Call Us!
             </Button>
-          </div>
-        </Reveal>
+          </Reveal>
+        </div>
 
-        <Reveal as="div" className={styles.visual} direction="left" delay={120}>
+        <Reveal as="div" className={styles.visual} direction="up" delay={120}>
           <TransformVisual />
         </Reveal>
       </div>

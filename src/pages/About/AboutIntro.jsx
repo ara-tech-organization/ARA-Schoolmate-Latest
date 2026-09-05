@@ -6,7 +6,7 @@ function AboutIntro() {
   return (
     <Reveal as="section" className={styles.section}>
       <div className={`container ${styles.split}`}>
-        <Reveal as="div" className={styles.copy} direction="right">
+        <Reveal as="div" className={styles.copy} direction="up">
           <p className={styles.lead}>
             SchoolMate is a smart schooling software for schools and colleges to simplify administration, improve
             communication, and manage academics.
@@ -21,7 +21,7 @@ function AboutIntro() {
           </p>
         </Reveal>
 
-        <Reveal as="div" className={styles.visual} direction="left" delay={120}>
+        <Reveal as="div" className={styles.visual} direction="up" delay={120}>
           <ConnectedRoles />
         </Reveal>
       </div>

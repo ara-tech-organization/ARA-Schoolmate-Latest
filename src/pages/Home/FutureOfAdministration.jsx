@@ -7,7 +7,7 @@ function FutureOfAdministration() {
   return (
     <Reveal as="section" className={styles.section}>
       <div className={`container ${styles.row}`}>
-        <Reveal as="div" className={styles.copy} direction="right">
+        <Reveal as="div" className={styles.copy} direction="up">
           <Eyebrow>One smart dashboard</Eyebrow>
           <h2 className={styles.heading}>The Future of Digital School Administration Starts Here</h2>
           <p className={styles.body}>
@@ -19,7 +19,7 @@ function FutureOfAdministration() {
             activities through a single smart dashboard.
           </p>
         </Reveal>
-        <Reveal as="div" className={styles.visual} direction="left" delay={120}>
+        <Reveal as="div" className={styles.visual} direction="up" delay={120}>
           <DashboardMockup />
         </Reveal>
       </div>

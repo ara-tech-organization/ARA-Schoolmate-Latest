@@ -6,13 +6,15 @@ function ProductVisual() {
   return (
     <Reveal as="section" className={styles.section}>
       <div className="container">
-        <div
+        <Reveal
+          as="div"
           className={styles.frame}
+          direction="up"
           role="img"
           aria-label="SchoolMate admin dashboard showing attendance rate, class-wise attendance, and school KPIs"
         >
           <ContactDashboardMockup />
-        </div>
+        </Reveal>
       </div>
     </Reveal>
   )

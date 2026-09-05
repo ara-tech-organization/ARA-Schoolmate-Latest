@@ -62,7 +62,7 @@ function WhatWeOffer() {
         <div className={styles.list}>
           {CAPABILITIES.map((cap) => (
             <div key={cap.title} className={[styles.capability, cap.reverse ? styles.reverse : ''].join(' ')}>
-              <Reveal as="div" className={styles.copy} direction={cap.reverse ? 'left' : 'right'}>
+              <Reveal as="div" className={styles.copy} direction="up">
                 <span className={styles.iconTile}>
                   <img src={cap.icon} alt="" loading="lazy" decoding="async" width={24} height={24} />
                 </span>
@@ -73,7 +73,7 @@ function WhatWeOffer() {
                   ))}
                 </ul>
               </Reveal>
-              <Reveal as="div" className={styles.visual} direction={cap.reverse ? 'right' : 'left'} delay={120}>
+              <Reveal as="div" className={styles.visual} direction="up" delay={120}>
                 <div className={[styles.visualFrame, styles[cap.frameClass]].join(' ')}>{cap.visual}</div>
               </Reveal>
             </div>

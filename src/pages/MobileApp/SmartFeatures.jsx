@@ -74,7 +74,7 @@ function SmartFeatures() {
         <div className={styles.list}>
           {FEATURES.map((feature, i) => (
             <div key={feature.index} className={`${styles.row} ${i % 2 === 1 ? styles.reversed : ''}`}>
-              <Reveal as="div" className={styles.copy} direction={i % 2 === 1 ? 'left' : 'right'}>
+              <Reveal as="div" className={styles.copy} direction="up">
                 <p className={styles.index}>{feature.index}</p>
                 <h3 className={styles.title}>{feature.title}</h3>
                 <p className={styles.body}>{feature.body}</p>
@@ -82,7 +82,7 @@ function SmartFeatures() {
               <Reveal
                 as="div"
                 className={styles.visual}
-                direction={i % 2 === 1 ? 'right' : 'left'}
+                direction="up"
                 delay={120}
                 role="img"
                 aria-label={feature.alt}

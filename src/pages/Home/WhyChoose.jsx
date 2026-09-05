@@ -38,7 +38,7 @@ function WhyChoose() {
         </p>
 
         <div className={styles.comparison}>
-          <Reveal as="div" className={styles.panelBefore} direction="right">
+          <Reveal as="div" className={styles.panelBefore} direction="up">
             <span className={styles.badgeBefore}>
               <img src={closeIcon} alt="" loading="lazy" decoding="async" width={15} height={15} />
               Before SchoolMate
@@ -59,7 +59,7 @@ function WhyChoose() {
             </span>
           </Reveal>
 
-          <Reveal as="div" className={styles.panelAfter} direction="left" delay={180}>
+          <Reveal as="div" className={styles.panelAfter} direction="up" delay={180}>
             <span className={styles.badgeAfter}>
               <img src={checkWhiteIcon} alt="" loading="lazy" decoding="async" width={15} height={15} />
               After SchoolMate

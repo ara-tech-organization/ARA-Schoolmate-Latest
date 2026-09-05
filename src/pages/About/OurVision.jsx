@@ -7,7 +7,7 @@ function OurVision() {
   return (
     <Reveal as="section" className={styles.section}>
       <div className={`container ${styles.split}`}>
-        <Reveal as="div" className={styles.copy} direction="right">
+        <Reveal as="div" className={styles.copy} direction="up">
           <p className={styles.kicker}>Our Vision</p>
           <h2 className={styles.heading}>Transforming Education Through Smart Digital Innovation</h2>
           <p className={styles.body}>
@@ -21,7 +21,7 @@ function OurVision() {
           </p>
         </Reveal>
 
-        <Reveal as="div" className={styles.visual} direction="left" delay={120}>
+        <Reveal as="div" className={styles.visual} direction="up" delay={120}>
           <div className={styles.dashboard}>
             <DashboardMockup />
           </div>
